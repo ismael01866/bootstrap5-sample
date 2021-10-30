@@ -1,0 +1,28 @@
+a {
+  color          : var(--color-link);
+  text-decoration: none;
+
+  &:hover,
+  &:focus {
+    color : var(--color-link-hover);
+    cursor: pointer;
+  }
+
+  &.active {
+    color : var(--color-link-active);
+  }
+}
+
+b,
+strong {
+  font-weight: bold;
+}
+
+p {
+  color      : var(--color-body);
+  line-height: var(--body-line-height);
+
+  + p {
+    margin-top: var(--space-xs);
+  }
+}

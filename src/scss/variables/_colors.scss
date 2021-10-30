@@ -1,0 +1,56 @@
+// brand
+
+$color-primary    : #2962ff;
+$color-accent     : #ffd600;
+
+// generic
+
+$color-black      : #000;
+$color-white      : #fff;
+
+$color-shade-1    : #fafafa;
+$color-shade-2    : darken($color-shade-1, 4%);
+$color-shade-3    : darken($color-shade-1, 8%);
+$color-shade-4    : darken($color-shade-1, 12%);
+$color-shade-5    : darken($color-shade-1, 16%);
+$color-shade-6    : darken($color-shade-1, 20%);
+$color-shade-7    : darken($color-shade-1, 24%);
+$color-shade-8    : darken($color-shade-1, 28%);
+
+// backgrounds
+
+$color-bg         : $color-shade-3;
+
+$color-bg-lt      : $color-shade-2;
+$color-bg-lter    : $color-shade-1;
+
+$color-bg-dk      : $color-shade-4;
+$color-bg-dker    : $color-shade-5;
+
+// borders
+
+$color-border     : $color-shade-5;
+
+$color-border-lt  : $color-shade-4;
+$color-border-lter: $color-shade-3;
+
+$color-border-dk  : $color-shade-6;
+$color-border-dker: $color-shade-7;
+
+// typography
+
+$color-link       : $color-primary;
+$color-link-hover : darken($color-link, 8%);
+$color-link-active: darken($color-link, 16%);
+
+$color-heading    : #212121;
+$color-body       : #616161;
+$color-subtle     : #bdbdbd;
+
+$color-icon       : #9e9e9e;
+
+// vendor
+
+$color-google     : #4285f4;
+$color-twitter    : #1da1f2;
+$color-facebook   : #3b5998;

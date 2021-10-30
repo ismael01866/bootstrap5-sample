@@ -1,0 +1,12 @@
+html {
+  font-size  : var(--font-size-base);
+  height     : 100%;
+
+  body {
+    background-color: var(--color-bg);
+    color           : var(--color-body);
+    font-family     : var(--font-family-base);
+    height          : 100%;
+    position        : relative;
+  }
+}
