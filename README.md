@@ -1,4 +1,4 @@
-# HTML + WebPack 5 = Boilerplate
+# Design System Boilerplate
 
 ## Table of Contents
 
