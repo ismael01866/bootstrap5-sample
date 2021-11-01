@@ -1,7 +1,12 @@
-$space-base: 1em;
+$space-base          : 1em;
 
-$space-xs  : $space-base * .5;
-$space-sm  : $space-base * .75;
-$space-md  : $space-base * 1.25;
-$space-lg  : $space-base * 2;
-$space-xl  : $space-base * 3.25;
+$space-xs            : $space-base * .5;
+$space-sm            : $space-base * .75;
+$space-md            : $space-base * 1.25;
+$space-lg            : $space-base * 2;
+$space-xl            : $space-base * 3.25;
+
+$space-component-base: $space-base;
+
+$space-component-xs  : $space-xs;
+$space-component-sm  : $space-sm;
