@@ -1,0 +1,11 @@
+$component-space-base : 1rem;
+
+$component-space-xs   : $component-space-base * .5;
+$component-space-sm   : $component-space-base * .75;
+
+$component-height-unit: 1rem;
+$component-height-base: $component-height-unit * 2.5;
+
+$component-height-xs  : $component-height-unit * 2;
+$component-height-sm  : $component-height-unit * 2.25;
+$component-height-md  : $component-height-unit * 3;

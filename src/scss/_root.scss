@@ -2,102 +2,110 @@
 
   // Border
 
-  --border-radius-base  : #{$border-radius-base};
+  --border-radius-base   : #{$border-radius-base};
 
   // Brightness
 
-  --brightness-hover    : #{$brightness-hover};
-  --brightness-active   : #{$brightness-active};
+  --brightness-hover     : #{$brightness-hover};
+  --brightness-active    : #{$brightness-active};
 
   // Colors
 
-  --color-white         : #{$color-white};
-  --color-black         : #{$color-black};
+  --color-white          : #{$color-white};
+  --color-black          : #{$color-black};
 
-  --color-shade-1       : #{$color-shade-1};
-  --color-shade-2       : #{$color-shade-2};
-  --color-shade-3       : #{$color-shade-3};
-  --color-shade-4       : #{$color-shade-4};
-  --color-shade-5       : #{$color-shade-5};
-  --color-shade-6       : #{$color-shade-6};
-  --color-shade-7       : #{$color-shade-7};
+  --color-shade-1        : #{$color-shade-1};
+  --color-shade-2        : #{$color-shade-2};
+  --color-shade-3        : #{$color-shade-3};
+  --color-shade-4        : #{$color-shade-4};
+  --color-shade-5        : #{$color-shade-5};
+  --color-shade-6        : #{$color-shade-6};
+  --color-shade-7        : #{$color-shade-7};
 
-  --color-bg            : #{$color-bg};
+  --color-bg             : #{$color-bg};
 
-  --color-bg-lt         : #{$color-bg-lt};
-  --color-bg-lter       : #{$color-bg-lter};
+  --color-bg-lt          : #{$color-bg-lt};
+  --color-bg-lter        : #{$color-bg-lter};
 
-  --color-bg-dk         : #{$color-bg-dk};
-  --color-bg-dker       : #{$color-bg-dker};
+  --color-bg-dk          : #{$color-bg-dk};
+  --color-bg-dker        : #{$color-bg-dker};
 
-  --color-border        : #{$color-border};
+  --color-border         : #{$color-border};
 
-  --color-border-lt     : #{$color-border-lt};
-  --color-border-lter   : #{$color-border-lter};
+  --color-border-lt      : #{$color-border-lt};
+  --color-border-lter    : #{$color-border-lter};
 
-  --color-border-dk     : #{$color-border-dk};
-  --color-border-dker   : #{$color-border-dker};
+  --color-border-dk      : #{$color-border-dk};
+  --color-border-dker    : #{$color-border-dker};
 
-  --color-link          : #{$color-link};
-  --color-link-hover    : #{$color-link-hover};
-  --color-link-active   : #{$color-link-active};
+  --color-link           : #{$color-link};
+  --color-link-hover     : #{$color-link-hover};
+  --color-link-active    : #{$color-link-active};
 
-  --color-heading       : #{$color-heading};
-  --color-body          : #{$color-body};
-  --color-subtle        : #{$color-subtle};
+  --color-heading        : #{$color-heading};
+  --color-body           : #{$color-body};
+  --color-subtle         : #{$color-subtle};
 
-  --color-icon          : #{$color-icon};
+  --color-icon           : #{$color-icon};
 
-  --color-primary       : #{$color-primary};
-  --color-accent        : #{$color-accent};
+  --color-primary        : #{$color-primary};
+  --color-accent         : #{$color-accent};
+
+  // Components
+
+  --component-space-base : #{$component-space-base};
+
+  --component-space-xs   : #{$component-space-xs};
+  --component-space-sm   : #{$component-space-sm};
+
+  --component-height-base: #{$component-height-base};
+
+  --component-height-xs  : #{$component-height-xs};
+  --component-height-sm  : #{$component-height-sm};
+  --component-height-md  : #{$component-height-md};
 
   // Icons
 
-  --icon-size-base      : #{$icon-size-base};
+  --icon-size-base       : #{$icon-size-base};
 
-  --icon-size-xs        : #{$icon-size-xs};
-  --icon-size-sm        : #{$icon-size-sm};
-  --icon-size-md        : #{$icon-size-md};
-  --icon-size-lg        : #{$icon-size-lg};
-  --icon-size-xl        : #{$icon-size-xl};
-  --icon-size-xxl       : #{$icon-size-xxl};
+  --icon-size-xs         : #{$icon-size-xs};
+  --icon-size-sm         : #{$icon-size-sm};
+  --icon-size-md         : #{$icon-size-md};
+  --icon-size-lg         : #{$icon-size-lg};
+  --icon-size-xl         : #{$icon-size-xl};
+  --icon-size-xxl        : #{$icon-size-xxl};
 
   // Spacing
 
-  --space-base          : #{$space-base};
+  --space-base           : #{$space-base};
 
-  --space-xs            : #{$space-xs};
-  --space-sm            : #{$space-sm};
-  --space-md            : #{$space-md};
-  --space-lg            : #{$space-lg};
-  --space-xl            : #{$space-xl};
-
-
-  --space-component-base: #{$space-component-base};
-
-  --space-component-xs  : #{$space-component-xs};
-  --space-component-sm  : #{$space-component-sm};
+  --space-xs             : #{$space-xs};
+  --space-sm             : #{$space-sm};
+  --space-md             : #{$space-md};
+  --space-lg             : #{$space-lg};
+  --space-xl             : #{$space-xl};
 
   // Typography
 
-  --font-family-base    : #{inspect($font-family-base)};
-  --font-family-heading : #{inspect($font-family-heading)};
-  --font-family-generic : #{inspect($font-family-generic)};
+  --font-family-base     : #{inspect($font-family-base)};
+  --font-family-heading  : #{inspect($font-family-heading)};
+  --font-family-generic  : #{inspect($font-family-generic)};
 
-  --font-size-base      : #{$font-size-base};
+  --font-size-base       : #{$font-size-base};
 
-  --font-size-h1        : #{$font-size-h1};
-  --font-size-h2        : #{$font-size-h2};
-  --font-size-h3        : #{$font-size-h3};
-  --font-size-h4        : #{$font-size-h4};
-  --font-size-h5        : #{$font-size-h5};
+  --font-size-h1         : #{$font-size-h1};
+  --font-size-h2         : #{$font-size-h2};
+  --font-size-h3         : #{$font-size-h3};
+  --font-size-h4         : #{$font-size-h4};
+  --font-size-h5         : #{$font-size-h5};
 
-  --font-size-sm        : #{$font-size-sm};
-  --font-size-xs        : #{$font-size-xs};
+  --font-size-sm         : #{$font-size-sm};
+  --font-size-xs         : #{$font-size-xs};
 
-  --font-weight-bold    : #{$font-weight-bold};
-  --font-weight-regular : #{$font-weight-regular};
+  --font-weight-bold     : #{$font-weight-bold};
+  --font-weight-regular  : #{$font-weight-regular};
 
-  --body-line-height    : #{$body-line-height};
-  --heading-line-height : #{$heading-line-height};
+  --body-line-height     : #{$body-line-height};
+  --heading-line-height  : #{$heading-line-height};
+
 }
