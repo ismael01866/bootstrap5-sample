@@ -1,0 +1,29 @@
+/*
+========================================
+Styles */
+
+@each $name, $value in $color-styles-map {
+  .btn-#{$name} {
+    @include btn-style-mixin($value);
+  }
+
+  .btn-#{$name}-outline {
+    @include btn-style-outline-mixin($value);
+  }
+}
+
+/*
+========================================
+Sizing */
+
+@each $name, $props in $btn-sizing-map {
+  @if ($name == '') {
+    .btn {
+      @include btn-sizing-mixin($props);
+    }
+  } @else {
+    .btn-#{$name} {
+      @include btn-sizing-mixin($props);
+    }
+  }
+}

@@ -1,0 +1,25 @@
+$btn-sizing-map: (
+  '': (
+    'height'   : $btn-height,
+    'font-size': $btn-font-size,
+    'padding'  : $btn-padding-y $btn-padding-x
+  ),
+
+  'xs': (
+    'height'   : $btn-xs-height,
+    'font-size': $btn-xs-font-size,
+    'padding'  : $btn-xs-padding-y $btn-xs-padding-x
+  ),
+
+  'sm': (
+    'height'   : $btn-sm-height,
+    'font-size': $btn-sm-font-size,
+    'padding'  : $btn-sm-padding-y $btn-sm-padding-x
+  ),
+
+  'md': (
+    'height'   : $btn-md-height,
+    'font-size': $btn-md-font-size,
+    'padding'  : $btn-md-padding-y $btn-md-padding-x
+  )
+);

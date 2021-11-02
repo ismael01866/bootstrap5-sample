@@ -1,0 +1,62 @@
+/*
+========================================
+Styles */
+
+@mixin btn-style-mixin($color) {
+  $color-lt    : lighten($color, 48%);
+  $color-dk    :  darken($color, 48%);
+
+  $color-text  : color-yiq($color, $color-dk, $color-lt);
+
+  $color-hover : darken($color, $brightness-hover);
+  $color-active: darken($color, $brightness-active);
+
+  background-color: $color;
+  border-color    : $color;
+  color           : $color-text;
+
+  &:hover {
+    background-color: $color-hover;
+    border-color    : $color-hover;
+  }
+
+  &:focus,
+  &:active {
+    background-color: $color-active;
+    border-color    : $color-active;
+  }
+}
+
+@mixin btn-style-outline-mixin($color) {
+  $color-lt    : lighten($color, 48%);
+  $color-dk    :  darken($color, 48%);
+
+  $color-text  : color-yiq($color);
+
+  $color-hover : darken($color, $brightness-hover);
+  $color-active: darken($color, $brightness-active);
+
+  border-color: $color;
+  color       : $color;
+
+  &:hover {
+    background-color: $color-hover;
+    border-color    : $color-hover;
+    color           : $color-text;
+  }
+
+  &:focus,
+  &:active {
+    background-color: $color-active;
+    border-color    : $color-active;
+    color           : $color-text;
+  }
+}
+
+/*
+========================================
+Sizing */
+
+@mixin btn-sizing-mixin($props) {
+  @each $name, $value in $props { #{$name}: #{$value}; }
+}

@@ -1,0 +1,29 @@
+.nav {
+  display      : flex;
+  flex-wrap    : wrap;
+  list-style   : none;
+  margin-bottom: 0;
+  padding-left : 0;
+}
+
+.nav-item {
+  align-items   : center;
+  display       : flex;
+  flex-direction: column;
+  padding       : $nav-item-padding-y $nav-item-padding-x;
+}
+
+.nav-link {
+  color: $nav-link-color;
+
+  &:hover,
+  &:focus,
+  &:active,
+  &.active {
+    color: $nav-link-hover-color;
+  }
+
+  &.active {
+    color: $nav-link-active-color;
+  }
+}

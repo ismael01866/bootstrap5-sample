@@ -1,0 +1,20 @@
+.btn {
+  border-radius  : $btn-border-radius;
+  border-style   : solid;
+  border-width   : $btn-border-width;
+  display        : inline-block;
+  font-weight    : $btn-font-weight;
+  text-align     : center;
+  text-decoration: none;
+  transition     : background $btn-transition-duration, border $btn-transition-duration, color $btn-transition-duration;
+
+  &:hover {
+    cursor         : pointer;
+    text-decoration: none;
+  }
+}
+
+.btn-block {
+  display: block;
+  width  : 100%;
+}

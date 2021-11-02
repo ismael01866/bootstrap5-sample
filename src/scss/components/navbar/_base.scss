@@ -1,0 +1,30 @@
+.navbar {
+  align-items    : center;
+  display        : flex;
+  flex-wrap      : wrap;
+  justify-content: space-between;
+  padding        : $navbar-padding-y $navbar-padding-x;
+  position       : relative;
+}
+
+.navbar-brand {
+  &:hover,
+  &:focus,
+  &:active {
+    color: $navbar-brand-hover-color;
+  }
+}
+
+.navbar-nav {
+  align-items  : center;
+  display      : flex;
+  list-style   : none;
+  margin-bottom: 0;
+  padding-left : 0;
+
+  .nav-link {
+    font-size: $navbar-nav-link-font-size;
+  }
+}
+
+
