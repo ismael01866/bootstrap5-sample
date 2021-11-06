@@ -19,8 +19,9 @@ strong {
 }
 
 p {
-  color      : var(--color-body);
-  line-height: var(--body-line-height);
+  color        : var(--color-body);
+  line-height  : var(--body-line-height);
+  margin-bottom: 0;
 
   + p {
     margin-top: var(--space-xs);

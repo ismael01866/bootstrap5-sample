@@ -1,0 +1,5 @@
+@each $value in ('40', '60', '80') {
+  .max-w-#{$value}-ch {
+    max-width: #{$value}ch;
+  }
+}

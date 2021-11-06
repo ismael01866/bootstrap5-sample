@@ -3,13 +3,7 @@ h2,
 h3,
 h4,
 h5,
-h6,
-.h1,
-.h2,
-.h3,
-.h4,
-.h5,
-.h6 {
+h6 {
   color        : var(--color-heading);
   font-family  : var(--font-family-heading);
   line-height  : var(--heading-line-height);
@@ -21,7 +15,7 @@ h1,
   font-size: var(--font-size-h1);
 
   + p {
-    margin-top: var(--space-md);
+    margin-top: var(--space-lg);
   }
 }
 
@@ -39,7 +33,7 @@ h3,
   font-size: var(--font-size-h3);
 
   + p {
-    margin-top: var(--space-base);
+    margin-top: var(--space-md);
   }
 }
 
@@ -57,7 +51,7 @@ h5,
   font-size: var(--font-size-h5);
 
   + p {
-    margin-top: var(--space-sm);
+    margin-top: var(--space-base);
   }
 }
 
@@ -65,6 +59,6 @@ h6,
 .h6 {
 
   + p {
-    margin-top: var(--space-xs);
+    margin-top: var(--space-sm);
   }
 }

@@ -1,11 +1,19 @@
-$component-space-base : 1rem;
+$component-brightness-base  : $brightness-base;
 
-$component-space-xs   : $component-space-base * .5;
-$component-space-sm   : $component-space-base * .75;
+$component-brightness-hover : $component-brightness-base * 2;
+$component-brightness-active: $component-brightness-base * 3;
 
-$component-height-unit: 1rem;
-$component-height-base: $component-height-unit * 2.5;
+$component-height-unit      : 1rem;
+$component-height-base      : $component-height-unit * 2.5;
 
-$component-height-xs  : $component-height-unit * 2;
-$component-height-sm  : $component-height-unit * 2.25;
-$component-height-md  : $component-height-unit * 3;
+$component-height-xs        : $component-height-unit * 2;
+$component-height-sm        : $component-height-unit * 2.25;
+$component-height-md        : $component-height-unit * 3;
+$component-height-lg        : $component-height-unit * 3.5;
+
+$component-space-base       : 1rem;
+
+$component-space-xs         : $component-space-base * .5;
+$component-space-sm         : $component-space-base * .75;
+$component-space-md         : $component-space-base * 1.5;
+$component-space-lg         : $component-space-base * 2.25;

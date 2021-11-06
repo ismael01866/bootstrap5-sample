@@ -2,18 +2,24 @@
 ========================================
 Styles */
 
-@mixin btn-style-mixin($color) {
-  $color-lt    : lighten($color, 48%);
-  $color-dk    :  darken($color, 48%);
+@mixin btn-style-mixin($name) {
+  $color      : var(--color-#{$name});
+  $color-yiq  : var(--color-#{$name}-yiq);
+  $color-rgb  : var(--color-#{$name}-rgb);
 
-  $color-text  : color-yiq($color, $color-dk, $color-lt);
+  $color-hover: rgba(
+    $color-rgb,
+    calc(100% - var(--component-brightness-hover))
+  );
 
-  $color-hover : darken($color, $brightness-hover);
-  $color-active: darken($color, $brightness-active);
+  $color-active: rgba(
+    $color-rgb,
+    calc(100% - var(--component-brightness-active))
+  );
 
   background-color: $color;
   border-color    : $color;
-  color           : $color-text;
+  color           : $color-yiq;
 
   &:hover {
     background-color: $color-hover;
@@ -27,14 +33,20 @@ Styles */
   }
 }
 
-@mixin btn-style-outline-mixin($color) {
-  $color-lt    : lighten($color, 48%);
-  $color-dk    :  darken($color, 48%);
+@mixin btn-style-outline-mixin($name) {
+  $color      : var(--color-#{$name});
+  $color-yiq  : var(--color-#{$name}-yiq);
+  $color-rgb  : var(--color-#{$name}-rgb);
 
-  $color-text  : color-yiq($color);
+  $color-hover: rgba(
+    $color-rgb,
+    calc(100% - var(--component-brightness-hover))
+  );
 
-  $color-hover : darken($color, $brightness-hover);
-  $color-active: darken($color, $brightness-active);
+  $color-active: rgba(
+    $color-rgb,
+    calc(100% - var(--component-brightness-active))
+  );
 
   border-color: $color;
   color       : $color;
@@ -42,14 +54,14 @@ Styles */
   &:hover {
     background-color: $color-hover;
     border-color    : $color-hover;
-    color           : $color-text;
+    color           : $color-yiq;
   }
 
   &:focus,
   &:active {
     background-color: $color-active;
     border-color    : $color-active;
-    color           : $color-text;
+    color           : $color-yiq;
   }
 }
 

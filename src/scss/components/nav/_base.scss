@@ -14,7 +14,8 @@
 }
 
 .nav-link {
-  color: $nav-link-color;
+  color     : $nav-link-color;
+  transition: color $nav-link-transition-duration;
 
   &:hover,
   &:focus,

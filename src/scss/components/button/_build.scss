@@ -2,13 +2,13 @@
 ========================================
 Styles */
 
-@each $name, $value in $color-styles-map {
+@each $name in $color-styles {
   .btn-#{$name} {
-    @include btn-style-mixin($value);
+    @include btn-style-mixin($name);
   }
 
   .btn-#{$name}-outline {
-    @include btn-style-outline-mixin($value);
+    @include btn-style-outline-mixin($name);
   }
 }
 
