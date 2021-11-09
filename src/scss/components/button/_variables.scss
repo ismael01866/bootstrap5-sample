@@ -7,21 +7,29 @@ $btn-transition-duration: var(--transition-duration-base);
 // sizing
 
 $btn-font-size          : var(--font-size-base);
+
 $btn-xs-font-size       : var(--font-size-xs);
 $btn-sm-font-size       : var(--font-size-sm);
 $btn-md-font-size       : var(--font-size-base);
+$btn-lg-font-size       : var(--font-size-base);
 
 $btn-height             : var(--component-height-base);
+
 $btn-xs-height          : var(--component-height-xs);
 $btn-sm-height          : var(--component-height-sm);
 $btn-md-height          : var(--component-height-md);
+$btn-lg-height          : var(--component-height-lg);
 
 $btn-padding-x          : var(--component-space-base);
+
 $btn-xs-padding-x       : var(--component-space-xs);
 $btn-sm-padding-x       : var(--component-space-sm);
 $btn-md-padding-x       : var(--component-space-base);
+$btn-lg-padding-x       : var(--component-space-base);
 
 $btn-padding-y          : 0;
+
 $btn-xs-padding-y       : 0;
 $btn-sm-padding-y       : 0;
 $btn-md-padding-y       : 0;
+$btn-lg-padding-y       : 0;

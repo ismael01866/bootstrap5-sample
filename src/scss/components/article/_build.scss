@@ -1,0 +1,15 @@
+/*
+========================================
+Sizing */
+
+@each $name, $props in $article-box-sizing-map {
+  @if ($name == '') {
+    .article-box {
+      @include article-box-sizing-mixin($props);
+    }
+  } @else {
+    .article-box-#{$name} {
+      @include article-box-sizing-mixin($props);
+    }
+  }
+}

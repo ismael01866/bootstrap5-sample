@@ -1,0 +1,26 @@
+$avatar-sizing-map: (
+  '': (
+    'height': $avatar-height,
+    'width' : $avatar-height
+  ),
+
+  'xs': (
+    'height': $avatar-xs-height,
+    'width' : $avatar-xs-height
+  ),
+
+  'sm': (
+    'height': $avatar-sm-height,
+    'width' : $avatar-sm-height
+  ),
+
+  'md': (
+    'height': $avatar-md-height,
+    'width' : $avatar-md-height
+  ),
+
+  'lg': (
+    'height': $avatar-lg-height,
+    'width' : $avatar-lg-height
+  )
+);

@@ -1,0 +1,7 @@
+/*
+========================================
+Sizing */
+
+@mixin avatar-sizing-mixin($props) {
+  @each $name, $value in $props { #{$name}: #{$value}; }
+}

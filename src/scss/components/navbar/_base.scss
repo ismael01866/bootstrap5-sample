@@ -8,6 +8,9 @@
 }
 
 .navbar-brand {
+  align-items: center;
+  display    : inline-flex;
+
   &:hover,
   &:focus,
   &:active {

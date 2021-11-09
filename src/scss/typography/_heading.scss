@@ -57,6 +57,7 @@ h5,
 
 h6,
 .h6 {
+  line-height  : var(--body-line-height);
 
   + p {
     margin-top: var(--space-sm);

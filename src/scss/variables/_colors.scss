@@ -1,15 +1,6 @@
 $color-black         : #000;
 $color-white         : #fff;
 
-$color-shade-1       : #fafafa;
-$color-shade-2       : darken($color-shade-1, $brightness-xs);
-$color-shade-3       : darken($color-shade-1, $brightness-sm);
-$color-shade-4       : darken($color-shade-1, $brightness-base);
-$color-shade-5       : darken($color-shade-1, $brightness-md);
-$color-shade-6       : darken($color-shade-1, $brightness-lg);
-$color-shade-7       : darken($color-shade-1, $brightness-xl);
-$color-shade-8       : darken($color-shade-1, $brightness-xxl);
-
 // style
 
 $color-primary       : #7c4dff;
@@ -18,11 +9,17 @@ $color-primary-yiq   : color-yiq($color-primary);
 $color-primary-lt    : lighten($color-primary, $brightness-xs);
 $color-primary-lter  : lighten($color-primary, $brightness-sm);
 
+$color-primary-dk    : darken($color-primary, $brightness-xs);
+$color-primary-dker  : darken($color-primary, $brightness-sm);
+
 $color-accent        : #00c853;
 $color-accent-yiq    : color-yiq($color-accent);
 
 $color-accent-lt     : lighten($color-accent, $brightness-xs);
 $color-accent-lter   : lighten($color-accent, $brightness-sm);
+
+$color-accent-dk     : darken($color-accent, $brightness-xs);
+$color-accent-dker   : darken($color-accent, $brightness-sm);
 
 // backgrounds
 
@@ -36,13 +33,13 @@ $color-bg-dker       : darken($color-bg, $brightness-sm);
 
 // borders
 
-$color-border        : $color-shade-5;
+$color-border        : #424242;
 
-$color-border-lt     : $color-shade-4;
-$color-border-lter   : $color-shade-3;
+$color-border-lt     : lighten($color-border, $brightness-xs);;
+$color-border-lter   : lighten($color-border, $brightness-sm);;
 
-$color-border-dk     : $color-shade-6;
-$color-border-dker   : $color-shade-7;
+$color-border-dk     : darken($color-border, $brightness-xs);
+$color-border-dker   : darken($color-border, $brightness-sm);
 
 // typography
 

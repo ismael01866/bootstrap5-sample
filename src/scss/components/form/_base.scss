@@ -1,0 +1,12 @@
+form {
+  &.has-validation {
+    &:invalid {
+      input,
+      button {
+        &[type='submit'] {
+          @include disabled;
+        }
+      }
+    }
+  }
+}

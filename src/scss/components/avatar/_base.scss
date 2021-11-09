@@ -1,0 +1,9 @@
+.avatar {
+  border-radius: $avatar-border-radius;
+  overflow     : hidden;
+  position     : relative;
+
+  img {
+    @include img-fit;
+  }
+}
