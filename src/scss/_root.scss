@@ -118,6 +118,14 @@
   --space-lg                   : #{$space-lg};
   --space-xl                   : #{$space-xl};
 
+  // Layout
+
+  --breakpoint-xs              : #{$breakpoint-xs};
+  --breakpoint-sm              : #{$breakpoint-sm};
+  --breakpoint-md              : #{$breakpoint-md};
+  --breakpoint-lg              : #{$breakpoint-lg};
+  --breakpoint-xl              : #{$breakpoint-xl};
+
   // Typography
 
   --font-family-base           : #{inspect($font-family-base)};

@@ -5,10 +5,11 @@ module.exports = {
   darkMode: false, // or 'media' or 'class'
   theme: {
     screens: {
-      sm: '576px',
-      md: '768px',
-      lg: '992px',
-      xl: '1200px'
+      sm : '576px',
+      md : '768px',
+      lg : '992px',
+      xl : '1200px',
+      xxl: '1400px'
     },
     extend: {
       colors: {
@@ -29,6 +30,10 @@ module.exports = {
         'accent-dk'   : 'var(--color-accent-dk)',
         'accent-lter' : 'var(--color-accent-lter)',
         'accent-dker' : 'var(--color-accent-dker)',
+
+        google        : 'var(--color-google)',
+        twitter       : 'var(--color-twitter)',
+        facebook      : 'var(--color-facebook)',
 
         body          : 'var(--color-body)',
         heading       : 'var(--color-heading)',
