@@ -7,7 +7,7 @@
   font-size      : $btn-font-size;
   font-weight    : $btn-font-weight;
   line-height    : 1;
-  padding        : $btn-padding;
+  padding        : $btn-padding-y $btn-padding-x;
   text-align     : center;
   text-decoration: none;
   transition     : background $btn-transition-duration, border $btn-transition-duration, color $btn-transition-duration;

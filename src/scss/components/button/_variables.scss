@@ -2,6 +2,7 @@ $btn-border-width       : var(--border-width-base);
 $btn-border-radius      : var(--border-radius-base);
 $btn-font-size          : var(--font-size-base);
 $btn-font-weight        : var(--font-weight-bold);
-$btn-padding            : var(--space-base);
+$btn-padding-x          : var(--space-base);
+$btn-padding-y          : 0;
 
 $btn-transition-duration: var(--transition-duration-base);

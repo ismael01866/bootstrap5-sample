@@ -1,7 +1,15 @@
 .avatar {
   border-radius: $avatar-border-radius;
+  box-sizing   : border-box;
+  display      : inline-block;
+  font-size    : $avatar-font-size;
+  font-weight  : $avatar-font-weight;
+  height       : $avatar-height;
+  line-height  : 1;
   overflow     : hidden;
   position     : relative;
+  text-align   : center;
+  width        : $avatar-width;
 
   img {
     @include img-fit;
