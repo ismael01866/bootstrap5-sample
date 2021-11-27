@@ -1,30 +1,30 @@
-$component-brightness-base  : 8%;
+$component-brightness-base  : 8% !default;
 
-$component-brightness-hover : $component-brightness-base * 2;
-$component-brightness-active: $component-brightness-base * 3;
+$component-brightness-hover : $component-brightness-base * 2 !default;
+$component-brightness-active: $component-brightness-base * 3 !default;
 
 // typography
 
-$component-font-scale       : 1.333; // Perfect Fourth
-$component-font-size-base   : 1rem;
+$component-font-scale       : 1.333 !default; // Perfect Fourth
+$component-font-size-base   : 1rem !default;
 
-$component-font-size-xs     : $component-font-size-base / ($component-font-scale * $component-font-scale);
-$component-font-size-sm     : $component-font-size-base / ($component-font-scale);
-$component-font-size-md     : $component-font-size-base;
-$component-font-size-lg     : $component-font-size-base;
+$component-font-size-xs     : $component-font-size-base / ($component-font-scale * $component-font-scale) !default;
+$component-font-size-sm     : $component-font-size-base / ($component-font-scale) !default;
+$component-font-size-md     : $component-font-size-base !default;
+$component-font-size-lg     : $component-font-size-base !default;
 
 // spacing
 
-$component-space-base       : 1rem;
+$component-space-base       : 1rem !default;
 
-$component-space-xs         : $component-space-base * .5;
-$component-space-sm         : $component-space-base * .75;
-$component-space-md         : $component-space-base * 1.5;
-$component-space-lg         : $component-space-base * 2.25;
+$component-space-xs         : $component-space-base * .5 !default;
+$component-space-sm         : $component-space-base * .75 !default;
+$component-space-md         : $component-space-base * 1.5 !default;
+$component-space-lg         : $component-space-base * 2.25 !default;
 
 // styling
 
-$component-styles          : ('primary', 'accent');
+$component-styles          : ('primary', 'accent') !default;
 $component-sizing-map      : (
   'xs': (
     'font-size': $component-font-size-xs,
@@ -45,4 +45,4 @@ $component-sizing-map      : (
     'font-size': $component-font-size-lg,
     'padding'  : $component-space-lg
   )
-)
+) !default;
