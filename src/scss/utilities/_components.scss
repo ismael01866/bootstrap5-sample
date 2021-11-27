@@ -31,10 +31,35 @@ Styles */
 ========================================
 Sizing */
 
-@each $name, $props in $component-sizing-map {
+@each $name, $props in $component-font-sizing-map {
   @if ($name != '') {
-    .component-#{$name} {
-      @include component-sizing-mixin($props);
+    .component-font-#{$name} {
+      @include map-props-mixin($props);
     }
   }
 }
+
+@each $name, $props in $component-padding-sizing-map {
+  @if ($name != '') {
+    .component-padding-#{$name} {
+      @include map-props-mixin($props);
+    }
+  }
+}
+
+@each $name, $props in $component-padding-x-sizing-map {
+  @if ($name != '') {
+    .component-padding-x-#{$name} {
+      @include map-props-mixin($props);
+    }
+  }
+}
+
+@each $name, $props in $component-font-sizing-map {
+  @if ($name != '') {
+    .component-size-#{$name} {
+      @include map-props-mixin($props);
+    }
+  }
+}
+

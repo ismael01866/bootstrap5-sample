@@ -40,12 +40,3 @@ Styles */
     border-color    : transparent;
   }
 }
-
-
-/*
-========================================
-Sizing */
-
-@mixin component-sizing-mixin($props) {
-  @each $name, $value in $props { #{$name}: #{$value}; }
-}

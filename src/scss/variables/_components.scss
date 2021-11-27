@@ -13,6 +13,15 @@ $component-font-size-sm     : $component-font-size-base / ($component-font-scale
 $component-font-size-md     : $component-font-size-base !default;
 $component-font-size-lg     : $component-font-size-base !default;
 
+// sizing
+
+$component-sizing-base      : 48px;
+
+$component-sizing-xs        : 24px;
+$component-sizing-sm        : 32px;
+$component-sizing-md        : 56px;
+$component-sizing-lg        : 64px;
+
 // spacing
 
 $component-space-base       : 1rem !default;
@@ -22,27 +31,59 @@ $component-space-sm         : $component-space-base * .75 !default;
 $component-space-md         : $component-space-base * 1.5 !default;
 $component-space-lg         : $component-space-base * 2.25 !default;
 
-// styling
+// maps
 
-$component-styles          : ('primary', 'accent') !default;
-$component-sizing-map      : (
+$component-styles: ('primary', 'accent') !default;
+
+$component-font-sizing-map: (
+  'xs': ('font-size': $component-font-size-xs),
+  'sm': ('font-size': $component-font-size-sm),
+  'md': ('font-size': $component-font-size-md),
+  'lg': ('font-size': $component-font-size-lg)
+) !default;
+
+$component-padding-sizing-map: (
+  'xs': ('padding': $component-space-xs),
+  'sm': ('padding': $component-space-sm),
+  'md': ('padding': $component-space-md),
+  'lg': ('padding': $component-space-lg)
+) !default;
+
+$component-padding-x-sizing-map: (
   'xs': (
-    'font-size': $component-font-size-xs,
-    'padding'  : $component-space-xs
+    'padding-left' : $component-space-xs,
+    'padding-right': $component-space-xs
   ),
-
   'sm': (
-    'font-size': $component-font-size-sm,
-    'padding'  : $component-space-sm
+    'padding-left' : $component-space-sm
+    'padding-right': $component-space-sm
   ),
-
   'md': (
-    'font-size': $component-font-size-md,
-    'padding'  : $component-space-md
+    'padding-left' : $component-space-md
+    'padding-right': $component-space-md
   ),
-
   'lg': (
-    'font-size': $component-font-size-lg,
-    'padding'  : $component-space-lg
+    'padding-left' : $component-space-lg
+    'padding-right': $component-space-lg
   )
 ) !default;
+
+$component-size-sizing-map: (
+  'xs': (
+    'height': $component-space-xs,
+    'width' : $component-space-xs
+  ),
+  'sm': (
+    'height': $component-space-sm
+    'width' : $component-space-sm
+  ),
+  'md': (
+    'height': $component-space-md
+    'width' : $component-space-md
+  ),
+  'lg': (
+    'height': $component-space-lg
+    'width' : $component-space-lg
+  )
+) !default;
+

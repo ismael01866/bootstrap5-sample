@@ -23,3 +23,7 @@
   display : $display;
   position: $pos;
 }
+
+@mixin map-props-mixin($props) {
+  @each $name, $value in $props { #{$name}: #{$value}; }
+}
