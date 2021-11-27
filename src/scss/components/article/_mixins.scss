@@ -1,7 +1,0 @@
-/*
-========================================
-Sizing */
-
-@mixin article-box-sizing-mixin($props) {
-  @each $name, $value in $props { #{$name}: #{$value}; }
-}

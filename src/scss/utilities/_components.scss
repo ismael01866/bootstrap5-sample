@@ -1,0 +1,40 @@
+/*
+========================================
+General */
+
+.component-block {
+  display: block;
+  width  : 100%;
+}
+
+/*
+========================================
+Styles */
+
+@each $name in $component-styles {
+  @if ($name != '') {
+    .component-#{$name} {
+      @include component-style-mixin($name);
+    }
+
+    .component-hover-#{$name} {
+      @include component-style-hover-mixin($name);
+    }
+
+    .component-active-#{$name} {
+      @include component-style-active-mixin($name);
+    }
+  }
+}
+
+/*
+========================================
+Sizing */
+
+@each $name, $props in $component-sizing-map {
+  @if ($name != '') {
+    .component-#{$name} {
+      @include component-sizing-mixin($props);
+    }
+  }
+}

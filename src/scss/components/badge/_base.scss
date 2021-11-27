@@ -1,0 +1,13 @@
+.badge {
+  border-radius: $badge-border-radius;
+  border-style : solid;
+  border-width : $badge-border-width;
+  box-sizing   : border-box;
+  display      : inline-block;
+  font-size    : $badge-font-size;
+  font-weight  : $badge-font-weight;
+  line-height  : 1;
+  padding      : $badge-padding;
+  text-align   : center;
+  white-space  : nowrap;
+}

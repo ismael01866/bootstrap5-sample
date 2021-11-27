@@ -2,8 +2,12 @@
   border-radius  : $btn-border-radius;
   border-style   : solid;
   border-width   : $btn-border-width;
+  box-sizing     : border-box;
   display        : inline-block;
+  font-size      : $btn-font-size;
   font-weight    : $btn-font-weight;
+  line-height    : 1;
+  padding        : $btn-padding;
   text-align     : center;
   text-decoration: none;
   transition     : background $btn-transition-duration, border $btn-transition-duration, color $btn-transition-duration;
@@ -12,9 +16,4 @@
     cursor         : pointer;
     text-decoration: none;
   }
-}
-
-.btn-block {
-  display: block;
-  width  : 100%;
 }

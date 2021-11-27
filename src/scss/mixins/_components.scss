@@ -1,0 +1,51 @@
+/*
+========================================
+Styles */
+
+@mixin component-style-mixin($name) {
+  $color    : var(--color-#{$name});
+  $color-yiq: var(--color-#{$name}-yiq);
+  $color-rgb: var(--color-#{$name}-rgb);
+
+  background-color: $color;
+  border-color    : $color;
+  color           : $color-yiq;
+}
+
+@mixin component-style-hover-mixin($name) {
+  $color-rgb: var(--color-#{$name}-rgb);
+
+  $color-hover: rgba(
+    $color-rgb,
+    calc(100% - var(--component-brightness-hover))
+  );
+
+  &:hover {
+    background-color: $color-hover;
+    border-color    : transparent;
+  }
+}
+
+@mixin component-style-active-mixin($name) {
+  $color-rgb: var(--color-#{$name}-rgb);
+
+  $color-active: rgba(
+    $color-rgb,
+    calc(100% - var(--component-brightness-active))
+  );
+
+  &:focus,
+  &:active {
+    background-color: $color-active;
+    border-color    : transparent;
+  }
+}
+
+
+/*
+========================================
+Sizing */
+
+@mixin component-sizing-mixin($props) {
+  @each $name, $value in $props { #{$name}: #{$value}; }
+}

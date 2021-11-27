@@ -1,15 +1,19 @@
-$component-brightness-base  : $brightness-base;
+$component-brightness-base  : 8%;
 
 $component-brightness-hover : $component-brightness-base * 2;
 $component-brightness-active: $component-brightness-base * 3;
 
-$component-height-unit      : 1rem;
-$component-height-base      : $component-height-unit * 2.5;
+// typography
 
-$component-height-xs        : $component-height-unit * 2;
-$component-height-sm        : $component-height-unit * 2.25;
-$component-height-md        : $component-height-unit * 3;
-$component-height-lg        : $component-height-unit * 3.5;
+$component-font-scale       : 1.333; // Perfect Fourth
+$component-font-size-base   : 1rem;
+
+$component-font-size-xs     : $component-font-size-base / ($component-font-scale * $component-font-scale);
+$component-font-size-sm     : $component-font-size-base / ($component-font-scale);
+$component-font-size-md     : $component-font-size-base;
+$component-font-size-lg     : $component-font-size-base;
+
+// spacing
 
 $component-space-base       : 1rem;
 
@@ -17,3 +21,28 @@ $component-space-xs         : $component-space-base * .5;
 $component-space-sm         : $component-space-base * .75;
 $component-space-md         : $component-space-base * 1.5;
 $component-space-lg         : $component-space-base * 2.25;
+
+// styling
+
+$component-styles          : ('primary', 'accent');
+$component-sizing-map      : (
+  'xs': (
+    'font-size': $component-font-size-xs,
+    'padding'  : $component-space-xs
+  ),
+
+  'sm': (
+    'font-size': $component-font-size-sm,
+    'padding'  : $component-space-sm
+  ),
+
+  'md': (
+    'font-size': $component-font-size-md,
+    'padding'  : $component-space-md
+  ),
+
+  'lg': (
+    'font-size': $component-font-size-lg,
+    'padding'  : $component-space-lg
+  )
+)
