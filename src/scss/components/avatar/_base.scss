@@ -5,7 +5,7 @@
   font-size    : $avatar-font-size;
   font-weight  : $avatar-font-weight;
   height       : $avatar-height;
-  line-height  : 1;
+  line-height  : $avatar-height;
   overflow     : hidden;
   position     : relative;
   text-align   : center;

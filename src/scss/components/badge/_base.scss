@@ -7,7 +7,7 @@
   font-size    : $badge-font-size;
   font-weight  : $badge-font-weight;
   height       : $badge-height;
-  line-height  : 1;
+  line-height  : $badge-height;
   padding      : $badge-padding-y $badge-padding-x;
   text-align   : center;
   white-space  : nowrap;

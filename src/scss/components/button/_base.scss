@@ -7,7 +7,7 @@
   font-size      : $btn-font-size;
   font-weight    : $btn-font-weight;
   height         : $btn-height;
-  line-height    : 1;
+  line-height    : $btn-height;
   padding        : $btn-padding-y $btn-padding-x;
   text-align     : center;
   text-decoration: none;
