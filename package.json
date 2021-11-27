@@ -1,5 +1,5 @@
 {
-  "name": "bootstrap_5_theme_a",
+  "name": "design-system-boilerplate",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -9,7 +9,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/ismael01866/bootstrap_5_theme_a.git"
+    "url": "git+https://github.com/ismael01866/design-system-boilerplate.git"
   },
   "author": "Ismael Mariscal",
   "license": "ISC",
