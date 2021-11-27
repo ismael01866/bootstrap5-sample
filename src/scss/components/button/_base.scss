@@ -12,6 +12,8 @@
   text-align     : center;
   text-decoration: none;
   transition     : background $btn-transition-duration, border $btn-transition-duration, color $btn-transition-duration;
+  vertical-align : middle;
+
 
   &:hover {
     cursor         : pointer;
