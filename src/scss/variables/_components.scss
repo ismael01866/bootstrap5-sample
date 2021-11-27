@@ -55,15 +55,15 @@ $component-padding-x-sizing-map: (
     'padding-right': $component-space-xs
   ),
   'sm': (
-    'padding-left' : $component-space-sm
+    'padding-left' : $component-space-sm,
     'padding-right': $component-space-sm
   ),
   'md': (
-    'padding-left' : $component-space-md
+    'padding-left' : $component-space-md,
     'padding-right': $component-space-md
   ),
   'lg': (
-    'padding-left' : $component-space-lg
+    'padding-left' : $component-space-lg,
     'padding-right': $component-space-lg
   )
 ) !default;
@@ -74,15 +74,15 @@ $component-size-sizing-map: (
     'width' : $component-space-xs
   ),
   'sm': (
-    'height': $component-space-sm
+    'height': $component-space-sm,
     'width' : $component-space-sm
   ),
   'md': (
-    'height': $component-space-md
+    'height': $component-space-md,
     'width' : $component-space-md
   ),
   'lg': (
-    'height': $component-space-lg
+    'height': $component-space-lg,
     'width' : $component-space-lg
   )
 ) !default;
