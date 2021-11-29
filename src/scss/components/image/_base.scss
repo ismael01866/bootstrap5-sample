@@ -1,13 +1,8 @@
+.img {
+  height: $img-height;
+}
+
 .img-fluid {
   height   : auto;
   max-width: 100%;
-}
-
-.figure {
-  display: inline-block;
-}
-
-.figure-img {
-  line-height  : 1;
-  margin-bottom: 0;
 }
