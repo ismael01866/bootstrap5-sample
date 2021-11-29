@@ -70,20 +70,20 @@ $component-padding-x-sizing-map: (
 
 $component-size-sizing-map: (
   'xs': (
-    'height': $component-space-xs,
-    'width' : $component-space-xs
+    'height': $component-size-xs,
+    'width' : $component-size-xs
   ),
   'sm': (
-    'height': $component-space-sm,
-    'width' : $component-space-sm
+    'height': $component-size-sm,
+    'width' : $component-size-sm
   ),
   'md': (
-    'height': $component-space-md,
-    'width' : $component-space-md
+    'height': $component-size-md,
+    'width' : $component-size-md
   ),
   'lg': (
-    'height': $component-space-lg,
-    'width' : $component-space-lg
+    'height': $component-size-lg,
+    'width' : $component-size-lg
   )
 ) !default;
 
