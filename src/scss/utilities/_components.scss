@@ -55,7 +55,7 @@ Sizing */
   }
 }
 
-@each $name, $props in $component-font-sizing-map {
+@each $name, $props in $component-size-sizing-map {
   @if ($name != '') {
     .component-size-#{$name} {
       @include map-props-mixin($props);
