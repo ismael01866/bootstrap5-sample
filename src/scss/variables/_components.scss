@@ -87,3 +87,19 @@ $component-size-sizing-map: (
   )
 ) !default;
 
+$component-gap-sizing-map: (
+  'xs': (
+    'gap': $component-size-xs
+  ),
+  'sm': (
+    'gap': $component-size-sm
+  ),
+  'md': (
+    'gap': $component-size-md
+  ),
+  'lg': (
+    'gap': $component-size-lg
+  )
+) !default;
+
+

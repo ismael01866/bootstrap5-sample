@@ -63,3 +63,16 @@ Sizing */
   }
 }
 
+/*
+========================================
+Spacing */
+
+@each $name, $props in $component-gap-sizing-map {
+  @if ($name != '') {
+    .component-gap-#{$name} {
+      @include map-props-mixin($props);
+    }
+  }
+}
+
+
