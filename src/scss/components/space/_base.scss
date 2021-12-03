@@ -1,4 +1,5 @@
 .space {
   display : inline-flex;
+  gap     : $space-gap;
   position: relative;
 }
