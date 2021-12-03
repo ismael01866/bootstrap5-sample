@@ -89,16 +89,16 @@ $component-size-sizing-map: (
 
 $component-gap-sizing-map: (
   'xs': (
-    'gap': $component-size-xs
+    'gap': 4px
   ),
   'sm': (
-    'gap': $component-size-sm
+    'gap': 8px
   ),
   'md': (
-    'gap': $component-size-md
+    'gap': 16px
   ),
   'lg': (
-    'gap': $component-size-lg
+    'gap': 20px
   )
 ) !default;
 
