@@ -2,18 +2,9 @@
 ========================================
 Styles */
 
-@mixin component-style-mixin($name) {
-  $color: var(--color-#{$name});
-  $color-yiq: var(--color-#{$name}-yiq);
-
-  background-color: $color;
-  border-color: $color;
-  color: $color-yiq;
-}
-
-@mixin component-lt-style-mixin($name) {
-  $color: var(--color-#{$name}-lt);
-  $color-yiq: var(--color-#{$name}-yiq);
+@mixin component-style-mixin($name, $variant: '') {
+  $color: var(--color-#{$name}#{$variant});
+  $color-yiq: var(--color-#{$name}#{$variant}-yiq);
 
   background-color: $color;
   border-color: $color;

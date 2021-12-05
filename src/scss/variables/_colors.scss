@@ -13,19 +13,25 @@ $color-primary-lter: lighten($color-primary, $brightness-sm) !default;
 $color-primary-lter-yiq: color-yiq($color-primary-lter) !default;
 
 $color-primary-dk: darken($color-primary, $brightness-xs) !default;
-$color-primary-dk-yiq: color-yiq($color-primary) !default;
+$color-primary-dk-yiq: color-yiq($color-primary-dk) !default;
 
 $color-primary-dker: darken($color-primary, $brightness-sm) !default;
-$color-primary-dker-yiw: color-yiq($color-primary) !default;
+$color-primary-dker-yiq: color-yiq($color-primary-dker) !default;
 
 $color-accent: #00c853 !default;
 $color-accent-yiq: color-yiq($color-accent) !default;
 
 $color-accent-lt: lighten($color-accent, $brightness-xs) !default;
+$color-accent-lt-yiq: color-yiq($color-accent-lt) !default;
+
 $color-accent-lter: lighten($color-accent, $brightness-sm) !default;
+$color-accent-lter-yiq: color-yiq($color-accent-lter) !default;
 
 $color-accent-dk: darken($color-accent, $brightness-xs) !default;
+$color-accent-dk-yiq: color-yiq($color-accent-dk) !default;
+
 $color-accent-dker: darken($color-accent, $brightness-sm) !default;
+$color-accent-dker-yiq: color-yiq($color-accent-dker) !default;
 
 // backgrounds
 
@@ -54,11 +60,13 @@ $color-link-hover: darken($color-link, $brightness-base) !default;
 $color-link-active: darken($color-link, $brightness-lg) !default;
 
 $color-heading: color-yiq($color-bg) !default;
+
 $color-body: color-yiq(
   $color-bg,
   lighten($color-heading, 40%),
   darken($color-heading, 40%)
 ) !default;
+
 $color-subtle: color-yiq(
   $color-bg,
   lighten($color-heading, 56%),
