@@ -17,8 +17,8 @@ Styles */
       @include component-style-mixin($name);
     }
 
-    .component-#{$name}-lt {
-      @include component-style-mixin($name, '-lt');
+    .component-#{$name}-lter {
+      @include component-style-lter-mixin($name);
     }
 
     .component-hover-#{$name} {

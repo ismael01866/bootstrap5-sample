@@ -2,11 +2,21 @@
 ========================================
 Styles */
 
-@mixin component-style-mixin($name, $variant: '') {
-  $color: var(--color-#{$name}#{$variant});
-  $color-yiq: var(--color-#{$name}#{$variant}-yiq);
+@mixin component-style-mixin($name) {
+  $color: var(--color-#{$name});
+  $color-yiq: var(--color-#{$name}-yiq);
 
   background-color: $color;
+  border-color: $color;
+  color: $color-yiq;
+}
+
+@mixin component-style-mixin($name) {
+  $color: var(--color-#{$name});
+  $color-lter: var(--color-#{$name}-lter);
+  $color-yiq: var(--color-#{$name}-lter-yiq);
+
+  background-color: $color-lter;
   border-color: $color;
   color: $color-yiq;
 }
