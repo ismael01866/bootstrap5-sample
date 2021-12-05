@@ -2,7 +2,7 @@
   font-size: var(--icon-size-base);
 }
 
-@each $name in ('xs', 'sm', 'md', 'lg', 'xl', 'xxl') {
+@each $name in ("xs", "sm", "md", "lg", "xl", "xxl") {
   .icon-#{$name} {
     font-size: var(--icon-size-#{$name});
   }

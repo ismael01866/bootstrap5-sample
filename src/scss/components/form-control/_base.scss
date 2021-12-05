@@ -1,14 +1,14 @@
 .form-control {
-  appearance      : none;
+  appearance: none;
   background-color: $form-control-bg-color;
-  border          : $form-control-border-width solid $form-control-border-color;
-  border-radius   : $form-control-border-radius;
-  color           : $form-control-color;
-  display         : block;
-  width           : 100%;
+  border: $form-control-border-width solid $form-control-border-color;
+  border-radius: $form-control-border-radius;
+  color: $form-control-color;
+  display: block;
+  width: 100%;
 
   &::placeholder {
-    color  : $form-control-placeholder-color;
+    color: $form-control-placeholder-color;
     opacity: 1;
   }
 

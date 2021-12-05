@@ -1,16 +1,16 @@
 .avatar {
-  border-radius : $avatar-border-radius;
-  box-sizing    : border-box;
-  display       : inline-block;
-  font-size     : $avatar-font-size;
-  font-weight   : $avatar-font-weight;
-  height        : $avatar-height;
-  line-height   : $avatar-height;
-  overflow      : hidden;
-  position      : relative;
-  text-align    : center;
+  border-radius: $avatar-border-radius;
+  box-sizing: border-box;
+  display: inline-block;
+  font-size: $avatar-font-size;
+  font-weight: $avatar-font-weight;
+  height: $avatar-height;
+  line-height: $avatar-height;
+  overflow: hidden;
+  position: relative;
+  text-align: center;
   vertical-align: middle;
-  width         : $avatar-width;
+  width: $avatar-width;
 
   img {
     @include img-fit;

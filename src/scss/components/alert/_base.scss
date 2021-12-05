@@ -1,0 +1,10 @@
+.alert {
+  border-radius: $alert-border-radius;
+  border-style: solid;
+  border-width: $alert-border-width;
+  box-sizing: border-box;
+  display: flex;
+  font-size: $alert-font-size;
+  font-weight: $alert-font-weight;
+  padding: $alert-padding-y $alert-padding-x;
+}

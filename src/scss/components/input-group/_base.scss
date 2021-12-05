@@ -1,25 +1,25 @@
 .input-group {
   align-items: stretch;
-  display    : flex;
-  flex-wrap  : wrap;
-  position   : relative;
-  width      : 100%;
+  display: flex;
+  flex-wrap: wrap;
+  position: relative;
+  width: 100%;
 
   .form-control {
-    flex     : 1 1 auto;
+    flex: 1 1 auto;
     min-width: 0;
-    position : relative;
-    width    : 1%;
+    position: relative;
+    width: 1%;
   }
 
   > :not(:first-child) {
     border-bottom-left-radius: 0;
-    border-top-left-radius   : 0;
-    margin-left              : -1px;
+    border-top-left-radius: 0;
+    margin-left: -1px;
   }
 
   > :not(:last-child) {
     border-bottom-right-radius: 0;
-    border-top-right-radius   : 0;
+    border-top-right-radius: 0;
   }
 }

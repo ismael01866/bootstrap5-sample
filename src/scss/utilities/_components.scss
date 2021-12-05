@@ -4,7 +4,7 @@ General */
 
 .component-block {
   display: block;
-  width  : 100%;
+  width: 100%;
 }
 
 /*
@@ -12,7 +12,27 @@ General */
 Styles */
 
 @each $name in $component-styles {
-  @if ($name != '') {
+  @if ($name != "") {
+    .component-#{$name} {
+      @include component-style-mixin($name);
+    }
+
+    .component-lt-#{$name} {
+      @include component-lt-style-mixin($name);
+    }
+
+    .component-hover-#{$name} {
+      @include component-style-hover-mixin($name);
+    }
+
+    .component-active-#{$name} {
+      @include component-style-active-mixin($name);
+    }
+  }
+}
+
+@each $name in $component-styles {
+  @if ($name != "") {
     .component-#{$name} {
       @include component-style-mixin($name);
     }
@@ -32,7 +52,7 @@ Styles */
 Sizing */
 
 @each $name, $props in $component-font-sizing-map {
-  @if ($name != '') {
+  @if ($name != "") {
     .component-font-#{$name} {
       @include map-props-mixin($props);
     }
@@ -40,7 +60,7 @@ Sizing */
 }
 
 @each $name, $props in $component-padding-sizing-map {
-  @if ($name != '') {
+  @if ($name != "") {
     .component-padding-#{$name} {
       @include map-props-mixin($props);
     }
@@ -48,7 +68,7 @@ Sizing */
 }
 
 @each $name, $props in $component-padding-x-sizing-map {
-  @if ($name != '') {
+  @if ($name != "") {
     .component-padding-x-#{$name} {
       @include map-props-mixin($props);
     }
@@ -56,7 +76,7 @@ Sizing */
 }
 
 @each $name, $props in $component-size-sizing-map {
-  @if ($name != '') {
+  @if ($name != "") {
     .component-size-#{$name} {
       @include map-props-mixin($props);
     }
@@ -68,11 +88,9 @@ Sizing */
 Spacing */
 
 @each $name, $props in $component-gap-sizing-map {
-  @if ($name != '') {
+  @if ($name != "") {
     .component-gap-#{$name} {
       @include map-props-mixin($props);
     }
   }
 }
-
-

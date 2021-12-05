@@ -3,7 +3,7 @@ form {
     &:invalid {
       input,
       button {
-        &[type='submit'] {
+        &[type="submit"] {
           @include disabled;
         }
       }

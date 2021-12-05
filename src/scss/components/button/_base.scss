@@ -1,21 +1,21 @@
 .btn {
-  border-radius  : $btn-border-radius;
-  border-style   : solid;
-  border-width   : $btn-border-width;
-  box-sizing     : border-box;
-  font-size      : $btn-font-size;
-  font-weight    : $btn-font-weight;
-  height         : $btn-height;
-  line-height    : $btn-height;
-  padding        : $btn-padding-y $btn-padding-x;
-  text-align     : center;
+  border-radius: $btn-border-radius;
+  border-style: solid;
+  border-width: $btn-border-width;
+  box-sizing: border-box;
+  font-size: $btn-font-size;
+  font-weight: $btn-font-weight;
+  height: $btn-height;
+  line-height: $btn-height;
+  padding: $btn-padding-y $btn-padding-x;
+  text-align: center;
   text-decoration: none;
-  transition     : background $btn-transition-duration, border $btn-transition-duration, color $btn-transition-duration;
-  vertical-align : middle;
-
+  transition: background $btn-transition-duration,
+    border $btn-transition-duration, color $btn-transition-duration;
+  vertical-align: middle;
 
   &:hover {
-    cursor         : pointer;
+    cursor: pointer;
     text-decoration: none;
   }
 }

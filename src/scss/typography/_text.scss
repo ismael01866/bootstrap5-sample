@@ -1,15 +1,15 @@
 a {
-  color          : var(--color-link);
+  color: var(--color-link);
   text-decoration: none;
 
   &:hover,
   &:focus {
-    color : var(--color-link-hover);
+    color: var(--color-link-hover);
     cursor: pointer;
   }
 
   &.active {
-    color : var(--color-link-active);
+    color: var(--color-link-active);
   }
 }
 
@@ -19,8 +19,8 @@ strong {
 }
 
 p {
-  color        : var(--color-body);
-  line-height  : var(--body-line-height);
+  color: var(--color-body);
+  line-height: var(--body-line-height);
   margin-bottom: 0;
 
   + p {

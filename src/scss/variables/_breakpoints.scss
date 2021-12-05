@@ -1,15 +1,15 @@
-$breakpoint-xs : 0 !default;
-$breakpoint-sm : 576px !default;
-$breakpoint-md : 768px !default;
-$breakpoint-lg : 992px !default;
-$breakpoint-xl : 1200px !default;
+$breakpoint-xs: 0 !default;
+$breakpoint-sm: 576px !default;
+$breakpoint-md: 768px !default;
+$breakpoint-lg: 992px !default;
+$breakpoint-xl: 1200px !default;
 $breakpoint-xxl: 1400px !default;
 
 $breakpoints-map: (
-  xs : $breakpoint-xs,
-  sm : $breakpoint-sm,
-  md : $breakpoint-md,
-  lg : $breakpoint-lg,
-  xl : $breakpoint-xl,
-  xxl: $breakpoint-xxl
+  xs: $breakpoint-xs,
+  sm: $breakpoint-sm,
+  md: $breakpoint-md,
+  lg: $breakpoint-lg,
+  xl: $breakpoint-xl,
+  xxl: $breakpoint-xxl,
 ) !default;

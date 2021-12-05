@@ -1,0 +1,9 @@
+dist
+node_modules
+
+# Ignore all but style files:
+*.html
+*.json
+*.js
+*.md
+*.yml

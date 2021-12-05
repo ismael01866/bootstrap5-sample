@@ -5,7 +5,7 @@
 
 @function breakpoint-max($name, $breakpoints: $breakpoints-map) {
   $max: map-get($breakpoints, $name);
-  @return if($max and $max > 0, $max - .02, null);
+  @return if($max and $max > 0, $max - 0.02, null);
 }
 
 @mixin media-breakpoint-up($name, $breakpoints: $breakpoints-map) {
@@ -30,7 +30,11 @@
   }
 }
 
-@mixin media-breakpoint-between($lower, $upper, $breakpoints: $breakpoints-map) {
+@mixin media-breakpoint-between(
+  $lower,
+  $upper,
+  $breakpoints: $breakpoints-map
+) {
   $min: breakpoint-min($lower, $breakpoints);
   $max: breakpoint-max($upper, $breakpoints);
 
@@ -50,9 +54,9 @@
 }
 
 @mixin media-breakpoint-only($name, $breakpoints: $breakpoints-map) {
-  $min:  breakpoint-min($name, $breakpoints);
+  $min: breakpoint-min($name, $breakpoints);
   $next: breakpoint-next($name, $breakpoints);
-  $max:  breakpoint-max($next);
+  $max: breakpoint-max($next);
 
   @if $min != null and $max != null {
     @media (min-width: $min) and (max-width: $max) {

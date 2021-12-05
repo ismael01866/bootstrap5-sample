@@ -1,15 +1,15 @@
 .badge {
-  border-radius : $badge-border-radius;
-  border-style  : solid;
-  border-width  : $badge-border-width;
-  box-sizing    : border-box;
-  display       : inline-block;
-  font-size     : $badge-font-size;
-  font-weight   : $badge-font-weight;
-  height        : $badge-height;
-  line-height   : $badge-height;
-  padding       : $badge-padding-y $badge-padding-x;
-  text-align    : center;
+  border-radius: $badge-border-radius;
+  border-style: solid;
+  border-width: $badge-border-width;
+  box-sizing: border-box;
+  display: inline-block;
+  font-size: $badge-font-size;
+  font-weight: $badge-font-weight;
+  height: $badge-height;
+  line-height: $badge-height;
+  padding: $badge-padding-y $badge-padding-x;
+  text-align: center;
   vertical-align: middle;
-  white-space   : nowrap;
+  white-space: nowrap;
 }

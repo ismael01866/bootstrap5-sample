@@ -3,13 +3,21 @@
 Styles */
 
 @mixin component-style-mixin($name) {
-  $color    : var(--color-#{$name});
+  $color: var(--color-#{$name});
   $color-yiq: var(--color-#{$name}-yiq);
-  $color-rgb: var(--color-#{$name}-rgb);
 
   background-color: $color;
-  border-color    : $color;
-  color           : $color-yiq;
+  border-color: $color;
+  color: $color-yiq;
+}
+
+@mixin component-lt-style-mixin($name) {
+  $color: var(--color-#{$name}-lt);
+  $color-yiq: var(--color-#{$name}-yiq);
+
+  background-color: $color;
+  border-color: $color;
+  color: $color-yiq;
 }
 
 @mixin component-style-hover-mixin($name) {
@@ -22,7 +30,7 @@ Styles */
 
   &:hover {
     background-color: $color-hover;
-    border-color    : transparent;
+    border-color: transparent;
   }
 }
 
@@ -37,7 +45,7 @@ Styles */
   &:focus,
   &:active {
     background-color: $color-active;
-    border-color    : transparent;
+    border-color: transparent;
   }
 }
 
