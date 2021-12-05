@@ -11,7 +11,7 @@ Styles */
   color: $color-yiq;
 }
 
-@mixin component-style-mixin($name) {
+@mixin component-style-lter-mixin($name) {
   $color: var(--color-#{$name});
   $color-lter: var(--color-#{$name}-lter);
   $color-yiq: var(--color-#{$name}-lter-yiq);
