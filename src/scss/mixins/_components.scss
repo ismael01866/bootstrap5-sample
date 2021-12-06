@@ -11,12 +11,12 @@ Styles */
   color: $color-yiq;
 }
 
-@mixin component-style-lter-mixin($name) {
+@mixin component-style-subtle-mixin($name) {
   $color: var(--color-#{$name});
-  $color-lter: var(--color-#{$name}-lter);
-  $color-yiq: var(--color-#{$name}-lter-yiq);
+  $color-subtle: var(--color-#{$name}-subtle);
+  $color-yiq: var(--color-#{$name}-subtle-yiq);
 
-  background-color: $color-lter;
+  background-color: $color-subtle;
   border-color: $color;
   color: $color-yiq;
 }

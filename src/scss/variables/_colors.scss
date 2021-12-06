@@ -7,31 +7,44 @@ $color-primary: #7c4dff !default;
 $color-primary-yiq: color-yiq($color-primary) !default;
 
 $color-primary-lt: lighten($color-primary, $brightness-xs) !default;
-$color-primary-lt-yiq: color-yiq($color-primary-lt) !default;
-
 $color-primary-lter: lighten($color-primary, $brightness-sm) !default;
-$color-primary-lter-yiq: color-yiq($color-primary-lter) !default;
 
 $color-primary-dk: darken($color-primary, $brightness-xs) !default;
-$color-primary-dk-yiq: color-yiq($color-primary-dk) !default;
-
 $color-primary-dker: darken($color-primary, $brightness-sm) !default;
-$color-primary-dker-yiq: color-yiq($color-primary-dker) !default;
 
 $color-accent: #00c853 !default;
 $color-accent-yiq: color-yiq($color-accent) !default;
 
 $color-accent-lt: lighten($color-accent, $brightness-xs) !default;
-$color-accent-lt-yiq: color-yiq($color-accent-lt) !default;
-
 $color-accent-lter: lighten($color-accent, $brightness-sm) !default;
-$color-accent-lter-yiq: color-yiq($color-accent-lter) !default;
 
 $color-accent-dk: darken($color-accent, $brightness-xs) !default;
-$color-accent-dk-yiq: color-yiq($color-accent-dk) !default;
-
 $color-accent-dker: darken($color-accent, $brightness-sm) !default;
-$color-accent-dker-yiq: color-yiq($color-accent-dker) !default;
+
+// -- status colors
+
+$color-success: #4caf50 !default;
+$color-success-yiq: color-yiq($color-success) !default;
+
+$color-success-lt: lighten($color-success, $brightness-xs) !default;
+$color-success-lter: lighten($color-success, $brightness-sm) !default;
+
+$color-success-dk: darken($color-success, $brightness-xs) !default;
+$color-success-dker: darken($color-success, $brightness-sm) !default;
+
+// -- subtle colors
+
+$color-success-subtle: #e8f5e9 !default;
+$color-success-subtle-yiq: color-yiq($color-success-subtle) !default;
+
+$color-info-subtle: #e3f2fd !default;
+$color-info-subtle-yiq: color-yiq($color-info-subtle) !default;
+
+$color-warning-subtle: #fffde7 !default;
+$color-warning-subtle-yiq: color-yiq($color-warning-subtle) !default;
+
+$color-error-subtle: #ffebee !default;
+$color-error-subtle-yiq: color-yiq($color-error-subtle) !default;
 
 // backgrounds
 

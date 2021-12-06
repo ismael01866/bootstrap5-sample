@@ -95,6 +95,34 @@
   --color-accent-dker-yiq: #{$color-accent-dker-yiq};
   --color-accent-dker-rgb: #{color-hex-to-rgb($color-accent-dker)};
 
+  // status
+
+  --color-success: #{$color-success};
+  --color-success-yiq: #{$color-success-yiq};
+
+  --color-success-subtle: #{$color-success-subtle};
+  --color-success-subtle-yiq: #{$color-success-subtle-yiq};
+
+  --color-info: #{$color-info};
+  --color-info-yiq: #{$color-info-yiq};
+
+  --color-info-subtle: #{$color-info-subtle};
+  --color-info-subtle-yiq: #{$color-info-subtle-yiq};
+
+  --color-warning: #{$color-warning};
+  --color-warning-yiq: #{$color-warning-yiq};
+
+  --color-warning-subtle: #{$color-warning-subtle};
+  --color-warning-subtle-yiq: #{$color-warning-subtle-yiq};
+
+  --color-error: #{$color-error};
+  --color-error-yiq: #{$color-error-yiq};
+
+  --color-error-subtle: #{$color-error-subtle};
+  --color-error-subtle-yiq: #{$color-error-subtle-yiq};
+
+  // vendor
+
   --color-google: #{$color-google};
   --color-twitter: #{$color-twitter};
   --color-facebook: #{$color-facebook};
