@@ -60,40 +60,20 @@
   --color-primary-rgb: #{color-hex-to-rgb($color-primary)};
 
   --color-primary-lt: #{$color-primary-lt};
-  --color-primary-lt-yiq: #{$color-primary-lt-yiq};
-  --color-primary-lt-rgb: #{color-hex-to-rgb($color-primary-lt)};
-
   --color-primary-lter: #{$color-primary-lter};
-  --color-primary-lter-yiq: #{$color-primary-lter-yiq};
-  --color-primary-lter-rgb: #{color-hex-to-rgb($color-primary-lter)};
 
   --color-primary-dk: #{$color-primary-dk};
-  --color-primary-dk-yiq: #{$color-primary-dk-yiq};
-  --color-primary-dk-rgb: #{color-hex-to-rgb($color-primary-dk)};
-
   --color-primary-dker: #{$color-primary-dker};
-  --color-primary-dker-yiq: #{$color-primary-dker-yiq};
-  --color-primary-dker-rgb: #{color-hex-to-rgb($color-primary-dker)};
 
   --color-accent: #{$color-accent};
   --color-accent-yiq: #{$color-accent-yiq};
   --color-accent-rgb: #{color-hex-to-rgb($color-accent)};
 
   --color-accent-lt: #{$color-accent-lt};
-  --color-accent-lt-yiq: #{$color-accent-lt-yiq};
-  --color-accent-lt-rgb: #{color-hex-to-rgb($color-accent-lt)};
-
   --color-accent-lter: #{$color-accent-lter};
-  --color-accent-lter-yiq: #{$color-accent-lter-yiq};
-  --color-accent-lter-rgb: #{color-hex-to-rgb($color-accent-lter)};
 
   --color-accent-dk: #{$color-accent-dk};
-  --color-accent-dk-yiq: #{$color-accent-dk-yiq};
-  --color-accent-dk-rgb: #{color-hex-to-rgb($color-accent-dk)};
-
   --color-accent-dker: #{$color-accent-dker};
-  --color-accent-dker-yiq: #{$color-accent-dker-yiq};
-  --color-accent-dker-rgb: #{color-hex-to-rgb($color-accent-dker)};
 
   // status
 
