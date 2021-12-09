@@ -1,7 +1,5 @@
-$badge-border-radius: var(--border-radius-base);
-$badge-border-width: var(--component-border-width-base);
-$badge-font-size: var(--component-font-size-base);
-$badge-font-weight: var(--font-weight-bold);
-$badge-height: var(--component-size-base);
-$badge-padding-x: var(--component-space-base);
-$badge-padding-y: 0;
+$badge-border-radius: var(--border-radius-base) !default;
+$badge-border-width : var(--component-border-width-base) !default;
+$badge-font-weight  : var(--font-weight-bold) !default;
+
+$badge-sizes: ('xs', 'sm') !default;

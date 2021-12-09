@@ -59,23 +59,14 @@
   --color-primary-yiq: #{$color-primary-yiq};
   --color-primary-rgb: #{color-hex-to-rgb($color-primary)};
 
-  // --color-primary-lt: #{$color-primary-lt};
-  // --color-primary-lter: #{$color-primary-lter};
-
-  // --color-primary-dk: #{$color-primary-dk};
-  // --color-primary-dker: #{$color-primary-dker};
-
   --color-accent: #{$color-accent};
   --color-accent-yiq: #{$color-accent-yiq};
   --color-accent-rgb: #{color-hex-to-rgb($color-accent)};
 
-  // --color-accent-lt: #{$color-accent-lt};
-  // --color-accent-lter: #{$color-accent-lter};
-
-  // --color-accent-dk: #{$color-accent-dk};
-  // --color-accent-dker: #{$color-accent-dker};
-
   // status
+
+  --color-default: #{$color-default};
+  --color-default-yiq: #{$color-default-yiq};
 
   --color-success: #{$color-success};
   --color-success-yiq: #{$color-success-yiq};

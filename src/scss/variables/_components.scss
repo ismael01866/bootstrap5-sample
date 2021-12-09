@@ -10,8 +10,7 @@ $component-border-width-base: 1px;
 $component-font-scale: 1.333 !default; // Perfect Fourth
 $component-font-size-base: 1rem !default;
 
-$component-font-size-xs: $component-font-size-base /
-  ($component-font-scale * $component-font-scale) !default;
+$component-font-size-xs: $component-font-size-base / ($component-font-scale * $component-font-scale) !default;
 $component-font-size-sm: $component-font-size-base / ($component-font-scale) !default;
 $component-font-size-md: $component-font-size-base !default;
 $component-font-size-lg: $component-font-size-base !default;
@@ -27,18 +26,30 @@ $component-size-lg: 64px;
 
 // spacing
 
-$component-space-base: 1rem !default;
+$component-space-base: 1em !default;
 
 $component-space-xs: $component-space-base * 0.5 !default;
 $component-space-sm: $component-space-base * 0.75 !default;
 $component-space-md: $component-space-base * 1.5 !default;
 $component-space-lg: $component-space-base * 2.25 !default;
 
+$component-gap-base: .75em !default;
+
+$component-gap-xs: $component-gap-base * 0.375 !default;
+$component-gap-sm: $component-gap-base * 0.5 !default;
+$component-gap-md: $component-gap-base * 1.5 !default;
+$component-gap-lg: $component-gap-base * 2.25 !default;
+
 // maps
 
-$component-styles: ("primary", "accent") !default;
+$component-styles: (
+  "default", "primary", "accent", "success", "info", "warning", "error"
+) !default;
 
 $component-font-sizing-map: (
+  "base": (
+    "font-size": $component-font-size-base,
+  ),
   "xs": (
     "font-size": $component-font-size-xs,
   ),
@@ -53,7 +64,64 @@ $component-font-sizing-map: (
   ),
 ) !default;
 
+$component-gap-sizing-map: (
+  "base": (
+    "gap": $component-gap-base,
+  ),
+  "xs": (
+    "gap": $component-gap-xs,
+  ),
+  "sm": (
+    "gap": $component-gap-sm,
+  ),
+  "md": (
+    "gap": $component-gap-md,
+  ),
+  "lg": (
+    "gap": $component-gap-lg,
+  ),
+) !default;
+
+$component-height-sizing-map: (
+  "base": (
+    "height": $component-size-base
+  ),
+  "xs": (
+    "height": $component-size-xs
+  ),
+  "sm": (
+    "height": $component-size-sm
+  ),
+  "md": (
+    "height": $component-size-md
+  ),
+  "lg": (
+    "height": $component-size-lg
+  ),
+) !default;
+
+$component-margin-sizing-map: (
+  "base": (
+    "margin": $component-space-base,
+  ),
+  "xs": (
+    "margin": $component-space-xs,
+  ),
+  "sm": (
+    "margin": $component-space-sm,
+  ),
+  "md": (
+    "margin": $component-space-md,
+  ),
+  "lg": (
+    "margin": $component-space-lg,
+  ),
+) !default;
+
 $component-padding-sizing-map: (
+  "base": (
+    "padding": $component-space-base,
+  ),
   "xs": (
     "padding": $component-space-xs,
   ),
@@ -69,6 +137,10 @@ $component-padding-sizing-map: (
 ) !default;
 
 $component-padding-x-sizing-map: (
+  "base": (
+    "padding-left": $component-space-base,
+    "padding-right": $component-space-base,
+  ),
   "xs": (
     "padding-left": $component-space-xs,
     "padding-right": $component-space-xs,
@@ -88,6 +160,10 @@ $component-padding-x-sizing-map: (
 ) !default;
 
 $component-size-sizing-map: (
+  "base": (
+    "height": $component-size-base,
+    "width": $component-size-base,
+  ),
   "xs": (
     "height": $component-size-xs,
     "width": $component-size-xs,
@@ -103,20 +179,5 @@ $component-size-sizing-map: (
   "lg": (
     "height": $component-size-lg,
     "width": $component-size-lg,
-  ),
-) !default;
-
-$component-gap-sizing-map: (
-  "xs": (
-    "gap": 4px,
-  ),
-  "sm": (
-    "gap": 8px,
-  ),
-  "md": (
-    "gap": 16px,
-  ),
-  "lg": (
-    "gap": 20px,
   ),
 ) !default;

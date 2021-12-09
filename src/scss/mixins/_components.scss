@@ -1,5 +1,13 @@
 /*
 ========================================
+Spacing */
+
+@mixin component-gap-mixin($name) {
+  gap: var(--component-space-#{$name});
+}
+
+/*
+========================================
 Styles */
 
 @mixin component-style-mixin($name) {
@@ -48,8 +56,4 @@ Styles */
     background-color: $color-active;
     border-color: transparent;
   }
-}
-
-@mixin component-gap-mixin($name) {
-  gap: var(--component-space-#{$name});
 }

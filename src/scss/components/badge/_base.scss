@@ -1,15 +1,49 @@
 .badge {
+  align-items: center;
   border-radius: $badge-border-radius;
   border-style: solid;
   border-width: $badge-border-width;
   box-sizing: border-box;
-  display: inline-block;
-  font-size: $badge-font-size;
+  display: inline-flex;
   font-weight: $badge-font-weight;
-  height: $badge-height;
-  line-height: $badge-height;
-  padding: $badge-padding-y $badge-padding-x;
-  text-align: center;
   vertical-align: middle;
-  white-space: nowrap;
+}
+
+@each $size in $badge-sizes {
+  .badge-#{$size} {
+    @include map-props-mixin(
+      map-get($component-font-sizing-map, $size)
+    );
+
+    @include map-props-mixin(
+      map-get($component-gap-sizing-map, $size)
+    );
+
+    @include map-props-mixin(
+      map-get($component-height-sizing-map, $size)
+    );
+
+    @include map-props-mixin(
+      map-get($component-padding-sizing-map, $size)
+    );
+  }
+}
+
+.badge-image {
+  height: 100%;
+
+  img {
+    height: 100%;
+  }
+}
+
+@each $size in $badge-sizes {
+  $props: map-get($component-gap-sizing-map, $size);
+
+  .badge-image-#{$size} {
+    $gap: (map-get($props, "gap"));
+
+    height: calc(100% + #{$gap * 2});
+    margin: -#{$gap} #{$gap / 2} -#{$gap} -#{$gap};
+  }
 }

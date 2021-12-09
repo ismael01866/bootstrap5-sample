@@ -9,6 +9,47 @@ General */
 
 /*
 ========================================
+Sizing */
+
+@each $name, $props in $component-font-sizing-map {
+  .component-font-#{$name} {
+    @include map-props-mixin($props);
+  }
+}
+
+@each $name, $props in $component-gap-sizing-map {
+  .component-gap-#{$name} {
+    @include map-props-mixin($props);
+  }
+}
+
+
+@each $name, $props in $component-height-sizing-map {
+  .component-height-#{$name} {
+    @include map-props-mixin($props);
+  }
+}
+
+@each $name, $props in $component-padding-sizing-map {
+  .component-padding-#{$name} {
+    @include map-props-mixin($props);
+  }
+}
+
+@each $name, $props in $component-padding-x-sizing-map {
+  .component-padding-x-#{$name} {
+    @include map-props-mixin($props);
+  }
+}
+
+@each $name, $props in $component-size-sizing-map {
+  .component-size-#{$name} {
+    @include map-props-mixin($props);
+  }
+}
+
+/*
+========================================
 Styles */
 
 @each $name in $component-styles {
@@ -43,54 +84,6 @@ Styles */
 
     .component-active-#{$name} {
       @include component-style-active-mixin($name);
-    }
-  }
-}
-
-/*
-========================================
-Sizing */
-
-@each $name, $props in $component-font-sizing-map {
-  @if ($name != "") {
-    .component-font-#{$name} {
-      @include map-props-mixin($props);
-    }
-  }
-}
-
-@each $name, $props in $component-padding-sizing-map {
-  @if ($name != "") {
-    .component-padding-#{$name} {
-      @include map-props-mixin($props);
-    }
-  }
-}
-
-@each $name, $props in $component-padding-x-sizing-map {
-  @if ($name != "") {
-    .component-padding-x-#{$name} {
-      @include map-props-mixin($props);
-    }
-  }
-}
-
-@each $name, $props in $component-size-sizing-map {
-  @if ($name != "") {
-    .component-size-#{$name} {
-      @include map-props-mixin($props);
-    }
-  }
-}
-
-/*
-========================================
-Spacing */
-
-@each $name, $props in $component-gap-sizing-map {
-  @if ($name != "") {
-    .component-gap-#{$name} {
-      @include map-props-mixin($props);
     }
   }
 }
