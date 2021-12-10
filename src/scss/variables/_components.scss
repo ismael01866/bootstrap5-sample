@@ -10,10 +10,18 @@ $component-border-width-base: 1px;
 $component-font-scale: 1.333 !default; // Perfect Fourth
 $component-font-size-base: 1rem !default;
 
-$component-font-size-xs: $component-font-size-base / ($component-font-scale * $component-font-scale) !default;
+$component-font-size-xs: $component-font-size-base /
+  ($component-font-scale * $component-font-scale) !default;
 $component-font-size-sm: $component-font-size-base / ($component-font-scale) !default;
 $component-font-size-md: $component-font-size-base !default;
 $component-font-size-lg: $component-font-size-base !default;
+
+// shapes
+
+$component-border-radius-base: 3px;
+
+$component-border-radius-square: 0;
+$component-border-radius-rounded: 50rem;
 
 // sizing
 
@@ -33,17 +41,23 @@ $component-space-sm: $component-space-base * 0.75 !default;
 $component-space-md: $component-space-base * 1.5 !default;
 $component-space-lg: $component-space-base * 2.25 !default;
 
-$component-gap-base: .75em !default;
+$component-gap-base: 1em !default;
 
-$component-gap-xs: $component-gap-base * 0.375 !default;
-$component-gap-sm: $component-gap-base * 0.5 !default;
+$component-gap-xs: $component-gap-base * 0.5 !default;
+$component-gap-sm: $component-gap-base * 0.75 !default;
 $component-gap-md: $component-gap-base * 1.5 !default;
 $component-gap-lg: $component-gap-base * 2.25 !default;
 
 // maps
 
-$component-styles: (
-  "default", "primary", "accent", "success", "info", "warning", "error"
+$component-colors: (
+  "default",
+  "primary",
+  "accent",
+  "success",
+  "info",
+  "warning",
+  "error"
 ) !default;
 
 $component-font-sizing-map: (
@@ -84,19 +98,19 @@ $component-gap-sizing-map: (
 
 $component-height-sizing-map: (
   "base": (
-    "height": $component-size-base
+    "height": $component-size-base,
   ),
   "xs": (
-    "height": $component-size-xs
+    "height": $component-size-xs,
   ),
   "sm": (
-    "height": $component-size-sm
+    "height": $component-size-sm,
   ),
   "md": (
-    "height": $component-size-md
+    "height": $component-size-md,
   ),
   "lg": (
-    "height": $component-size-lg
+    "height": $component-size-lg,
   ),
 ) !default;
 
@@ -159,6 +173,29 @@ $component-padding-x-sizing-map: (
   ),
 ) !default;
 
+$component-padding-y-sizing-map: (
+  "base": (
+    "padding-bottom": $component-space-base,
+    "padding-top": $component-space-base,
+  ),
+  "xs": (
+    "padding-bottom": $component-space-xs,
+    "padding-top": $component-space-xs,
+  ),
+  "sm": (
+    "padding-bottom": $component-space-sm,
+    "padding-top": $component-space-sm,
+  ),
+  "md": (
+    "padding-bottom": $component-space-md,
+    "padding-top": $component-space-md,
+  ),
+  "lg": (
+    "padding-bottom": $component-space-lg,
+    "padding-top": $component-space-lg,
+  ),
+) !default;
+
 $component-size-sizing-map: (
   "base": (
     "height": $component-size-base,
@@ -180,4 +217,16 @@ $component-size-sizing-map: (
     "height": $component-size-lg,
     "width": $component-size-lg,
   ),
+) !default;
+
+$component-shapes-map: (
+  "base": (
+    "border-radius": $component-border-radius-base,
+  ),
+  "square": (
+    "border-radius": $component-border-radius-square,
+  ),
+  "rounded": (
+    "border-radius": $component-border-radius-rounded,
+  )
 ) !default;

@@ -4,7 +4,8 @@
   "description": "",
   "main": "",
   "scripts": {
-    "build": "webpack --config webpack/webpack.build.js --progress"
+    "build": "webpack --config webpack/webpack.build.js --progress",
+    "prettier:fix": "npx run prettier --write ."
   },
   "repository": {
     "type": "git",

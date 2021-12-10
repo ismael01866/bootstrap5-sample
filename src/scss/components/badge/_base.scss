@@ -1,6 +1,5 @@
 .badge {
   align-items: center;
-  border-radius: $badge-border-radius;
   border-style: solid;
   border-width: $badge-border-width;
   box-sizing: border-box;
@@ -9,28 +8,34 @@
   vertical-align: middle;
 }
 
+@each $shape in $badge-shapes {
+  $props: map-get($component-shapes-map, $shape);
+
+  .badge-shape-#{$shape} {
+    @include map-props-mixin($props);
+
+    .badge-image {
+      @include map-props-mixin($props);
+    }
+  }
+}
+
 @each $size in $badge-sizes {
   .badge-#{$size} {
-    @include map-props-mixin(
-      map-get($component-font-sizing-map, $size)
-    );
+    @include map-props-mixin(map-get($component-font-sizing-map, $size));
 
-    @include map-props-mixin(
-      map-get($component-gap-sizing-map, $size)
-    );
+    @include map-props-mixin(map-get($component-gap-sizing-map, $size));
 
-    @include map-props-mixin(
-      map-get($component-height-sizing-map, $size)
-    );
+    @include map-props-mixin(map-get($component-height-sizing-map, $size));
 
-    @include map-props-mixin(
-      map-get($component-padding-sizing-map, $size)
-    );
+    @include map-props-mixin(map-get($component-padding-sizing-map, $size));
   }
 }
 
 .badge-image {
+  display: inline-flex;
   height: 100%;
+  overflow: hidden;
 
   img {
     height: 100%;
@@ -38,12 +43,22 @@
 }
 
 @each $size in $badge-sizes {
-  $props: map-get($component-gap-sizing-map, $size);
+  $props: map-get($component-padding-sizing-map, $size);
 
   .badge-image-#{$size} {
-    $gap: (map-get($props, "gap"));
+    $adjust: (map-get($props, "padding"));
 
-    height: calc(100% + #{$gap * 2});
-    margin: -#{$gap} #{$gap / 2} -#{$gap} -#{$gap};
+    height: calc(100% + #{$adjust});
+    margin-left: -#{$adjust / 2};
   }
+}
+
+.badge-shape-rounded {
+
+  .badge-image {
+    img {
+      // @include map-props-mixin($props);
+    }
+  }
+
 }
