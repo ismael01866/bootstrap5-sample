@@ -1,0 +1,20 @@
+.close {
+  box-sizing: border-box;
+  display: inline-flex;
+
+  &:hover {
+    cursor: pointer;
+  }
+
+  svg {
+    height: 100%;
+  }
+}
+
+@each $size in $close-sizes {
+  .close-size-#{$size} {
+    @include map-props-mixin(map-get($component-font-sizing, $size));
+
+    @include map-props-mixin(map-get($component-height-sizing, $size));
+  }
+}

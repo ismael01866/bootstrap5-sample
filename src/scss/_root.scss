@@ -59,14 +59,23 @@
   --color-primary-yiq: #{$color-primary-yiq};
   --color-primary-rgb: #{color-hex-to-rgb($color-primary)};
 
+  --color-primary-subtle: #{$color-primary-subtle};
+  --color-primary-subtle-yiq: #{$color-primary-subtle-yiq};
+
   --color-accent: #{$color-accent};
   --color-accent-yiq: #{$color-accent-yiq};
   --color-accent-rgb: #{color-hex-to-rgb($color-accent)};
 
+  --color-accent-subtle: #{$color-accent-subtle};
+  --color-accent-subtle-yiq: #{$color-accent-subtle-yiq};
+
   // status
 
-  --color-default: #{$color-default};
-  --color-default-yiq: #{$color-default-yiq};
+  --color-grey: #{$color-grey};
+  --color-grey-yiq: #{$color-grey-yiq};
+
+  --color-grey-subtle: #{$color-grey-subtle};
+  --color-grey-subtle-yiq: #{$color-grey-subtle-yiq};
 
   --color-success: #{$color-success};
   --color-success-yiq: #{$color-success-yiq};
@@ -108,7 +117,6 @@
   --component-border-width-base: #{$component-border-width-base};
 
   --component-border-radius-base: #{$component-border-radius-base};
-  --component-border-radius-square: #{$component-border-radius-square};
   --component-border-radius-rounded: #{$component-border-radius-rounded};
 
   --component-font-size-base: #{$component-font-size-base};

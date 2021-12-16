@@ -1,8 +1,5 @@
-$badge-border-width:
-var(--component-border-width-base) !default;
+$badge-border-width: var(--component-border-width-base) !default;
+$badge-font-weight : var(--font-weight-bold) !default;
 
-$badge-font-weight:
-var(--font-weight-bold) !default;
-
-$badge-sizes: ("xs", "sm") !default;
-$badge-shapes: ("base", "square", "rounded") !default;
+$badge-sizes       : ("xs", "sm") !default;
+$badge-shapes      : ("base", "rounded") !default;

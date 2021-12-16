@@ -1,5 +1,7 @@
 $alert-border-radius: var(--border-radius-base);
 $alert-border-width: var(--component-border-width-base);
-$alert-font-size: var(--component-font-size-base);
-$alert-padding-x: var(--component-space-base);
-$alert-padding-y: var(--component-space-base);
+
+// $alert-title-spacer:
+
+
+$alert-sizes: ("base", "xs", "sm", "md", "lg") !default;

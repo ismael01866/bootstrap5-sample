@@ -10,23 +10,22 @@ $component-border-width-base: 1px;
 $component-font-scale: 1.333 !default; // Perfect Fourth
 $component-font-size-base: 1rem !default;
 
-$component-font-size-xs: $component-font-size-base /
-  ($component-font-scale * $component-font-scale) !default;
+$component-font-size-xxs: $component-font-size-base / ($component-font-scale * $component-font-scale * $component-font-scale) !default;
+$component-font-size-xs: $component-font-size-base / ($component-font-scale * $component-font-scale) !default;
 $component-font-size-sm: $component-font-size-base / ($component-font-scale) !default;
-$component-font-size-md: $component-font-size-base !default;
-$component-font-size-lg: $component-font-size-base !default;
+$component-font-size-md: $component-font-size-base * ($component-font-scale) !default;
+$component-font-size-lg: $component-font-size-base * ($component-font-scale * $component-font-scale) !default;
 
 // shapes
 
 $component-border-radius-base: 3px;
-
-$component-border-radius-square: 0;
 $component-border-radius-rounded: 50rem;
 
 // sizing
 
 $component-size-base: 48px;
 
+$component-size-xxs: 16px;
 $component-size-xs: 24px;
 $component-size-sm: 32px;
 $component-size-md: 56px;
@@ -36,6 +35,7 @@ $component-size-lg: 64px;
 
 $component-space-base: 1em !default;
 
+$component-space-xxs: $component-space-base * 0.25 !default;
 $component-space-xs: $component-space-base * 0.5 !default;
 $component-space-sm: $component-space-base * 0.75 !default;
 $component-space-md: $component-space-base * 1.5 !default;
@@ -43,6 +43,7 @@ $component-space-lg: $component-space-base * 2.25 !default;
 
 $component-gap-base: 1em !default;
 
+$component-gap-xxs: $component-gap-base * 0.25 !default;
 $component-gap-xs: $component-gap-base * 0.5 !default;
 $component-gap-sm: $component-gap-base * 0.75 !default;
 $component-gap-md: $component-gap-base * 1.5 !default;
@@ -51,7 +52,7 @@ $component-gap-lg: $component-gap-base * 2.25 !default;
 // maps
 
 $component-colors: (
-  "default",
+  "grey",
   "primary",
   "accent",
   "success",
@@ -60,9 +61,12 @@ $component-colors: (
   "error"
 ) !default;
 
-$component-font-sizing-map: (
+$component-font-sizing: (
   "base": (
     "font-size": $component-font-size-base,
+  ),
+  "xxs": (
+    "font-size": $component-font-size-xxs,
   ),
   "xs": (
     "font-size": $component-font-size-xs,
@@ -78,9 +82,12 @@ $component-font-sizing-map: (
   ),
 ) !default;
 
-$component-gap-sizing-map: (
+$component-gap-sizing: (
   "base": (
     "gap": $component-gap-base,
+  ),
+  "xxs": (
+    "gap": $component-gap-xxs,
   ),
   "xs": (
     "gap": $component-gap-xs,
@@ -96,9 +103,12 @@ $component-gap-sizing-map: (
   ),
 ) !default;
 
-$component-height-sizing-map: (
+$component-height-sizing: (
   "base": (
     "height": $component-size-base,
+  ),
+  "xxs": (
+    "height": $component-size-xxs,
   ),
   "xs": (
     "height": $component-size-xs,
@@ -114,9 +124,12 @@ $component-height-sizing-map: (
   ),
 ) !default;
 
-$component-margin-sizing-map: (
+$component-margin-sizing: (
   "base": (
     "margin": $component-space-base,
+  ),
+  "xxs": (
+    "margin": $component-space-xxs,
   ),
   "xs": (
     "margin": $component-space-xs,
@@ -132,9 +145,12 @@ $component-margin-sizing-map: (
   ),
 ) !default;
 
-$component-padding-sizing-map: (
+$component-padding-sizing: (
   "base": (
     "padding": $component-space-base,
+  ),
+  "xxs": (
+    "padding": $component-space-xxs,
   ),
   "xs": (
     "padding": $component-space-xs,
@@ -150,10 +166,14 @@ $component-padding-sizing-map: (
   ),
 ) !default;
 
-$component-padding-x-sizing-map: (
+$component-padding-x-sizing: (
   "base": (
     "padding-left": $component-space-base,
     "padding-right": $component-space-base,
+  ),
+  "xxs": (
+    "padding-left": $component-space-xxs,
+    "padding-right": $component-space-xxs,
   ),
   "xs": (
     "padding-left": $component-space-xs,
@@ -173,10 +193,14 @@ $component-padding-x-sizing-map: (
   ),
 ) !default;
 
-$component-padding-y-sizing-map: (
+$component-padding-y-sizing: (
   "base": (
     "padding-bottom": $component-space-base,
     "padding-top": $component-space-base,
+  ),
+  "xxs": (
+    "padding-bottom": $component-space-xxs,
+    "padding-top": $component-space-xxs,
   ),
   "xs": (
     "padding-bottom": $component-space-xs,
@@ -196,10 +220,14 @@ $component-padding-y-sizing-map: (
   ),
 ) !default;
 
-$component-size-sizing-map: (
+$component-size-sizing: (
   "base": (
     "height": $component-size-base,
     "width": $component-size-base,
+  ),
+  "xxs": (
+    "height": $component-size-xxs,
+    "width": $component-size-xxs,
   ),
   "xs": (
     "height": $component-size-xs,
@@ -219,12 +247,9 @@ $component-size-sizing-map: (
   ),
 ) !default;
 
-$component-shapes-map: (
+$component-shapes: (
   "base": (
     "border-radius": $component-border-radius-base,
-  ),
-  "square": (
-    "border-radius": $component-border-radius-square,
   ),
   "rounded": (
     "border-radius": $component-border-radius-rounded,

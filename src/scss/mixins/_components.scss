@@ -10,7 +10,7 @@ Spacing */
 ========================================
 Styles */
 
-@mixin component-style-mixin($name) {
+@mixin component-solid-mixin($name) {
   $color: var(--color-#{$name});
   $color-yiq: var(--color-#{$name}-yiq);
 
@@ -19,7 +19,7 @@ Styles */
   color: $color-yiq;
 }
 
-@mixin component-style-subtle-mixin($name) {
+@mixin component-subtle-mixin($name) {
   $color: var(--color-#{$name});
   $color-subtle: var(--color-#{$name}-subtle);
   $color-yiq: var(--color-#{$name}-subtle-yiq);
@@ -29,31 +29,48 @@ Styles */
   color: $color-yiq;
 }
 
-@mixin component-style-hover-mixin($name) {
-  $color-rgb: var(--color-#{$name}-rgb);
+@mixin component-outline-mixin($name) {
+  $color: var(--color-#{$name});
 
-  $color-hover: rgba(
-    $color-rgb,
-    calc(100% - var(--component-brightness-hover))
-  );
-
-  &:hover {
-    background-color: $color-hover;
-    border-color: transparent;
-  }
+  background-color: $color-white;
+  border-color: $color;
+  color: $color;
 }
 
-@mixin component-style-active-mixin($name) {
-  $color-rgb: var(--color-#{$name}-rgb);
+@mixin component-ghost-mixin($name) {
+  $color: var(--color-#{$name});
 
-  $color-active: rgba(
-    $color-rgb,
-    calc(100% - var(--component-brightness-active))
-  );
-
-  &:focus,
-  &:active {
-    background-color: $color-active;
-    border-color: transparent;
-  }
+  background-color: transparent;
+  border-color: transparent;
+  color: $color;
 }
+
+
+// @mixin component-style-hover-mixin($name) {
+//   $color-rgb: var(--color-#{$name}-rgb);
+
+//   $color-hover: rgba(
+//     $color-rgb,
+//     calc(100% - var(--component-brightness-hover))
+//   );
+
+//   &:hover {
+//     background-color: $color-hover;
+//     border-color: transparent;
+//   }
+// }
+
+// @mixin component-style-active-mixin($name) {
+//   $color-rgb: var(--color-#{$name}-rgb);
+
+//   $color-active: rgba(
+//     $color-rgb,
+//     calc(100% - var(--component-brightness-active))
+//   );
+
+//   &:focus,
+//   &:active {
+//     background-color: $color-active;
+//     border-color: transparent;
+//   }
+// }

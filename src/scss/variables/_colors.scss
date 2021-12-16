@@ -3,44 +3,48 @@ $color-white: #fff !default;
 
 // style
 
+$color-grey: #e0e0e0 !default;
+$color-grey-yiq: color-yiq($color-grey) !default;
+
+$color-grey-subtle: mix($color-white, $color-grey, 100 - $brightness-base) !default;
+$color-grey-subtle-yiq: color-yiq($color-grey-subtle) !default;
+
 $color-primary: #7c4dff !default;
 $color-primary-yiq: color-yiq($color-primary) !default;
+
+$color-primary-subtle: mix($color-white, $color-primary, 100 - $brightness-base) !default;
+$color-primary-subtle-yiq: color-yiq($color-primary-subtle) !default;
 
 $color-accent: #00c853 !default;
 $color-accent-yiq: color-yiq($color-accent) !default;
 
-// -- status colors
+$color-accent-subtle: mix($color-white, $color-accent, 100 - $brightness-base) !default;
+$color-accent-subtle-yiq: color-yiq($color-accent-subtle) !default;
 
-$color-default: #e0e0e0 !default;
-$color-default-yiq: color-yiq($color-default) !default;
+// -- status colors
 
 $color-success: #43a047 !default;
 $color-success-yiq: color-yiq($color-success) !default;
 
+$color-success-subtle: mix($color-white, $color-success, 100 - $brightness-base) !default;
+$color-success-subtle-yiq: color-yiq($color-success-subtle) !default;
+
 $color-info: #1e88e5 !default;
 $color-info-yiq: color-yiq($color-info) !default;
+
+$color-info-subtle: mix($color-white, $color-info, 100 - $brightness-base) !default;
+$color-info-subtle-yiq: color-yiq($color-info-subtle) !default;
 
 $color-warning: #fdd835 !default;
 $color-warning-yiq: color-yiq($color-warning) !default;
 
+$color-warning-subtle: mix($color-white, $color-warning, 100 - $brightness-base) !default;
+$color-warning-subtle-yiq: color-yiq($color-warning-subtle) !default;
+
 $color-error: #e53935 !default;
 $color-error-yiq: color-yiq($color-error) !default;
 
-// -- subtle colors
-
-$color-default-subtle: #fafafa !default;
-$color-default-subtle-yiq: color-yiq($color-default-subtle) !default;
-
-$color-success-subtle: #e8f5e9 !default;
-$color-success-subtle-yiq: color-yiq($color-success-subtle) !default;
-
-$color-info-subtle: #e3f2fd !default;
-$color-info-subtle-yiq: color-yiq($color-info-subtle) !default;
-
-$color-warning-subtle: #fffde7 !default;
-$color-warning-subtle-yiq: color-yiq($color-warning-subtle) !default;
-
-$color-error-subtle: #ffebee !default;
+$color-error-subtle: mix($color-white, $color-error, 100 - $brightness-base) !default;
 $color-error-subtle-yiq: color-yiq($color-error-subtle) !default;
 
 // backgrounds

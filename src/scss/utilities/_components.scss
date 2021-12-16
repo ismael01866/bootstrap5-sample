@@ -7,47 +7,46 @@ General */
   width: 100%;
 }
 
-@each $name, $props in $component-shapes-map {
-  .component-shape-#{$name} {
-    @include map-props-mixin($props);
-  }
+.component-flex {
+  display: flex;
+  width: 100%;
 }
 
 /*
 ========================================
 Sizing */
 
-@each $name, $props in $component-font-sizing-map {
+@each $name, $props in $component-font-sizing {
   .component-font-#{$name} {
     @include map-props-mixin($props);
   }
 }
 
-@each $name, $props in $component-gap-sizing-map {
+@each $name, $props in $component-gap-sizing {
   .component-gap-#{$name} {
     @include map-props-mixin($props);
   }
 }
 
-@each $name, $props in $component-height-sizing-map {
+@each $name, $props in $component-height-sizing {
   .component-height-#{$name} {
     @include map-props-mixin($props);
   }
 }
 
-@each $name, $props in $component-padding-sizing-map {
+@each $name, $props in $component-padding-sizing {
   .component-padding-#{$name} {
     @include map-props-mixin($props);
   }
 }
 
-@each $name, $props in $component-padding-x-sizing-map {
+@each $name, $props in $component-padding-x-sizing {
   .component-padding-x-#{$name} {
     @include map-props-mixin($props);
   }
 }
 
-@each $name, $props in $component-size-sizing-map {
+@each $name, $props in $component-size-sizing {
   .component-size-#{$name} {
     @include map-props-mixin($props);
   }
@@ -57,22 +56,34 @@ Sizing */
 ========================================
 Styles */
 
-@each $name in $component-colors {
-  @if ($name != "") {
-    .component-color-#{$name} {
-      @include component-style-mixin($name);
-    }
+@each $color in $component-colors {
+  .component-#{$color}-solid {
+    @include component-solid-mixin($color);
+  }
 
-    .component-color-#{$name}-subtle {
-      @include component-style-subtle-mixin($name);
-    }
+  .component-#{$color}-subtle {
+    @include component-subtle-mixin($color);
+  }
 
-    // .component-hover-#{$name} {
-    //   @include component-style-hover-mixin($name);
-    // }
+  .component-#{$color}-outline {
+    @include component-outline-mixin($color);
+  }
 
-    // .component-active-#{$name} {
-    //   @include component-style-active-mixin($name);
-    // }
+  .component-#{$color}-ghost {
+    @include component-ghost-mixin($color);
+  }
+
+  // .component-hover-#{$name} {
+  //   @include component-style-hover-mixin($name);
+  // }
+
+  // .component-active-#{$name} {
+  //   @include component-style-active-mixin($name);
+  // }
+}
+
+@each $name, $props in $component-shapes {
+  .component-shape-#{$name} {
+    @include map-props-mixin($props);
   }
 }

@@ -1,21 +1,41 @@
-.btn {
-  border-radius: $btn-border-radius;
+.button {
+  align-items: center;
   border-style: solid;
-  border-width: $btn-border-width;
+  border-width: $button-border-width;
   box-sizing: border-box;
-  font-size: $btn-font-size;
-  font-weight: $btn-font-weight;
-  height: $btn-height;
-  line-height: $btn-height;
-  padding: $btn-padding-y $btn-padding-x;
+  display: inline-flex;
+  font-weight: $button-font-weight;
   text-align: center;
   text-decoration: none;
-  transition: background $btn-transition-duration,
-    border $btn-transition-duration, color $btn-transition-duration;
+  transition: background $button-transition-duration, border $button-transition-duration, color $button-transition-duration;
   vertical-align: middle;
 
   &:hover {
     cursor: pointer;
     text-decoration: none;
+  }
+}
+
+@each $shape in $button-shapes {
+  $props: map-get($component-shapes, $shape);
+
+  .button-shape-#{$shape} {
+    @include map-props-mixin($props);
+
+    .button-image {
+      @include map-props-mixin($props);
+    }
+  }
+}
+
+@each $size in $button-sizes {
+  .button-size-#{$size} {
+    @include map-props-mixin(map-get($component-font-sizing, $size));
+
+    @include map-props-mixin(map-get($component-gap-sizing, $size));
+
+    @include map-props-mixin(map-get($component-height-sizing, $size));
+
+    @include map-props-mixin(map-get($component-padding-sizing, $size));
   }
 }
