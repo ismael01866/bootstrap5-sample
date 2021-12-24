@@ -1,8 +1,26 @@
-$icon-size-base: 16px !default;
+$icon-size-base: 24px !default;
 
-$icon-size-xs: 10px !default;
-$icon-size-sm: 12px !default;
-$icon-size-md: 24px !default;
-$icon-size-lg: 32px !default;
+$icon-size-xs: 16px !default;
+$icon-size-sm: 20px !default;
+$icon-size-md: 32px !default;
+$icon-size-lg: 40px !default;
 $icon-size-xl: 48px !default;
 $icon-size-xxl: 64px !default;
+
+$icon-height-sizing: (
+  "base": (
+    "height": $icon-size-base,
+  ),
+  "xs": (
+    "height": $icon-size-xs,
+  ),
+  "sm": (
+    "height": $icon-size-sm,
+  ),
+  "md": (
+    "height": $icon-size-md,
+  ),
+  "lg": (
+    "height": $icon-size-lg,
+  ),
+) !default;

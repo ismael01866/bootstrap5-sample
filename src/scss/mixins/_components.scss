@@ -8,6 +8,16 @@ Spacing */
 
 /*
 ========================================
+States */
+
+@mixin component-hover-mixin {
+  &:hover {
+    filter: brightness(calc(100% - var(--component-brightness-hover)));
+  }
+}
+
+/*
+========================================
 Styles */
 
 @mixin component-solid-mixin($name) {
@@ -44,7 +54,6 @@ Styles */
   border-color: transparent;
   color: $color;
 }
-
 
 // @mixin component-style-hover-mixin($name) {
 //   $color-rgb: var(--color-#{$name}-rgb);

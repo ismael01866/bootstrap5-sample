@@ -4,10 +4,10 @@
   border-width: $button-border-width;
   box-sizing: border-box;
   display: inline-flex;
-  font-weight: $button-font-weight;
   text-align: center;
   text-decoration: none;
-  transition: background $button-transition-duration, border $button-transition-duration, color $button-transition-duration;
+  transition: background $button-transition-duration,
+    border $button-transition-duration, color $button-transition-duration;
   vertical-align: middle;
 
   &:hover {
@@ -21,21 +21,14 @@
 
   .button-shape-#{$shape} {
     @include map-props-mixin($props);
-
-    .button-image {
-      @include map-props-mixin($props);
-    }
   }
 }
 
 @each $size in $button-sizes {
   .button-size-#{$size} {
     @include map-props-mixin(map-get($component-font-sizing, $size));
-
     @include map-props-mixin(map-get($component-gap-sizing, $size));
-
     @include map-props-mixin(map-get($component-height-sizing, $size));
-
     @include map-props-mixin(map-get($component-padding-sizing, $size));
   }
 }

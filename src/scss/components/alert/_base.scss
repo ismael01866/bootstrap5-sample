@@ -1,7 +1,7 @@
 .alert {
   @include typography-mixin(
     (
-      color: 'inherit'
+      color: "inherit",
     )
   );
 
@@ -12,16 +12,27 @@
   display: inline-flex;
 }
 
-.alert-title {
-  + * {
+.alert-content {
+  display: flex;
+  flex-direction: column;
+}
 
-  }
+.alert-close {
+  position: relative;
+  top: 4px;
 }
 
 @each $size in $alert-sizes {
   .alert-size-#{$size} {
     @include map-props-mixin(map-get($component-font-sizing, $size));
+    @include map-props-mixin(map-get($component-gap-sizing, $size));
+  }
+}
 
-    @include map-props-mixin(map-get($component-padding-sizing, $size));
+.alert-size-sm {
+  @include map-props-mixin(map-get($component-padding-sizing, "base"));
+
+  .alert-title {
+    @include map-props-mixin(map-get($component-font-sizing, "md"));
   }
 }

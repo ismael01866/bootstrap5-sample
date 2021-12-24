@@ -1,4 +1,6 @@
 .close {
+  @include component-hover-mixin;
+
   box-sizing: border-box;
   display: inline-flex;
 
@@ -13,8 +15,6 @@
 
 @each $size in $close-sizes {
   .close-size-#{$size} {
-    @include map-props-mixin(map-get($component-font-sizing, $size));
-
-    @include map-props-mixin(map-get($component-height-sizing, $size));
+    @include map-props-mixin(map-get($icon-height-sizing, $size));
   }
 }
