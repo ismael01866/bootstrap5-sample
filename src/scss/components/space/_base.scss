@@ -1,5 +1,11 @@
 .space {
   display: inline-flex;
-  gap: $space-gap;
-  position: relative;
+}
+
+@each $name, $props in $space-sizes {
+  $gap: map-get($props, "gap");
+
+  .space-size-#{$name} {
+    @include map-props-mixin(map-get($component-gap-sizing, $gap));
+  }
 }

@@ -1,9 +1,5 @@
 .alert {
-  @include typography-mixin(
-    (
-      color: "inherit",
-    )
-  );
+  @include typography-mixin((color: "inherit"));
 
   border-radius: $alert-border-radius;
   border-style: solid;
@@ -26,13 +22,10 @@
   .alert-size-#{$size} {
     @include map-props-mixin(map-get($component-font-sizing, $size));
     @include map-props-mixin(map-get($component-gap-sizing, $size));
-  }
-}
+    @include map-props-mixin(map-get($component-padding-sizing, $size));
 
-.alert-size-sm {
-  @include map-props-mixin(map-get($component-padding-sizing, "base"));
-
-  .alert-title {
-    @include map-props-mixin(map-get($component-font-sizing, "md"));
+    .alert-title + .alert-message {
+      @include map-props-mixin(map-get($component-font-space-sizing, $size));
+    }
   }
 }

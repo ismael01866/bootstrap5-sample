@@ -56,34 +56,22 @@ Sizing */
 ========================================
 Styles */
 
-@each $color in $component-colors {
-  .component-#{$color}-solid {
-    @include component-solid-mixin($color);
-  }
+// @each $color in $component-colors {
+//   .component-#{$color}-solid {
+//     @include component-solid-mixin($color);
+//   }
 
-  .component-#{$color}-subtle {
-    @include component-subtle-mixin($color);
-  }
+//   .component-#{$color}-subtle {
+//     @include component-subtle-mixin($color);
+//   }
 
-  .component-#{$color}-outline {
-    @include component-outline-mixin($color);
-  }
+//   .component-#{$color}-ghost {
+//     @include component-ghost-mixin($color);
+//   }
+// }
 
-  .component-#{$color}-ghost {
-    @include component-ghost-mixin($color);
-  }
-
-  // .component-hover-#{$name} {
-  //   @include component-style-hover-mixin($name);
-  // }
-
-  // .component-active-#{$name} {
-  //   @include component-style-active-mixin($name);
-  // }
-}
-
-@each $name, $props in $component-shapes {
-  .component-shape-#{$name} {
-    @include map-props-mixin($props);
-  }
-}
+// @each $name, $props in $component-shapes {
+//   .component-shape-#{$name} {
+//     @include map-props-mixin($props);
+//   }
+// }

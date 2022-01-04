@@ -1,5 +1,32 @@
-$avatar-border-radius: var(--border-radius-base);
-$avatar-font-size: var(--component-font-size-base);
-$avatar-font-weight: var(--font-weight-bold);
-$avatar-height: var(--component-size-base);
-$avatar-width: var(--component-size-base);
+$avatar-bg: var(--color-grey);
+$avatar-border-radius: var(--component-border-radius-base);
+
+$avatar-shapes: ("base", "rounded") !default;
+
+$avatar-sizes: (
+  "xxs": (
+    "size": '16'
+  ),
+  "xs": (
+    "size": '20'
+  ),
+  "sm": (
+    "size": '24'
+  ),
+  "base": (
+    "size": '32'
+  ),
+  "md": (
+    "size": '40'
+  ),
+  "lg": (
+    "size": '48'
+  ),
+  "xl": (
+    "size": '56'
+  ),
+  "xxl": (
+    "size": '64'
+  )
+) !default;
+

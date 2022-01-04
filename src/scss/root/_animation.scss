@@ -1,0 +1,6 @@
+:root {
+  --transition-duration-base: #{$transition-duration-base};
+
+  --transition-duration-slow: #{$transition-duration-slow};
+  --transition-duration-fast: #{$transition-duration-fast};
+}

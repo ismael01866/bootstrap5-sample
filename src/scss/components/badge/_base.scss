@@ -4,57 +4,88 @@
   border-width: $badge-border-width;
   box-sizing: border-box;
   display: inline-flex;
-  vertical-align: middle;
+  justify-content: center;
+  position: relative;
 }
 
 .badge-icon {
   display: inline-flex;
-  height: 100%;
-  min-height: 1em;
-
-  svg {
-    height: 100%;
-  }
 }
 
 .badge-image {
   display: inline-flex;
-  height: 100%;
-  overflow: hidden;
 
   img {
-    height: 100%;
-  }
-}
-
-@each $shape in $badge-shapes {
-  $props: map-get($component-shapes, $shape);
-
-  .badge-shape-#{$shape} {
-    @include map-props-mixin($props);
-
-    .badge-image {
-      @include map-props-mixin($props);
+    &:not([src]) {
+      visibility: hidden;
     }
   }
 }
 
-@each $size in $badge-sizes {
-  .badge-size-#{$size} {
-    @include map-props-mixin(map-get($component-font-sizing, $size));
-    @include map-props-mixin(map-get($component-gap-sizing, $size));
-    @include map-props-mixin(map-get($component-height-sizing, $size));
-    @include map-props-mixin(map-get($component-padding-sizing, $size));
+// Color
+
+@each $color in $component-colors {
+  @each $type in $badge-types {
+    .badge-#{$color}-#{$type} {
+      @include badge-style-mixin($color, $type);
+    }
+  }
+}
+
+// Position
+
+@each $position in $component-positions {
+  .badge-position-#{$position} {
+    @include component-position-mixin($position);
+  }
+}
+
+// Shape
+
+@each $shape, $props in $component-shapes {
+  .badge-shape-#{$shape} {
+    @include map-props-mixin($props);
+  }
+}
+
+// Size
+
+@each $name, $props in $badge-sizes {
+
+  $gap      : map-get($props, "gap");
+  $height   : map-get($props, "height");
+  $font-size: map-get($props, "font-size");
+  $min-width: map-get($props, "min-width");
+  $padding-x: map-get($props, "padding-x");
+
+  .badge-size-#{$name} {
+    @include map-props-mixin(
+      map-get($component-font-sizing, $font-size));
+
+    @include map-props-mixin(
+      map-get($component-gap-sizing, $gap));
+
+    @include map-props-mixin(
+      map-get($component-height-sizing, $height));
+
+    @include map-props-mixin(
+      map-get($component-min-width-sizing, $min-width));
+
+    @include map-props-mixin(
+      map-get($component-padding-x-sizing, $padding-x));
+  }
+
+  // badge-icon
+
+  $adjust: map-get($component-padding-x-sizing, $padding-x);
+
+  .badge-icon-#{$name} {
+    margin-left: -#{map-get($adjust, "padding-left") / 4};
   }
 
   // badge-image
 
-  $props: map-get($component-padding-sizing, $size);
-
-  .badge-image-#{$size} {
-    $adjust: (map-get($props, "padding"));
-
-    height: calc(100% + #{$adjust});
-    margin-left: -#{$adjust / 2};
+  .badge-image-#{$name} {
+    margin-left: -#{map-get($adjust, "padding-left") / 1.5};
   }
 }

@@ -1,1 +1,14 @@
-$close-sizes: ("base", "xs", "sm") !default;
+$close-color: var(--color-subtle) !default;
+$close-transition-duration: var(--transition-duration-base) !default;
+
+$close-sizes: (
+  "xs": (
+    "size": "16"
+  ),
+  "sm": (
+    "size": "24"
+  ),
+  "base": (
+    "size": "32"
+  )
+) !default;

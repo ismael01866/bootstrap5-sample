@@ -1,0 +1,9 @@
+@mixin dot-style-mixin($color, $type) {
+  @if ($type == 'solid') {
+    @include dot-solid-mixin($color);
+  }
+}
+
+@mixin dot-solid-mixin($name) {
+  @include component-solid-mixin($name);
+}

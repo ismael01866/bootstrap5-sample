@@ -1,19 +1,26 @@
 /*
 ========================================
-Spacing */
+Position */
 
-@mixin component-gap-mixin($name) {
-  gap: var(--component-space-#{$name});
-}
+@mixin component-position-mixin($name) {
+  $props: map-get(
+    (
+      'top-left'     : (top: 0, left: 0),
+      'top-center'   : (top: 0, left: 50%),
+      'top-right'    : (top: 0, left: 100%),
+      'center-left'  : (top: 50%, left: 0),
+      'center-center': (top: 50%, left: 50%),
+      'center-right' : (top: 50%, left: 100%),
+      'bottom-left'  : (top: 100%, left: 0),
+      'bottom-center': (top: 100%, left: 50%),
+      'bottom-right' : (top: 100%, left: 100%),
+    ), $name
+  );
 
-/*
-========================================
-States */
+  @include map-props-mixin($props);
 
-@mixin component-hover-mixin {
-  &:hover {
-    filter: brightness(calc(100% - var(--component-brightness-hover)));
-  }
+  position: absolute;
+  transform: translate(-50%, -50%);
 }
 
 /*
@@ -39,47 +46,9 @@ Styles */
   color: $color-yiq;
 }
 
-@mixin component-outline-mixin($name) {
-  $color: var(--color-#{$name});
-
-  background-color: $color-white;
-  border-color: $color;
-  color: $color;
-}
-
 @mixin component-ghost-mixin($name) {
   $color: var(--color-#{$name});
 
   background-color: transparent;
   border-color: transparent;
-  color: $color;
 }
-
-// @mixin component-style-hover-mixin($name) {
-//   $color-rgb: var(--color-#{$name}-rgb);
-
-//   $color-hover: rgba(
-//     $color-rgb,
-//     calc(100% - var(--component-brightness-hover))
-//   );
-
-//   &:hover {
-//     background-color: $color-hover;
-//     border-color: transparent;
-//   }
-// }
-
-// @mixin component-style-active-mixin($name) {
-//   $color-rgb: var(--color-#{$name}-rgb);
-
-//   $color-active: rgba(
-//     $color-rgb,
-//     calc(100% - var(--component-brightness-active))
-//   );
-
-//   &:focus,
-//   &:active {
-//     background-color: $color-active;
-//     border-color: transparent;
-//   }
-// }

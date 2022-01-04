@@ -1,0 +1,22 @@
+:root {
+  --font-family-base: #{inspect($font-family-base)};
+  --font-family-heading: #{inspect($font-family-heading)};
+  --font-family-generic: #{inspect($font-family-generic)};
+
+  --font-size-base: #{$font-size-base};
+
+  --font-size-h1: #{$font-size-h1};
+  --font-size-h2: #{$font-size-h2};
+  --font-size-h3: #{$font-size-h3};
+  --font-size-h4: #{$font-size-h4};
+  --font-size-h5: #{$font-size-h5};
+
+  --font-size-sm: #{$font-size-sm};
+  --font-size-xs: #{$font-size-xs};
+
+  --font-weight-bold: #{$font-weight-bold};
+  --font-weight-regular: #{$font-weight-regular};
+
+  --body-line-height: #{$body-line-height};
+  --heading-line-height: #{$heading-line-height};
+}

@@ -1,0 +1,48 @@
+:root {
+  // Components
+
+
+  // --component-font-size-base: #{$component-font-size-base};
+
+  // --component-font-size-xs: #{$component-font-size-xs};
+  // --component-font-size-sm: #{$component-font-size-sm};
+  // --component-font-size-md: #{$component-font-size-md};
+  // --component-font-size-lg: #{$component-font-size-lg};
+
+  // --component-size-base: #{$component-size-base};
+
+  // --component-size-xs: #{$component-size-xs};
+  // --component-size-sm: #{$component-size-sm};
+  // --component-size-md: #{$component-size-md};
+  // --component-size-lg: #{$component-size-lg};
+
+  // --component-space-base: #{$component-space-base};
+
+  // --component-space-xs: #{$component-space-xs};
+  // --component-space-sm: #{$component-space-sm};
+  // --component-space-md: #{$component-space-md};
+  // // --component-space-lg: #{$component-space-lg};
+
+  // Typography
+
+  --font-family-base: #{inspect($font-family-base)};
+  --font-family-heading: #{inspect($font-family-heading)};
+  --font-family-generic: #{inspect($font-family-generic)};
+
+  --font-size-base: #{$font-size-base};
+
+  --font-size-h1: #{$font-size-h1};
+  --font-size-h2: #{$font-size-h2};
+  --font-size-h3: #{$font-size-h3};
+  --font-size-h4: #{$font-size-h4};
+  --font-size-h5: #{$font-size-h5};
+
+  --font-size-sm: #{$font-size-sm};
+  --font-size-xs: #{$font-size-xs};
+
+  --font-weight-bold: #{$font-weight-bold};
+  --font-weight-regular: #{$font-weight-regular};
+
+  --body-line-height: #{$body-line-height};
+  --heading-line-height: #{$heading-line-height};
+}

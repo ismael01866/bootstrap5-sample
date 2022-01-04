@@ -1,0 +1,39 @@
+.dot {
+  display: inline-flex;
+}
+
+// Color
+
+@each $color in $component-colors {
+  @each $type in $dot-types {
+    .dot-#{$color}-#{$type} {
+      @include dot-style-mixin($color, $type);
+    }
+  }
+}
+
+// Position
+
+@each $position in $component-positions {
+  .dot-position-#{$position} {
+    @include component-position-mixin($position);
+  }
+}
+
+// Shape
+
+@each $shape in $dot-shapes {
+  .dot-shape-#{$shape} {
+    @include map-props-mixin(map-get($component-shapes, $shape));
+  }
+}
+
+// Size
+
+@each $name, $props in $dot-sizes {
+  $size: map-get($props, "size");
+
+  .dot-size-#{$name} {
+    @include map-props-mixin(map-get($component-size-sizing, $size));
+  }
+}

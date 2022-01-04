@@ -1,105 +1,83 @@
+// backgrounds
+
+$color-bg: #fff !default;
+
+$color-bg-lt: lighten($color-bg, $brightness-4) !default;
+$color-bg-lter: lighten($color-bg, $brightness-8) !default;
+
+$color-bg-dk: darken($color-bg, $brightness-4) !default;
+$color-bg-dker: darken($color-bg, $brightness-8) !default;
+
+// borders
+
+$color-border: #e0e0e0 !default;
+
+$color-border-lt: lighten($color-border, $brightness-4) !default;
+$color-border-lter: lighten($color-border, $brightness-8) !default;
+
+$color-border-dk: darken($color-border, $brightness-4) !default;
+$color-border-dker: darken($color-border, $brightness-8) !default;
+
+// generic
+
 $color-black: #000 !default;
 $color-white: #fff !default;
 
 // style
 
-$color-grey: #e0e0e0 !default;
-$color-grey-yiq: color-yiq($color-grey) !default;
-
-$color-grey-subtle: mix(
-  $color-white,
-  $color-grey,
-  100 - $brightness-base
-) !default;
-$color-grey-subtle-yiq: color-yiq($color-grey-subtle) !default;
+// -- primary
 
 $color-primary: #7c4dff !default;
 $color-primary-yiq: color-yiq($color-primary) !default;
 
-$color-primary-subtle: mix(
-  $color-white,
-  $color-primary,
-  100 - $brightness-base
-) !default;
+$color-primary-subtle: color-subtle-light-mix($color-primary) !default;
 $color-primary-subtle-yiq: color-yiq($color-primary-subtle) !default;
+
+// -- accent
 
 $color-accent: #00c853 !default;
 $color-accent-yiq: color-yiq($color-accent) !default;
 
-$color-accent-subtle: mix(
-  $color-white,
-  $color-accent,
-  100 - $brightness-base
-) !default;
+$color-accent-subtle: color-subtle-light-mix($color-accent) !default;
 $color-accent-subtle-yiq: color-yiq($color-accent-subtle) !default;
 
 // -- status colors
 
+$color-grey: #e0e0e0 !default;
+$color-grey-yiq: color-yiq($color-grey) !default;
+
+$color-grey-subtle: color-subtle-light-mix($color-grey) !default;
+$color-grey-subtle-yiq: color-yiq($color-grey-subtle) !default;
+
 $color-success: #43a047 !default;
 $color-success-yiq: color-yiq($color-success) !default;
 
-$color-success-subtle: mix(
-  $color-white,
-  $color-success,
-  100 - $brightness-base
-) !default;
+$color-success-subtle: color-subtle-light-mix($color-success) !default;
 $color-success-subtle-yiq: color-yiq($color-success-subtle) !default;
 
 $color-info: #1e88e5 !default;
 $color-info-yiq: color-yiq($color-info) !default;
 
-$color-info-subtle: mix(
-  $color-white,
-  $color-info,
-  100 - $brightness-base
-) !default;
+$color-info-subtle: color-subtle-light-mix($color-info) !default;
 $color-info-subtle-yiq: color-yiq($color-info-subtle) !default;
 
 $color-warning: #fdd835 !default;
 $color-warning-yiq: color-yiq($color-warning) !default;
 
-$color-warning-subtle: mix(
-  $color-white,
-  $color-warning,
-  100 - $brightness-base
-) !default;
+$color-warning-subtle: color-subtle-light-mix($color-warning) !default;
 $color-warning-subtle-yiq: color-yiq($color-warning-subtle) !default;
 
 $color-error: #e53935 !default;
 $color-error-yiq: color-yiq($color-error) !default;
 
-$color-error-subtle: mix(
-  $color-white,
-  $color-error,
-  100 - $brightness-base
-) !default;
+$color-error-subtle: color-subtle-light-mix($color-error) !default;
 $color-error-subtle-yiq: color-yiq($color-error-subtle) !default;
-
-// backgrounds
-
-$color-bg: #fff !default;
-
-$color-bg-lt: lighten($color-bg, $brightness-xs) !default;
-$color-bg-lter: lighten($color-bg, $brightness-sm) !default;
-
-$color-bg-dk: darken($color-bg, $brightness-xs) !default;
-$color-bg-dker: darken($color-bg, $brightness-sm) !default;
-
-// borders
-
-$color-border: #424242 !default;
-
-$color-border-lt: lighten($color-border, $brightness-xs) !default;
-$color-border-lter: lighten($color-border, $brightness-sm) !default;
-
-$color-border-dk: darken($color-border, $brightness-xs) !default;
-$color-border-dker: darken($color-border, $brightness-sm) !default;
 
 // typography
 
 $color-link: $color-primary !default;
-$color-link-hover: darken($color-link, $brightness-base) !default;
-$color-link-active: darken($color-link, $brightness-lg) !default;
+$color-link-hover: darken($color-link, $brightness-16) !default;
+$color-link-active: darken($color-link, $brightness-24) !default;
 
 $color-heading: color-yiq($color-bg) !default;
 

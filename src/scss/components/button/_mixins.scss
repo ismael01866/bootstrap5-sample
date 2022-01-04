@@ -1,0 +1,54 @@
+@mixin button-style-mixin($color, $type) {
+  @if ($type == 'solid') {
+    @include button-solid-mixin($color);
+  } @else if ($type == 'subtle') {
+    @include button-subtle-mixin($color);
+  } @else if ($type == 'ghost') {
+    @include button-ghost-mixin($color);
+  }
+}
+
+@mixin button-solid-mixin($name) {
+  @include component-solid-mixin($name);
+}
+
+@mixin button-subtle-mixin($name) {
+  @include component-subtle-mixin($name);
+}
+
+@mixin button-ghost-mixin($name) {
+  @include component-ghost-mixin($name);
+}
+
+@mixin button-hover-mixin($name) {
+  $color-yiq: var(--color-#{$name}-yiq);
+
+  $lightness: calc(
+    var(--color-#{$name}-lightness) +
+    var(--component-brightness-base));
+
+  $color: hsl(
+    var(--color-#{$name}-hue),
+    var(--color-#{$name}-saturation), $lightness);
+
+  background-color: $color;
+  border-color: $color;
+  color: $color-yiq;
+}
+
+@mixin button-active-mixin($name) {
+  $color-yiq: var(--color-#{$name}-yiq);
+
+  $lightness: calc(
+    var(--color-#{$name}-lightness) -
+    var(--component-brightness-base));
+
+  $color: hsl(
+    var(--color-#{$name}-hue),
+    var(--color-#{$name}-saturation), $lightness);
+
+  background-color: $color;
+  border-color: $color;
+  color: $color-yiq;
+}
+

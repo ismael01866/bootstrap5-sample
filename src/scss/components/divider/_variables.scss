@@ -1,0 +1,15 @@
+$divider-border-color: var(--color-border) !default;
+$divider-border-width: var(--component-border-width-base) !default;
+
+$divider-sizes: (
+  "sm": (
+    "font-size": "xs",   "gap": "8",  "margin-y": "8"
+  ),
+  "base": (
+    "font-size": "sm",   "gap": "12", "margin-y": "16"
+  ),
+  "lg": (
+    "font-size": "base", "gap": "16", "margin-y": "24"
+  )
+) !default;
+

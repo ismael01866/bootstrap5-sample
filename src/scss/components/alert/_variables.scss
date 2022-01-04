@@ -1,4 +1,4 @@
-$alert-border-radius: var(--border-radius-base);
+$alert-border-radius: var(--component-border-radius-base);
 $alert-border-width: var(--component-border-width-base);
 
-$alert-sizes: ("sm") !default;
+$alert-sizes: ("base", "sm") !default;

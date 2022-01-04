@@ -1,10 +1,16 @@
 .close {
-  @include component-hover-mixin;
-
+  background: none;
+  border: 0;
   box-sizing: border-box;
+  color: $close-color;
   display: inline-flex;
+  outline: none;
+  padding: 0;
+  transition: filter $close-transition-duration;
 
   &:hover {
+    @include close-hover-mixin;
+
     cursor: pointer;
   }
 
@@ -13,8 +19,13 @@
   }
 }
 
-@each $size in $close-sizes {
-  .close-size-#{$size} {
-    @include map-props-mixin(map-get($icon-height-sizing, $size));
+// Size
+
+@each $name, $props in $close-sizes {
+  $size: map-get($props, "size");
+
+  .close-size-#{$name} {
+    @include map-props-mixin(
+      map-get($component-height-sizing, $size));
   }
 }

@@ -1,53 +1,5 @@
-$component-brightness-base: 16% !default;
 
-$component-brightness-hover: $component-brightness-base * 2 !default;
-$component-brightness-active: $component-brightness-base * 3 !default;
-
-$component-border-width-base: 1px;
-
-// typography
-
-$component-font-scale: 1.2 !default; // Minor Third
-$component-font-size-base: 1em !default;
-
-$component-font-size-xs: $component-font-size-base /
-  ($component-font-scale * $component-font-scale) !default;
-$component-font-size-sm: $component-font-size-base / ($component-font-scale) !default;
-$component-font-size-md: $component-font-size-base * ($component-font-scale) !default;
-$component-font-size-lg: $component-font-size-base *
-  ($component-font-scale * $component-font-scale) !default;
-
-// shapes
-
-$component-border-radius-base: 3px;
-$component-border-radius-rounded: 50rem;
-
-// sizing
-
-$component-size-base: 40px;
-
-$component-size-xs: 24px;
-$component-size-sm: 32px;
-$component-size-md: 48px;
-$component-size-lg: 56px;
-
-// spacing
-
-$component-space-base: 1em !default;
-
-$component-space-xs: $component-space-base * 0.5 !default;
-$component-space-sm: $component-space-base * 0.75 !default;
-$component-space-md: $component-space-base * 1.25 !default;
-$component-space-lg: $component-space-base * 1.5 !default;
-
-$component-gap-base: 1em !default;
-
-$component-gap-xs: $component-gap-base * 0.5 !default;
-$component-gap-sm: $component-gap-base * 0.675 !default;
-$component-gap-md: $component-gap-base * 1.25 !default;
-$component-gap-lg: $component-gap-base * 1.5 !default;
-
-// maps
+// Colors
 
 $component-colors: (
   "grey",
@@ -59,164 +11,20 @@ $component-colors: (
   "error"
 ) !default;
 
-$component-font-sizing: (
-  "base": (
-    "font-size": $component-font-size-base,
-  ),
-  "xs": (
-    "font-size": $component-font-size-xs,
-  ),
-  "sm": (
-    "font-size": $component-font-size-sm,
-  ),
-  "md": (
-    "font-size": $component-font-size-md,
-  ),
-  "lg": (
-    "font-size": $component-font-size-lg,
-  ),
+
+// Positions
+
+$component-positions: (
+  "top-left"   , "top-center"   , "top-right",
+  "center-left", "center-center", "center-right",
+  "bottom-left", "bottom-center", "bottom-right"
 ) !default;
 
-$component-gap-sizing: (
-  "base": (
-    "gap": $component-gap-base,
-  ),
-  "xs": (
-    "gap": $component-gap-xs,
-  ),
-  "sm": (
-    "gap": $component-gap-sm,
-  ),
-  "md": (
-    "gap": $component-gap-md,
-  ),
-  "lg": (
-    "gap": $component-gap-lg,
-  ),
-) !default;
 
-$component-height-sizing: (
-  "base": (
-    "height": $component-size-base,
-  ),
-  "xs": (
-    "height": $component-size-xs,
-  ),
-  "sm": (
-    "height": $component-size-sm,
-  ),
-  "md": (
-    "height": $component-size-md,
-  ),
-  "lg": (
-    "height": $component-size-lg,
-  ),
-) !default;
+// Shapes
 
-$component-margin-sizing: (
-  "base": (
-    "margin": $component-space-base,
-  ),
-  "xs": (
-    "margin": $component-space-xs,
-  ),
-  "sm": (
-    "margin": $component-space-sm,
-  ),
-  "md": (
-    "margin": $component-space-md,
-  ),
-  "lg": (
-    "margin": $component-space-lg,
-  ),
-) !default;
-
-$component-padding-sizing: (
-  "base": (
-    "padding": $component-space-base,
-  ),
-  "xs": (
-    "padding": $component-space-xs,
-  ),
-  "sm": (
-    "padding": $component-space-sm,
-  ),
-  "md": (
-    "padding": $component-space-md,
-  ),
-  "lg": (
-    "padding": $component-space-lg,
-  ),
-) !default;
-
-$component-padding-x-sizing: (
-  "base": (
-    "padding-left": $component-space-base,
-    "padding-right": $component-space-base,
-  ),
-  "xs": (
-    "padding-left": $component-space-xs,
-    "padding-right": $component-space-xs,
-  ),
-  "sm": (
-    "padding-left": $component-space-sm,
-    "padding-right": $component-space-sm,
-  ),
-  "md": (
-    "padding-left": $component-space-md,
-    "padding-right": $component-space-md,
-  ),
-  "lg": (
-    "padding-left": $component-space-lg,
-    "padding-right": $component-space-lg,
-  ),
-) !default;
-
-$component-padding-y-sizing: (
-  "base": (
-    "padding-bottom": $component-space-base,
-    "padding-top": $component-space-base,
-  ),
-  "xs": (
-    "padding-bottom": $component-space-xs,
-    "padding-top": $component-space-xs,
-  ),
-  "sm": (
-    "padding-bottom": $component-space-sm,
-    "padding-top": $component-space-sm,
-  ),
-  "md": (
-    "padding-bottom": $component-space-md,
-    "padding-top": $component-space-md,
-  ),
-  "lg": (
-    "padding-bottom": $component-space-lg,
-    "padding-top": $component-space-lg,
-  ),
-) !default;
-
-$component-size-sizing: (
-  "base": (
-    "height": $component-size-base,
-    "width": $component-size-base,
-  ),
-  "xs": (
-    "height": $component-size-xs,
-    "width": $component-size-xs,
-  ),
-  "sm": (
-    "height": $component-size-sm,
-    "width": $component-size-sm,
-  ),
-  "md": (
-    "height": $component-size-md,
-    "width": $component-size-md,
-  ),
-  "lg": (
-    "height": $component-size-lg,
-    "width": $component-size-lg,
-  ),
-) !default;
+$component-border-radius-base: 3px;
+$component-border-radius-rounded: 50rem;
 
 $component-shapes: (
   "base": (
@@ -226,3 +34,250 @@ $component-shapes: (
     "border-radius": $component-border-radius-rounded,
   ),
 ) !default;
+
+
+// Sizing
+
+// -- Base Component
+
+$component-size-base: 1rem;
+
+$component-size-8  : $component-size-base * .5;
+$component-size-12 : $component-size-base * .75;
+$component-size-16 : $component-size-base;
+$component-size-20 : $component-size-base * 1.25;
+$component-size-24 : $component-size-base * 1.5;
+$component-size-32 : $component-size-base * 2;
+$component-size-36 : $component-size-base * 2.25;
+$component-size-40 : $component-size-base * 2.5;
+$component-size-48 : $component-size-base * 3;
+$component-size-56 : $component-size-base * 3.5;
+$component-size-64 : $component-size-base * 4;
+
+$component-sizes:
+(
+  '8' : $component-size-8,
+  '12': $component-size-12,
+  '16': $component-size-16,
+  '20': $component-size-20,
+  '24': $component-size-24,
+  '32': $component-size-32,
+  '40': $component-size-40,
+  '48': $component-size-48,
+  '56': $component-size-56,
+  '64': $component-size-64
+);
+
+$component-size-sizing     : ();
+$component-height-sizing   : ();
+$component-min-width-sizing: ();
+
+@each $name, $value in $component-sizes {
+  $component-height-sizing: map-merge(
+    $component-height-sizing, (
+      "#{$name}": ("height": $value)
+    )
+  );
+
+  $component-min-width-sizing: map-merge(
+    $component-min-width-sizing, (
+      "#{$name}": ("min-width": $value)
+    )
+  );
+
+  $component-size-sizing: map-merge(
+    $component-size-sizing, (
+      "#{$name}": ("height": $value, "width": $value)
+    )
+  );
+}
+
+// -- Component Image
+
+// $component-image-size-base: 32px;
+
+// $component-image-size-xs: 16px;
+// $component-image-size-sm: 20px;
+
+// $component-image-size-sizing: (
+//   "base": (
+//     "height": $component-image-size-base,
+//     "width": $component-image-size-base,
+//   ),
+//   "xs": (
+//     "height": $component-image-size-xs,
+//     "width": $component-image-size-xs,
+//   ),
+//   "sm": (
+//     "height": $component-image-size-sm,
+//     "width": $component-image-size-sm,
+//   )
+// ) !default;
+
+
+// Spacing
+
+// -- Base
+
+$component-space-base: 1rem;
+
+$component-space-4  : $component-space-base * .25;
+$component-space-8  : $component-space-base * .5;
+$component-space-12 : $component-space-base * .75;
+$component-space-16 : $component-space-base;
+$component-space-20 : $component-space-base * 1.25;
+$component-space-24 : $component-space-base * 1.5;
+$component-space-32 : $component-space-base * 2;
+
+$component-spaces:
+(
+  '4' : $component-space-4,
+  '8' : $component-space-8,
+  '12': $component-space-12,
+  '16': $component-space-16,
+  '20': $component-space-20,
+  '24': $component-space-24,
+  '32': $component-space-32
+);
+
+$component-gap-sizing      : ();
+
+$component-margin-sizing  : ();
+$component-margin-x-sizing: ();
+$component-margin-y-sizing: ();
+
+
+$component-padding-sizing  : ();
+$component-padding-x-sizing: ();
+$component-padding-y-sizing: ();
+
+@each $name, $value in $component-spaces {
+  $component-gap-sizing: map-merge(
+    $component-gap-sizing, (
+      "#{$name}": ("gap": $value)
+    )
+  );
+
+  $component-margin-sizing: map-merge(
+    $component-margin-sizing, (
+      "#{$name}": ("margin": $value)
+    )
+  );
+
+  $component-margin-x-sizing: map-merge(
+    $component-margin-x-sizing, (
+      "#{$name}": ("margin-left": $value, "margin-right": $value)
+    )
+  );
+
+  $component-margin-y-sizing: map-merge(
+    $component-margin-y-sizing, (
+      "#{$name}": ("margin-top": $value, "margin-bottom": $value)
+    )
+  );
+
+  $component-padding-sizing: map-merge(
+    $component-padding-sizing, (
+      "#{$name}": ("padding": $value)
+    )
+  );
+
+  $component-padding-x-sizing: map-merge(
+    $component-padding-x-sizing, (
+      "#{$name}": ("padding-left": $value, "padding-right": $value)
+    )
+  );
+
+  $component-padding-y-sizing: map-merge(
+    $component-padding-y-sizing, (
+      "#{$name}": ("padding-top": $value, "padding-bottom": $value)
+    )
+  );
+}
+
+// Types
+
+$component-types: (
+  "solid",
+  "subtle",
+  "ghost"
+) !default;
+
+// Typography
+
+// -- Font size
+
+$component-font-scale: 1.2; // Minor Third
+$component-font-size-base: 1rem;
+
+$component-font-size-xxxs: $component-font-size-base / ($component-font-scale * $component-font-scale * $component-font-scale * $component-font-scale);
+
+$component-font-size-xxs: $component-font-size-base / ($component-font-scale * $component-font-scale * $component-font-scale);
+
+$component-font-size-xs: $component-font-size-base / ($component-font-scale * $component-font-scale);
+
+$component-font-size-sm: $component-font-size-base / ($component-font-scale);
+
+$component-font-size-md: $component-font-size-base * ($component-font-scale);
+
+$component-font-sizing: (
+  "base": (
+    "font-size": $component-font-size-base,
+  ),
+  "xxxs": (
+    "font-size": $component-font-size-xxxs,
+  ),
+  "xxs": (
+    "font-size": $component-font-size-xxs,
+  ),
+  "xs": (
+    "font-size": $component-font-size-xs,
+  ),
+  "sm": (
+    "font-size": $component-font-size-sm,
+  ),
+  "md": (
+    "font-size": $component-font-size-md,
+  )
+) !default;
+
+// -- Font spacing
+
+// $component-font-space-base: .675em;
+
+// $component-font-space-xs: $component-font-space-base * 0.375 !default;
+// $component-font-space-sm: $component-font-space-base * 0.5 !default;
+// $component-font-space-md: $component-font-space-base * 1.125 !default;
+
+$component-font-space-sizing: (
+  // "base": (
+  //   "margin-top": $component-font-space-base,
+  // ),
+  // "xs": (
+  //   "margin-top": $component-font-space-xs,
+  // ),
+  // "sm": (
+  //   "margin-top": $component-font-space-sm,
+  // ),
+  // "md": (
+  //   "margin-top": $component-font-space-md,
+  // )
+) !default;
+
+
+// $component-margin-sizing: (
+//   "base": (
+//     "margin": $component-space-base,
+//   ),
+//   "xs": (
+//     "margin": $component-space-xs,
+//   ),
+//   "sm": (
+//     "margin": $component-space-sm,
+//   ),
+//   "md": (
+//     "margin": $component-space-md,
+//   )
+// ) !default;
+
+

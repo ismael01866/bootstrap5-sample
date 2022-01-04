@@ -15,3 +15,26 @@
 @function color-hex-to-rgb($hex) {
   @return red($hex), green($hex), blue($hex);
 }
+
+@function color-hex-to-hsl($hex) {
+  @return hue($hex), saturation($hex), lightness($hex);
+}
+
+@function color-hue-from-hex($hex) {
+  @return hue($hex);
+}
+
+@function color-saturation-from-hex($hex) {
+  @return saturation($hex);
+}
+
+@function color-lightness-from-hex($hex) {
+  @return lightness($hex);
+}
+
+@function color-subtle-light-mix(
+  $color,
+  $brightness: $brightness-16
+) {
+  @return mix(#fff, $color, 100 - $brightness);
+}

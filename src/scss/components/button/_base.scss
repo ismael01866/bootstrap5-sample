@@ -4,17 +4,43 @@
   border-width: $button-border-width;
   box-sizing: border-box;
   display: inline-flex;
-  text-align: center;
   text-decoration: none;
   transition: background $button-transition-duration,
     border $button-transition-duration, color $button-transition-duration;
-  vertical-align: middle;
 
   &:hover {
     cursor: pointer;
     text-decoration: none;
   }
 }
+
+.button-icon {
+  display: inline-flex;
+
+  svg {
+    height: 100%;
+  }
+}
+
+// Color
+
+@each $color in $component-colors {
+  @each $type in $button-types {
+    .button-#{$color}-#{$type} {
+      @include button-style-mixin($color, $type);
+
+      &:hover {
+        @include button-hover-mixin($color);
+      }
+
+      &:active {
+        @include button-active-mixin($color);
+      }
+    }
+  }
+}
+
+// Shape
 
 @each $shape in $button-shapes {
   $props: map-get($component-shapes, $shape);
@@ -24,11 +50,26 @@
   }
 }
 
-@each $size in $button-sizes {
+// Size
+
+@each $size, $props in $button-sizes {
   .button-size-#{$size} {
-    @include map-props-mixin(map-get($component-font-sizing, $size));
-    @include map-props-mixin(map-get($component-gap-sizing, $size));
-    @include map-props-mixin(map-get($component-height-sizing, $size));
-    @include map-props-mixin(map-get($component-padding-sizing, $size));
+
+    $gap      : map-get($props, "gap");
+    $height   : map-get($props, "height");
+    $font-size: map-get($props, "font-size");
+    $padding-x: map-get($props, "padding-x");
+
+    @include map-props-mixin(
+      map-get($component-font-sizing, $font-size));
+
+    @include map-props-mixin(
+      map-get($component-gap-sizing, $gap));
+
+    @include map-props-mixin(
+      map-get($component-height-sizing, $height));
+
+    @include map-props-mixin(
+      map-get($component-padding-x-sizing, $padding-x));
   }
 }

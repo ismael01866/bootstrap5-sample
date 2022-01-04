@@ -1,0 +1,15 @@
+@mixin badge-style-mixin($color, $type) {
+  @if ($type == 'solid') {
+    @include badge-solid-mixin($color);
+  } @else if ($type == 'subtle') {
+    @include badge-subtle-mixin($color);
+  }
+}
+
+@mixin badge-solid-mixin($name) {
+  @include component-solid-mixin($name);
+}
+
+@mixin badge-subtle-mixin($name) {
+  @include component-subtle-mixin($name);
+}

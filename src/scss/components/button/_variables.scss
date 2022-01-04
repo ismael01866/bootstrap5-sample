@@ -1,5 +1,21 @@
 $button-border-width: var(--component-border-width-base) !default;
-$button-transition-duration: var(--transition-duration-base) !default;
+$button-transition-duration: var(--transition-duration-fast) !default;
 
-$button-sizes: ("base", "sm", "md") !default;
 $button-shapes: ("base", "rounded") !default;
+
+$button-sizes: (
+  "sm": (
+    "font-size": "xs",   "gap": "8",  "height": "24", "padding-x": "12"
+  ),
+  "base": (
+    "font-size": "sm",   "gap": "8",  "height": "32", "padding-x": "16"
+  ),
+  "md": (
+    "font-size": "base", "gap": "8",  "height": "40", "padding-x": "16"
+  ),
+  "lg": (
+    "font-size": "base", "gap": "12", "height": "48", "padding-x": "20"
+  )
+) !default;
+
+$button-types: ("solid", "subtle", "ghost") !default;

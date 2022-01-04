@@ -1,0 +1,3 @@
+@mixin close-hover-mixin {
+  filter: brightness(var(--component-brightness-base));
+}
