@@ -27,6 +27,8 @@ Position */
 ========================================
 Styles */
 
+// SOLID
+
 @mixin component-solid-mixin($name) {
   $color: var(--color-#{$name});
   $color-yiq: var(--color-#{$name}-yiq);
@@ -36,19 +38,146 @@ Styles */
   color: $color-yiq;
 }
 
-@mixin component-subtle-mixin($name) {
-  $color: var(--color-#{$name});
-  $color-subtle: var(--color-#{$name}-subtle);
-  $color-yiq: var(--color-#{$name}-subtle-yiq);
+// Hover
 
-  background-color: $color-subtle;
+@mixin component-solid-hover-mixin($name) {
+  $color: color-reduce-lightness-from-name($name, $amount: 8);
+
+  background-color: $color;
   border-color: $color;
-  color: $color-yiq;
 }
+
+// Active
+
+@mixin component-solid-active-mixin($name) {
+  $color: color-reduce-lightness-from-name($name, $amount: 16);
+
+  background-color: $color;
+  border-color: $color;
+}
+
+// Focus
+
+@mixin component-solid-focus-mixin($name) {
+  &:not(:active) {
+    $color: color-reduce-lightness-from-name($name, $amount: 8);
+
+    background-color: $color;
+    border-color: $color;
+  }
+}
+
+
+// SUBTLE
+
+@mixin component-subtle-mixin($name) {
+  background-color: var(--color-#{$name}-subtle);
+  border-color: var(--color-#{$name});
+}
+
+// Hover
+
+@mixin component-subtle-hover-mixin($name) {
+  color: var(--color-#{$name});
+}
+
+// Active
+
+@mixin component-subtle-active-mixin($name) {
+  $color: color-reduce-lightness-from-name-subtle($name, $amount: 4);
+
+  background-color: $color;
+  color: var(--color-#{$name});
+}
+
+// Focus
+
+@mixin component-subtle-focus-mixin($name) {
+  &:not(:active) {
+    color: var(--color-#{$name});
+  }
+}
+
+// -- Selected
+
+@mixin component-subtle-selected-mixin($name) {
+  color: var(--color-#{$name});
+}
+
+
+// OUTLINE
+
+@mixin component-outline-mixin($name) {
+  $color: var(--color-#{$name});
+
+  background-color: transparent;
+  border-color: $color;
+  color: $color;
+}
+
+// Hover
+
+@mixin component-outline-hover-mixin($name) {
+  $color: color-reduce-lightness-from-name($name, $amount: 16);
+
+  border-color: $color;
+  color: $color;
+}
+
+// Active
+
+@mixin component-outline-active-mixin($name) {
+  $color: color-reduce-lightness-from-name($name, $amount: 24);
+
+  border-color: $color;
+  color: $color;
+}
+
+// Focus
+
+@mixin component-outline-focus-mixin($name) {
+  &:not(:active) {
+    $color: color-reduce-lightness-from-name($name, $amount: 16);
+
+    border-color: $color;
+    color: $color;
+  }
+}
+
+
+// GHOST
 
 @mixin component-ghost-mixin($name) {
   $color: var(--color-#{$name});
 
   background-color: transparent;
   border-color: transparent;
+}
+
+// Hover
+
+@mixin component-ghost-hover-mixin($name) {
+  color: var(--color-#{$name});
+}
+
+// Active
+
+@mixin component-ghost-active-mixin($name) {
+  background-color: var(--color-#{$name}-subtle);
+  color: var(--color-#{$name});
+}
+
+// Focus
+
+@mixin component-ghost-focus-mixin($name) {
+  &:not(:active) {
+    background-color: var(--color-#{$name}-subtle);
+  }
+}
+
+// -- Selected
+
+@mixin component-ghost-selected-mixin($name) {
+  background-color: var(--color-#{$name}-subtle);
+  color: var(--color-#{$name});
 }

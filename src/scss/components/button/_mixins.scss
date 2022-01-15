@@ -1,54 +1,81 @@
 @mixin button-style-mixin($color, $type) {
   @if ($type == 'solid') {
     @include button-solid-mixin($color);
-  } @else if ($type == 'subtle') {
+  }
+
+  @if ($type == 'subtle') {
     @include button-subtle-mixin($color);
-  } @else if ($type == 'ghost') {
+  }
+
+  @if ($type == 'outline') {
+    @include button-outline-mixin($color);
+  }
+
+  @if ($type == 'ghost') {
     @include button-ghost-mixin($color);
   }
 }
 
 @mixin button-solid-mixin($name) {
   @include component-solid-mixin($name);
+
+  &:hover {
+    @include component-solid-hover-mixin($name);
+  }
+
+  &:active {
+    @include component-solid-active-mixin($name);
+  }
+
+  &:focus {
+    @include component-solid-focus-mixin($name);
+  }
 }
 
 @mixin button-subtle-mixin($name) {
   @include component-subtle-mixin($name);
+
+  &:hover {
+    @include component-subtle-hover-mixin($name);
+  }
+
+  &:active {
+    @include component-subtle-active-mixin($name);
+  }
+
+  &:focus {
+    @include component-subtle-focus-mixin($name);
+  }
+}
+
+@mixin button-outline-mixin($name) {
+  @include component-outline-mixin($name);
+
+  &:hover {
+    @include component-outline-hover-mixin($name);
+  }
+
+  &:active {
+    @include component-outline-active-mixin($name);
+  }
+
+  &:focus {
+    @include component-outline-focus-mixin($name);
+  }
 }
 
 @mixin button-ghost-mixin($name) {
   @include component-ghost-mixin($name);
+
+  &:hover {
+    @include component-ghost-hover-mixin($name);
+  }
+
+  &:active {
+    @include component-ghost-active-mixin($name);
+  }
+
+  &:focus {
+    @include component-ghost-focus-mixin($name);
+  }
 }
-
-@mixin button-hover-mixin($name) {
-  $color-yiq: var(--color-#{$name}-yiq);
-
-  $lightness: calc(
-    var(--color-#{$name}-lightness) +
-    var(--component-brightness-base));
-
-  $color: hsl(
-    var(--color-#{$name}-hue),
-    var(--color-#{$name}-saturation), $lightness);
-
-  background-color: $color;
-  border-color: $color;
-  color: $color-yiq;
-}
-
-@mixin button-active-mixin($name) {
-  $color-yiq: var(--color-#{$name}-yiq);
-
-  $lightness: calc(
-    var(--color-#{$name}-lightness) -
-    var(--component-brightness-base));
-
-  $color: hsl(
-    var(--color-#{$name}-hue),
-    var(--color-#{$name}-saturation), $lightness);
-
-  background-color: $color;
-  border-color: $color;
-  color: $color-yiq;
-}
-

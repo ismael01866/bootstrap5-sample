@@ -4,8 +4,9 @@ html {
   body {
     background-color: var(--color-bg);
     color: var(--color-body);
-    font-family: var(--font-family-base);
-    line-height: var(--body-line-height);
+    font-family: var(--font-family-body);
+    font-size: var(--font-size-body);
+    line-height: var(--line-height-body);
     position: relative;
   }
 }

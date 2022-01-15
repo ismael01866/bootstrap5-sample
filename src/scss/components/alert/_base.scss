@@ -1,6 +1,4 @@
 .alert {
-  @include typography-mixin((color: "inherit"));
-
   border-radius: $alert-border-radius;
   border-style: solid;
   border-width: $alert-border-width;
@@ -8,24 +6,37 @@
   display: inline-flex;
 }
 
-.alert-content {
+.alert-close {
+  position: relative;
+}
+
+.alert-children {
   display: flex;
   flex-direction: column;
 }
 
-.alert-close {
-  position: relative;
-  top: 4px;
+// Color
+
+@each $color in $component-colors {
+  @each $type in $alert-types {
+    .alert-#{$color}-#{$type} {
+      @include alert-style-mixin($color, $type);
+    }
+  }
 }
 
-@each $size in $alert-sizes {
-  .alert-size-#{$size} {
-    @include map-props-mixin(map-get($component-font-sizing, $size));
-    @include map-props-mixin(map-get($component-gap-sizing, $size));
-    @include map-props-mixin(map-get($component-padding-sizing, $size));
+// Size
 
-    .alert-title + .alert-message {
-      @include map-props-mixin(map-get($component-font-space-sizing, $size));
-    }
+@each $size, $props in $alert-sizes {
+  .alert-size-#{$size} {
+
+    $font-size: map-get($props, "font-size");
+    $padding  : map-get($props, "padding");
+
+    @include map-props-mixin(
+      map-get($component-font-sizing, $font-size));
+
+    @include map-props-mixin(
+      map-get($component-padding-sizing, $padding));
   }
 }

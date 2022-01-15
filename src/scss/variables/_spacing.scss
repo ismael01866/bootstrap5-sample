@@ -1,7 +1,20 @@
 $space-base: 1rem !default;
 
-$space-xs: $space-base * 0.5 !default;
-$space-sm: $space-base * 0.75 !default;
-$space-md: $space-base * 1.25 !default;
-$space-lg: $space-base * 2 !default;
-$space-xl: $space-base * 3.25 !default;
+$space-4  : $space-base * .25;
+$space-8  : $space-base * .5;
+$space-12 : $space-base * .75;
+$space-16 : $space-base;
+$space-20 : $space-base * 1.25;
+$space-24 : $space-base * 1.5;
+$space-32 : $space-base * 2;
+
+$spaces:
+(
+  '4' : $space-4,
+  '8' : $space-8,
+  '12': $space-12,
+  '16': $space-16,
+  '20': $space-20,
+  '24': $space-24,
+  '32': $space-32
+);

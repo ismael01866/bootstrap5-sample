@@ -1,0 +1,116 @@
+.menu {
+  background-color: $menu-bg;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+}
+
+// Width
+
+@each $width, $props in $menu-widths {
+  .menu-width-#{$width} {
+    @include map-props-mixin(
+      map-get($component-width-sizing, $width));
+  }
+}
+
+// Children
+
+// -- Menu title
+
+.menu-title {
+  align-items: center;
+  display: inline-flex;
+}
+
+// -- Menu title -- Size
+
+@each $size, $props in $menu-title-sizes {
+  .menu-title-size-#{$size} {
+
+    $font-size     : map-get($props, "font-size");
+    $gap           : map-get($props, "gap");
+    $height        : map-get($props, "height");
+    $margin-y      : map-get($props, "margin-y");
+    $padding-left  : map-get($props, "padding-left");
+    $padding-right : map-get($props, "padding-right");
+
+    @include map-props-mixin(
+      map-get($component-font-sizing, $font-size));
+
+    @include map-props-mixin(
+      map-get($component-gap-sizing, $gap));
+
+    @include map-props-mixin(
+      map-get($component-height-sizing, $height));
+
+    @include map-props-mixin(
+      map-get($component-margin-y-sizing, $margin-y));
+
+    @include map-props-mixin(
+      map-get($component-padding-left-sizing, $padding-left));
+
+    @include map-props-mixin(
+      map-get($component-padding-right-sizing, $padding-right));
+  }
+}
+
+// -- Menu item
+
+.menu-item {
+  align-items: center;
+  cursor: pointer;
+  display: inline-flex;
+  transition: background $menu-item-transition-duration, box-shadow $menu-item-transition-duration, color $menu-item-transition-duration;
+}
+
+// --Menu item -- Color
+
+@each $color in $component-colors {
+  @each $type in $menu-item-types {
+
+    .menu-item-#{$color}-#{$type} {
+      @include menu-item-style-mixin($color, $type);
+    }
+
+  }
+}
+
+// -- Menu item -- Size
+
+@each $size, $props in $menu-item-sizes {
+  .menu-item-size-#{$size} {
+
+    $font-size     : map-get($props, "font-size");
+    $gap           : map-get($props, "gap");
+    $height        : map-get($props, "height");
+    $margin-y      : map-get($props, "margin-y");
+    $padding-left  : map-get($props, "padding-left");
+    $padding-right : map-get($props, "padding-right");
+
+    @include map-props-mixin(
+      map-get($component-font-sizing, $font-size));
+
+    @include map-props-mixin(
+      map-get($component-gap-sizing, $gap));
+
+    @include map-props-mixin(
+      map-get($component-height-sizing, $height));
+
+    @include map-props-mixin(
+      map-get($component-margin-y-sizing, $margin-y));
+
+    @include map-props-mixin(
+      map-get($component-padding-left-sizing, $padding-left));
+
+    @include map-props-mixin(
+      map-get($component-padding-right-sizing, $padding-right));
+  }
+}
+
+// -- Menu item group
+
+.menu-item-group {
+  display: flex;
+  flex-direction: column;
+}

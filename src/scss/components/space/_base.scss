@@ -5,7 +5,7 @@
 @each $name, $props in $space-sizes {
   $gap: map-get($props, "gap");
 
-  .space-size-#{$name} {
+  .space-gap-#{$name} {
     @include map-props-mixin(map-get($component-gap-sizing, $gap));
   }
 }

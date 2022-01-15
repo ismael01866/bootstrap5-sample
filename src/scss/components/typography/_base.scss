@@ -1,0 +1,83 @@
+/* Headline */
+
+.headline {
+  font-family: $headline-font-family;
+  line-height: $headline-line-height;
+
+  @at-root {
+
+    h1#{&} {
+      font-size: $headline-1-font-size;
+      font-weight: $headline-1-font-weight;
+      letter-spacing: -1.5px;
+    }
+
+    h2#{&} {
+      font-size: $headline-2-font-size;
+      font-weight: $headline-2-font-weight;
+      letter-spacing: -.5px;
+    }
+
+    h3#{&} {
+      font-size: $headline-3-font-size;
+      font-weight: $headline-3-font-weight;
+      letter-spacing: 0;
+    }
+
+    h4#{&} {
+      font-size: $headline-4-font-size;
+      font-weight: $headline-4-font-weight;
+      letter-spacing: .25px;
+    }
+
+    h5#{&} {
+      font-size: $headline-5-font-size;
+      font-weight: $headline-5-font-weight;
+      letter-spacing: 0;
+    }
+
+    h6#{&} {
+      font-size: $headline-6-font-size;
+      font-weight: $headline-6-font-weight;
+      letter-spacing: .15px;
+    }
+  }
+}
+
+/* Subtitle */
+
+.subtitle {
+  font-family: $subtitle-font-family;
+  line-height: $subtitle-line-height;
+}
+
+.subtitle-level-1 {
+  font-size: $subtitle-1-font-size;
+  font-weight: $subtitle-1-font-weight;
+  letter-spacing: .15px;
+}
+
+.subtitle-level-2 {
+  font-size: $subtitle-2-font-size;
+  font-weight: $subtitle-2-font-weight;
+  letter-spacing: .1px;
+}
+
+/* Text */
+
+.text {
+  font-family: $text-font-family;
+  line-height: $text-line-height;
+}
+
+.text-level-1 {
+  font-size: $text-1-font-size;
+  font-weight: $text-1-font-weight;
+  letter-spacing: .5px;
+}
+
+.text-level-2 {
+  font-size: $text-2-font-size;
+  font-weight: $text-2-font-weight;
+  letter-spacing: .25px;
+}

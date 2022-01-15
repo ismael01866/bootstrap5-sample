@@ -1,23 +1,49 @@
-$body-line-height: 1.6 !default;
-$heading-line-height: 1.4 !default;
+/* Scale (Minor Third) */
 
-$font-family-base: "Open Sans" !default;
-$font-family-heading: "Quicksand" !default;
-$font-family-generic: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
-  "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji",
-  "Segoe UI Symbol" !default;
+$font-scale: 1.2 !default;
 
-$font-scale: 1.333 !default; // Perfect Fourth
+/* Font Familiy */
+
+$font-family-body: "Open Sans" !default;
+$font-family-headline: "Open Sans" !default;
+$font-family-subtitle: "Open Sans" !default;
+
+/* Font Size */
+
 $font-size-base: 1rem !default;
 
-$font-size-h1: 1em * ($font-scale * $font-scale * $font-scale * $font-scale * $font-scale) !default;
-$font-size-h2: 1em * ($font-scale * $font-scale * $font-scale * $font-scale) !default;
-$font-size-h3: 1em * ($font-scale * $font-scale * $font-scale) !default;
-$font-size-h4: 1em * ($font-scale * $font-scale) !default;
-$font-size-h5: 1em * ($font-scale) !default;
+$font-size-sm: $font-size-base / ($font-scale) !default;
+$font-size-xs: $font-size-sm / ($font-scale) !default;
+$font-size-xxs: $font-size-xs / ($font-scale) !default;
 
-$font-size-sm: 1em / ($font-scale) !default;
-$font-size-xs: 1em / ($font-scale * $font-scale) !default;
+// -- Body
+
+$font-size-body-2: 1em / ($font-scale) !default;
+$font-size-body-1: $font-size-body-2 * ($font-scale) !default;
+
+// -- Headline
+
+$font-size-headline-6: 1em * ($font-scale) !default;
+$font-size-headline-5: $font-size-headline-6 * ($font-scale) !default;
+$font-size-headline-4: $font-size-headline-5 * ($font-scale) !default;
+$font-size-headline-3: $font-size-headline-4 * ($font-scale) !default;
+$font-size-headline-2: $font-size-headline-3 * ($font-scale) !default;
+$font-size-headline-1: $font-size-headline-2 * ($font-scale) !default;
+
+// -- Subtitle
+
+$font-size-subtitle-2: 1em / ($font-scale) !default;
+$font-size-subtitle-1: $font-size-subtitle-2 * ($font-scale) !default;
+
+/* Font Weight */
 
 $font-weight-bold: 600 !default;
+$font-weight-medium: 500 !default;
 $font-weight-regular: 400 !default;
+$font-weight-light: 300 !default;
+
+/* Line Height */
+
+$line-height-body: 1.6 !default;
+$line-height-headline: 1.4 !default;
+$line-height-subtitle: 1.5 !default;

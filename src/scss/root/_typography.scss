@@ -1,22 +1,44 @@
 :root {
-  --font-family-base: #{inspect($font-family-base)};
-  --font-family-heading: #{inspect($font-family-heading)};
-  --font-family-generic: #{inspect($font-family-generic)};
 
-  --font-size-base: #{$font-size-base};
+  /* Font Family */
 
-  --font-size-h1: #{$font-size-h1};
-  --font-size-h2: #{$font-size-h2};
-  --font-size-h3: #{$font-size-h3};
-  --font-size-h4: #{$font-size-h4};
-  --font-size-h5: #{$font-size-h5};
+  --font-family-body   : #{$font-family-body};
+  --font-family-headline: #{$font-family-headline};
+  --font-family-subtitle: #{$font-family-subtitle};
 
-  --font-size-sm: #{$font-size-sm};
-  --font-size-xs: #{$font-size-xs};
+  /* Line Height */
+
+  --line-height-body    : #{$line-height-body};
+  --line-height-headline: #{$line-height-headline};
+  --line-height-subtitle: #{$line-height-subtitle};
+
+  /* Font Size */
+
+  // -- Body
+
+  --font-size-base  : #{$font-size-base};
+
+  --font-size-body-1: #{$font-size-body-1};
+  --font-size-body-2: #{$font-size-body-2};
+
+  // -- Headline
+
+  --font-size-headline-1: #{$font-size-headline-1};
+  --font-size-headline-2: #{$font-size-headline-2};
+  --font-size-headline-3: #{$font-size-headline-3};
+  --font-size-headline-4: #{$font-size-headline-4};
+  --font-size-headline-5: #{$font-size-headline-5};
+  --font-size-headline-6: #{$font-size-headline-6};
+
+  // -- Subtitle
+
+  --font-size-subtitle-1: #{$font-size-subtitle-1};
+  --font-size-subtitle-2: #{$font-size-subtitle-2};
+
+  /* Font Weight */
 
   --font-weight-bold: #{$font-weight-bold};
+  --font-weight-medium: #{$font-weight-medium};
   --font-weight-regular: #{$font-weight-regular};
-
-  --body-line-height: #{$body-line-height};
-  --heading-line-height: #{$heading-line-height};
+  --font-weight-light: #{$font-weight-light};
 }

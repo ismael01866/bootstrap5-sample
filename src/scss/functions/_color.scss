@@ -1,4 +1,7 @@
-@function color-yiq($background, $dark: #111, $light: #fff) {
+@function color-yiq(
+  $background,
+  $dark: #000, $light: #fff
+) {
   $r: red($background);
   $g: green($background);
   $b: blue($background);
@@ -37,4 +40,22 @@
   $brightness: $brightness-16
 ) {
   @return mix(#fff, $color, 100 - $brightness);
+}
+
+@function color-reduce-lightness-from-name($name, $amount) {
+  $lightness: calc(
+    var(--color-#{$name}-lightness) - var(--brightness-#{$amount}));
+
+  @return hsl(
+    var(--color-#{$name}-hue),
+    var(--color-#{$name}-saturation), $lightness);
+}
+
+@function color-reduce-lightness-from-name-subtle($name, $amount) {
+  $lightness: calc(
+    var(--color-#{$name}-subtle-lightness) - var(--brightness-#{$amount}));
+
+  @return hsl(
+    var(--color-#{$name}-subtle-hue),
+    var(--color-#{$name}-subtle-saturation), $lightness);
 }

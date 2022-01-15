@@ -1,4 +1,13 @@
 $alert-border-radius: var(--component-border-radius-base);
 $alert-border-width: var(--component-border-width-base);
 
-$alert-sizes: ("base", "sm") !default;
+$alert-sizes: (
+  "sm": (
+    "font-size": "xs", "gap": "8", "padding": "12"
+  ),
+  "base": (
+    "font-size": "sm", "gap": "8", "padding": "16"
+  )
+) !default;
+
+$alert-types: ("solid", "subtle") !default;

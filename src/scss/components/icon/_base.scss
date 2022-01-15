@@ -1,0 +1,20 @@
+.icon {
+  display: inline-flex;
+  position: relative;
+
+  > * {
+    height: 100%;
+  }
+}
+
+// Size
+
+@each $name, $props in $icon-sizes {
+
+  $size: map-get($props, "size");
+
+  .icon-size-#{$name} {
+    @include map-props-mixin(
+      map-get($component-size-sizing, $size));
+  }
+}

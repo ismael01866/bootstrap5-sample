@@ -1,6 +1,19 @@
 :root {
 
-  // backgrounds
+  /**
+   *
+   * Generic
+   *
+   */
+
+  --color-white: #{$color-white};
+  --color-black: #{$color-black};
+
+  /**
+   *
+   * Background
+   *
+   */
 
   --color-bg: #{$color-bg};
 
@@ -10,7 +23,11 @@
   --color-bg-dk: #{$color-bg-dk};
   --color-bg-dker: #{$color-bg-dker};
 
-  // borders
+  /**
+   *
+   * Border
+   *
+   */
 
   --color-border: #{$color-border};
 
@@ -20,14 +37,13 @@
   --color-border-dk: #{$color-border-dk};
   --color-border-dker: #{$color-border-dker};
 
-  // generic
+  /**
+   *
+   * Theme (Base)
+   *
+   */
 
-  --color-white: #{$color-white};
-  --color-black: #{$color-black};
-
-  // styles
-
-  // -- primary
+  /* Primary */
 
   --color-primary: #{$color-primary};
   --color-primary-yiq: #{$color-primary-yiq};
@@ -36,6 +52,8 @@
   --color-primary-saturation: #{color-saturation-from-hex($color-primary)};
   --color-primary-lightness: #{color-lightness-from-hex($color-primary)};
 
+  // -- Subtle
+
   --color-primary-subtle: #{$color-primary-subtle};
   --color-primary-subtle-yiq: #{$color-primary-subtle-yiq};
 
@@ -43,7 +61,25 @@
   --color-primary-subtle-saturation: #{color-saturation-from-hex($color-primary-subtle)};
   --color-primary-subtle-lightness: #{color-lightness-from-hex($color-primary-subtle)};
 
-  // -- accent
+  /* Secondary */
+
+  --color-secondary: #{$color-secondary};
+  --color-secondary-yiq: #{$color-secondary-yiq};
+
+  --color-secondary-hue: #{color-hue-from-hex($color-secondary)};
+  --color-secondary-saturation: #{color-saturation-from-hex($color-secondary)};
+  --color-secondary-lightness: #{color-lightness-from-hex($color-secondary)};
+
+  // -- Subtle
+
+  --color-secondary-subtle: #{$color-secondary-subtle};
+  --color-secondary-subtle-yiq: #{$color-secondary-subtle-yiq};
+
+  --color-secondary-subtle-hue: #{color-hue-from-hex($color-secondary-subtle)};
+  --color-secondary-subtle-saturation: #{color-saturation-from-hex($color-secondary-subtle)};
+  --color-secondary-subtle-lightness: #{color-lightness-from-hex($color-secondary-subtle)};
+
+  /* Accent */
 
   --color-accent: #{$color-accent};
   --color-accent-yiq: #{$color-accent-yiq};
@@ -53,6 +89,8 @@
   --color-accent-saturation: #{color-saturation-from-hex($color-accent)};
   --color-accent-lightness: #{color-lightness-from-hex($color-accent)};
 
+  // -- Subtle
+
   --color-accent-subtle: #{$color-accent-subtle};
   --color-accent-subtle-yiq: #{$color-accent-subtle-yiq};
 
@@ -60,25 +98,13 @@
   --color-accent-subtle-saturation: #{color-saturation-from-hex($color-accent-subtle)};
   --color-accent-subtle-lightness: #{color-lightness-from-hex($color-accent-subtle)};
 
-  // status
+  /**
+   *
+   * Theme (Status)
+   *
+   */
 
-  // -- grey
-
-  --color-grey: #{$color-grey};
-  --color-grey-yiq: #{$color-grey-yiq};
-
-  --color-grey-hue: #{color-hue-from-hex($color-grey)};
-  --color-grey-saturation: #{color-saturation-from-hex($color-grey)};
-  --color-grey-lightness: #{color-lightness-from-hex($color-grey)};
-
-  --color-grey-subtle: #{$color-grey-subtle};
-  --color-grey-subtle-yiq: #{$color-grey-subtle-yiq};
-
-  --color-grey-subtle-hue: #{color-hue-from-hex($color-grey-subtle)};
-  --color-grey-subtle-saturation: #{color-saturation-from-hex($color-grey-subtle)};
-  --color-grey-subtle-lightness: #{color-lightness-from-hex($color-grey-subtle)};
-
-  // -- success
+  /* Success */
 
   --color-success: #{$color-success};
   --color-success-yiq: #{$color-success-yiq};
@@ -87,6 +113,8 @@
   --color-success-saturation: #{color-saturation-from-hex($color-success)};
   --color-success-lightness: #{color-lightness-from-hex($color-success)};
 
+  // -- Subtle
+
   --color-success-subtle: #{$color-success-subtle};
   --color-success-subtle-yiq: #{$color-success-subtle-yiq};
 
@@ -94,7 +122,7 @@
   --color-success-subtle-saturation: #{color-saturation-from-hex($color-success-subtle)};
   --color-success-subtle-lightness: #{color-lightness-from-hex($color-success-subtle)};
 
-  // -- info
+  /* Info */
 
   --color-info: #{$color-info};
   --color-info-yiq: #{$color-info-yiq};
@@ -103,6 +131,8 @@
   --color-info-saturation: #{color-saturation-from-hex($color-info)};
   --color-info-lightness: #{color-lightness-from-hex($color-info)};
 
+  // -- Subtle
+
   --color-info-subtle: #{$color-info-subtle};
   --color-info-subtle-yiq: #{$color-info-subtle-yiq};
 
@@ -110,7 +140,7 @@
   --color-info-subtle-saturation: #{color-saturation-from-hex($color-info-subtle)};
   --color-info-subtle-lightness: #{color-lightness-from-hex($color-info-subtle)};
 
-  // --warning
+  /* Warning */
 
   --color-warning: #{$color-warning};
   --color-warning-yiq: #{$color-warning-yiq};
@@ -119,6 +149,8 @@
   --color-warning-saturation: #{color-saturation-from-hex($color-warning)};
   --color-warning-lightness: #{color-lightness-from-hex($color-warning)};
 
+  // --Subtle
+
   --color-warning-subtle: #{$color-warning-subtle};
   --color-warning-subtle-yiq: #{$color-warning-subtle-yiq};
 
@@ -126,7 +158,7 @@
   --color-warning-subtle-saturation: #{color-saturation-from-hex($color-warning-subtle)};
   --color-warning-subtle-lightness: #{color-lightness-from-hex($color-warning-subtle)};
 
-  // --error
+  /* Error */
 
   --color-error: #{$color-error};
   --color-error-yiq: #{$color-error-yiq};
@@ -135,6 +167,8 @@
   --color-error-saturation: #{color-saturation-from-hex($color-error)};
   --color-error-lightness: #{color-lightness-from-hex($color-error)};
 
+  // -- Subtle
+
   --color-error-subtle: #{$color-error-subtle};
   --color-error-subtle-yiq: #{$color-error-subtle-yiq};
 
@@ -142,19 +176,69 @@
   --color-error-subtle-saturation: #{color-saturation-from-hex($color-error-subtle)};
   --color-error-subtle-lightness: #{color-lightness-from-hex($color-error-subtle)};
 
-  // typography
+  /* Light */
+
+  --color-light: #{$color-light};
+  --color-light-yiq: #{$color-light-yiq};
+
+  --color-light-hue: #{color-hue-from-hex($color-light)};
+  --color-light-saturation: #{color-saturation-from-hex($color-light)};
+  --color-light-lightness: #{color-lightness-from-hex($color-light)};
+
+  // -- Subtle
+
+  --color-light-subtle: #{$color-light-subtle};
+  --color-light-subtle-yiq: #{$color-light-subtle-yiq};
+
+  --color-light-subtle-hue: #{color-hue-from-hex($color-light-subtle)};
+  --color-light-subtle-saturation: #{color-saturation-from-hex($color-light-subtle)};
+  --color-light-subtle-lightness: #{color-lightness-from-hex($color-light-subtle)};
+
+  /* Dark */
+
+  --color-dark: #{$color-dark};
+  --color-dark-yiq: #{$color-dark-yiq};
+
+  --color-dark-hue: #{color-hue-from-hex($color-dark)};
+  --color-dark-saturation: #{color-saturation-from-hex($color-dark)};
+  --color-dark-lightness: #{color-lightness-from-hex($color-dark)};
+
+  // -- Subtle
+
+  --color-dark-subtle: #{$color-dark-subtle};
+  --color-dark-subtle-yiq: #{$color-dark-subtle-yiq};
+
+  --color-dark-subtle-hue: #{color-hue-from-hex($color-dark-subtle)};
+  --color-dark-subtle-saturation: #{color-saturation-from-hex($color-dark-subtle)};
+  --color-dark-subtle-lightness: #{color-lightness-from-hex($color-dark-subtle)};
+
+  /**
+   *
+   * Typography
+   *
+   */
+
+  /* Headline */
+
+  --color-headline: #{$color-headline};
+
+  /* Body */
+
+  --color-body: #{$color-body};
+  --color-body-subtle: #{$color-body-subtle};
+  --color-body-disabled: #{$color-body-disabled};
+
+  /* Link */
 
   --color-link: #{$color-link};
   --color-link-hover: #{$color-link-hover};
   --color-link-active: #{$color-link-active};
 
-  --color-heading: #{$color-heading};
-  --color-body: #{$color-body};
-  --color-subtle: #{$color-subtle};
+  /* Icon */
 
   --color-icon: #{$color-icon};
 
-  // vendor
+  /* Vendor */
 
   --color-google: #{$color-google};
   --color-twitter: #{$color-twitter};

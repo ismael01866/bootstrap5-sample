@@ -1,0 +1,65 @@
+@mixin menu-item-style-mixin($color, $type) {
+  @if ($type == 'solid') {
+    @include menu-item-solid-mixin($color);
+  }
+
+  @if ($type == 'subtle') {
+    @include menu-item-subtle-mixin($color);
+  }
+
+  @if ($type == 'ghost') {
+    @include menu-item-ghost-mixin($color);
+  }
+}
+
+@mixin menu-item-solid-mixin($name) {
+  @include component-solid-mixin($name);
+
+  &:hover {
+    @include component-solid-hover-mixin($name);
+  }
+
+  &:active {
+    @include component-solid-active-mixin($name);
+  }
+
+  &.menu-item-is-selected {
+    @include component-solid-active-mixin($name);
+  }
+}
+
+@mixin menu-item-subtle-mixin($name) {
+  @include component-subtle-mixin($name);
+
+  &:hover {
+    @include component-subtle-hover-mixin($name);
+  }
+
+  &:active {
+    @include component-subtle-active-mixin($name);
+  }
+
+  &.menu-item-is-selected {
+    @include component-subtle-selected-mixin($name);
+
+    box-shadow: -3px 0 0 0 var(--color-#{$name}) inset;
+  }
+}
+
+@mixin menu-item-ghost-mixin($name) {
+  @include component-ghost-mixin($name);
+
+  &:hover {
+    @include component-ghost-hover-mixin($name);
+  }
+
+  &:active {
+    @include component-ghost-active-mixin($name);
+  }
+
+  &.menu-item-is-selected {
+    @include component-ghost-selected-mixin($name);
+
+    box-shadow: -3px 0 0 0 var(--color-#{$name}) inset;
+  }
+}

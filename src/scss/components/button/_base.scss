@@ -3,22 +3,13 @@
   border-style: solid;
   border-width: $button-border-width;
   box-sizing: border-box;
+  cursor: pointer;
   display: inline-flex;
   text-decoration: none;
-  transition: background $button-transition-duration,
-    border $button-transition-duration, color $button-transition-duration;
+  transition: background $button-transition-duration, border $button-transition-duration, color $button-transition-duration;
 
   &:hover {
-    cursor: pointer;
     text-decoration: none;
-  }
-}
-
-.button-icon {
-  display: inline-flex;
-
-  svg {
-    height: 100%;
   }
 }
 
@@ -28,14 +19,6 @@
   @each $type in $button-types {
     .button-#{$color}-#{$type} {
       @include button-style-mixin($color, $type);
-
-      &:hover {
-        @include button-hover-mixin($color);
-      }
-
-      &:active {
-        @include button-active-mixin($color);
-      }
     }
   }
 }
@@ -55,9 +38,9 @@
 @each $size, $props in $button-sizes {
   .button-size-#{$size} {
 
+    $font-size: map-get($props, "font-size");
     $gap      : map-get($props, "gap");
     $height   : map-get($props, "height");
-    $font-size: map-get($props, "font-size");
     $padding-x: map-get($props, "padding-x");
 
     @include map-props-mixin(
