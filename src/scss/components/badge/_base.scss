@@ -20,9 +20,9 @@
 
 // Position
 
-@each $position in $component-positions {
-  .badge-position-#{$position} {
-    @include component-position-mixin($position);
+@each $placement in $badge-placements {
+  .badge-placement-#{$placement} {
+    @include component-placement-mixin($placement);
   }
 }
 

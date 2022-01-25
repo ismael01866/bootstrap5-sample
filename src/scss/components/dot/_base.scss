@@ -12,11 +12,11 @@
   }
 }
 
-// Position
+// Placement
 
-@each $position in $component-positions {
-  .dot-position-#{$position} {
-    @include component-position-mixin($position);
+@each $placement in $dot-placements {
+  .dot-placement-#{$placement} {
+    @include component-placement-mixin($placement);
   }
 }
 

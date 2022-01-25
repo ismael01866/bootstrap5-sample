@@ -7,7 +7,7 @@
 
 // Width
 
-@each $width, $props in $menu-widths {
+@each $width in $menu-widths {
   .menu-width-#{$width} {
     @include map-props-mixin(
       map-get($component-width-sizing, $width));

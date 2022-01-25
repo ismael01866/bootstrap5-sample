@@ -12,11 +12,11 @@ $component-colors: (
   "dark"
 ) !default;
 
-/* Positions */
+/* Placements */
 
-$component-positions: (
-  "top-left"   ,
-  "top-center"   ,
+$component-placements: (
+  "top-left",
+  "top-center",
   "top-right",
   "center-left",
   "center-center",
@@ -48,6 +48,7 @@ $component-shapes: (
  */
 
 $component-height-sizing   : ();
+$component-max-width-sizing: ();
 $component-min-width-sizing: ();
 $component-size-sizing     : ();
 $component-width-sizing    : ();
@@ -56,6 +57,12 @@ $component-width-sizing    : ();
   $component-height-sizing: map-merge(
     $component-height-sizing, (
       "#{$name}": ("height": $value)
+    )
+  );
+
+  $component-max-width-sizing: map-merge(
+    $component-max-width-sizing, (
+      "#{$name}": ("max-width": $value)
     )
   );
 

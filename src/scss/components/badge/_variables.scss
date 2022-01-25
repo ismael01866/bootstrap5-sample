@@ -1,5 +1,9 @@
 $badge-border-width: var(--component-border-width-base) !default;
 
+$badge-placements: (
+  'top-left', 'top-right', 'bottom-left', 'bottom-right'
+) !default;
+
 $badge-sizes: (
   "xs": (
     "font-size": "xxs", "gap": "4", "height": "16", "min-width": "16", "padding-x": "4"

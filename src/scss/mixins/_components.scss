@@ -2,7 +2,7 @@
 ========================================
 Position */
 
-@mixin component-position-mixin($name) {
+@mixin component-placement-mixin($name) {
   $props: map-get(
     (
       'top-left'     : (top: 0, left: 0),
