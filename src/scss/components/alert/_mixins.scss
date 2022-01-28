@@ -1,4 +1,4 @@
-@mixin alert-style-mixin($color, $type) {
+@mixin alert-pattern-mixin($color, $type) {
   @if ($type == 'solid') {
     @include alert-solid-mixin($color);
   }

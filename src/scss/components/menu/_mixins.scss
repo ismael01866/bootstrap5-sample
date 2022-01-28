@@ -1,4 +1,4 @@
-@mixin menu-item-style-mixin($color, $type) {
+@mixin menu-item-pattern-mixin($color, $type) {
   @if ($type == 'solid') {
     @include menu-item-solid-mixin($color);
   }

@@ -13,7 +13,7 @@
 @each $color in $component-colors {
   @each $type in $badge-types {
     .badge-#{$color}-#{$type} {
-      @include badge-style-mixin($color, $type);
+      @include badge-pattern-mixin($color, $type);
     }
   }
 }

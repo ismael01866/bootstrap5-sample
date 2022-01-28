@@ -18,7 +18,7 @@
 @each $color in $component-colors {
   @each $type in $button-types {
     .button-#{$color}-#{$type} {
-      @include button-style-mixin($color, $type);
+      @include button-pattern-mixin($color, $type);
     }
   }
 }

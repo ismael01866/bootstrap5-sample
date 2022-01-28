@@ -1,4 +1,4 @@
-@mixin dot-style-mixin($color, $type) {
+@mixin dot-pattern-mixin($color, $type) {
   @if ($type == 'solid') {
     @include dot-solid-mixin($color);
   }

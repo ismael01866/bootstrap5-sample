@@ -20,7 +20,7 @@
 @each $color in $component-colors {
   @each $type in $alert-types {
     .alert-#{$color}-#{$type} {
-      @include alert-style-mixin($color, $type);
+      @include alert-pattern-mixin($color, $type);
     }
   }
 }

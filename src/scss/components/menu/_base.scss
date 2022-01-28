@@ -70,7 +70,7 @@
   @each $type in $menu-item-types {
 
     .menu-item-#{$color}-#{$type} {
-      @include menu-item-style-mixin($color, $type);
+      @include menu-item-pattern-mixin($color, $type);
     }
 
   }

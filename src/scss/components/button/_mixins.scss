@@ -1,4 +1,4 @@
-@mixin button-style-mixin($color, $type) {
+@mixin button-pattern-mixin($color, $type) {
   @if ($type == 'solid') {
     @include button-solid-mixin($color);
   }

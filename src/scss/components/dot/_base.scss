@@ -7,7 +7,7 @@
 @each $color in $component-colors {
   @each $type in $dot-types {
     .dot-#{$color}-#{$type} {
-      @include dot-style-mixin($color, $type);
+      @include dot-pattern-mixin($color, $type);
     }
   }
 }
