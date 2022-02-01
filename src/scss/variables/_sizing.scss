@@ -1,34 +1,31 @@
 $size-base: 1rem;
-
-$size-8  : $size-base * .5;
-$size-12 : $size-base * .75;
-$size-16 : $size-base;
-$size-20 : $size-base * 1.25;
-$size-24 : $size-base * 1.5;
-$size-32 : $size-base * 2;
-$size-40 : $size-base * 2.5;
-$size-48 : $size-base * 3;
-$size-56 : $size-base * 3.5;
-$size-64 : $size-base * 4;
-$size-80 : $size-base * 5;
-$size-96 : $size-base * 6;
+$size-8: $size-base * 0.5;
+$size-12: $size-base * 0.75;
+$size-16: $size-base;
+$size-20: $size-base * 1.25;
+$size-24: $size-base * 1.5;
+$size-32: $size-base * 2;
+$size-40: $size-base * 2.5;
+$size-48: $size-base * 3;
+$size-56: $size-base * 3.5;
+$size-64: $size-base * 4;
+$size-80: $size-base * 5;
+$size-96: $size-base * 6;
 $size-128: $size-base * 8;
 $size-256: $size-base * 16;
-
-$sizes:
-(
-  '8' : $size-8,
-  '12': $size-12,
-  '16': $size-16,
-  '20': $size-20,
-  '24': $size-24,
-  '32': $size-32,
-  '40': $size-40,
-  '48': $size-48,
-  '56': $size-56,
-  '64': $size-64,
-  '80': $size-80,
-  '96': $size-96,
-  '128': $size-128,
-  '256': $size-256
+$sizes: (
+  "8" : $size-8,
+  "12": $size-12,
+  "16": $size-16,
+  "20": $size-20,
+  "24": $size-24,
+  "32": $size-32,
+  "40": $size-40,
+  "48": $size-48,
+  "56": $size-56,
+  "64": $size-64,
+  "80": $size-80,
+  "96": $size-96,
+  "128": $size-128,
+  "256": $size-256
 );

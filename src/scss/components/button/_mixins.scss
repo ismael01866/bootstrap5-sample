@@ -1,81 +1,81 @@
-@mixin button-pattern-mixin($color, $type) {
-  @if ($type == 'solid') {
-    @include button-solid-mixin($color);
+@mixin button-pattern-mixin($pattern) {
+  @if $pattern == "solid" {
+    @include button-solid-mixin;
   }
 
-  @if ($type == 'subtle') {
-    @include button-subtle-mixin($color);
+  @if $pattern == "subtle" {
+    @include button-subtle-mixin;
   }
 
-  @if ($type == 'outline') {
-    @include button-outline-mixin($color);
+  @if $pattern == "outline" {
+    @include button-outline-mixin;
   }
 
-  @if ($type == 'ghost') {
-    @include button-ghost-mixin($color);
-  }
-}
-
-@mixin button-solid-mixin($name) {
-  @include component-solid-mixin($name);
-
-  &:hover {
-    @include component-solid-hover-mixin($name);
-  }
-
-  &:active {
-    @include component-solid-active-mixin($name);
-  }
-
-  &:focus {
-    @include component-solid-focus-mixin($name);
+  @if $pattern == "ghost" {
+    @include button-ghost-mixin;
   }
 }
 
-@mixin button-subtle-mixin($name) {
-  @include component-subtle-mixin($name);
+@mixin button-solid-mixin {
+  @include component-solid-mixin;
 
   &:hover {
-    @include component-subtle-hover-mixin($name);
+    @include component-solid-hover-mixin;
   }
 
   &:active {
-    @include component-subtle-active-mixin($name);
+    @include component-solid-active-mixin;
   }
 
   &:focus {
-    @include component-subtle-focus-mixin($name);
+    @include component-solid-focus-mixin;
   }
 }
 
-@mixin button-outline-mixin($name) {
-  @include component-outline-mixin($name);
+@mixin button-subtle-mixin {
+  @include component-subtle-mixin;
 
   &:hover {
-    @include component-outline-hover-mixin($name);
+    @include component-subtle-hover-mixin;
   }
 
   &:active {
-    @include component-outline-active-mixin($name);
+    @include component-subtle-active-mixin;
   }
 
   &:focus {
-    @include component-outline-focus-mixin($name);
+    @include component-subtle-focus-mixin;
   }
 }
 
-@mixin button-ghost-mixin($name) {
-  @include component-ghost-mixin($name);
+@mixin button-outline-mixin {
+  @include component-outline-mixin;
 
   &:hover {
-    @include component-ghost-hover-mixin($name);
+    @include component-outline-hover-mixin;
   }
 
   &:active {
-    @include component-ghost-active-mixin($name);
+    @include component-outline-active-mixin;
   }
 
   &:focus {
-    @include component-ghost-focus-mixin($name);
+    @include component-outline-focus-mixin;
+  }
+}
+
+@mixin button-ghost-mixin {
+  @include component-ghost-mixin;
+
+  &:hover {
+    @include component-ghost-hover-mixin;
+  }
+
+  &:active {
+    @include component-ghost-active-mixin;
+  }
+
+  &:focus {
+    @include component-ghost-focus-mixin;
   }
 }

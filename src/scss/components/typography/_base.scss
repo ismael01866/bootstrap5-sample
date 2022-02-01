@@ -15,7 +15,7 @@
     h2#{&} {
       font-size: $headline-2-font-size;
       font-weight: $headline-2-font-weight;
-      letter-spacing: -.5px;
+      letter-spacing: -0.5px;
     }
 
     h3#{&} {
@@ -27,7 +27,7 @@
     h4#{&} {
       font-size: $headline-4-font-size;
       font-weight: $headline-4-font-weight;
-      letter-spacing: .25px;
+      letter-spacing: 0.25px;
     }
 
     h5#{&} {
@@ -39,7 +39,7 @@
     h6#{&} {
       font-size: $headline-6-font-size;
       font-weight: $headline-6-font-weight;
-      letter-spacing: .15px;
+      letter-spacing: 0.15px;
     }
   }
 }
@@ -54,13 +54,13 @@
 .subtitle-level-1 {
   font-size: $subtitle-1-font-size;
   font-weight: $subtitle-1-font-weight;
-  letter-spacing: .15px;
+  letter-spacing: 0.15px;
 }
 
 .subtitle-level-2 {
   font-size: $subtitle-2-font-size;
   font-weight: $subtitle-2-font-weight;
-  letter-spacing: .1px;
+  letter-spacing: 0.1px;
 }
 
 /* Text */
@@ -73,11 +73,11 @@
 .text-level-1 {
   font-size: $text-1-font-size;
   font-weight: $text-1-font-weight;
-  letter-spacing: .5px;
+  letter-spacing: 0.5px;
 }
 
 .text-level-2 {
   font-size: $text-2-font-size;
   font-weight: $text-2-font-weight;
-  letter-spacing: .25px;
+  letter-spacing: 0.25px;
 }

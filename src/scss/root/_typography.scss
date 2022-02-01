@@ -1,14 +1,13 @@
 :root {
-
   /* Font Family */
 
-  --font-family-body   : #{$font-family-body};
+  --font-family-body: #{$font-family-body};
   --font-family-headline: #{$font-family-headline};
   --font-family-subtitle: #{$font-family-subtitle};
 
   /* Line Height */
 
-  --line-height-body    : #{$line-height-body};
+  --line-height-body: #{$line-height-body};
   --line-height-headline: #{$line-height-headline};
   --line-height-subtitle: #{$line-height-subtitle};
 
@@ -16,8 +15,7 @@
 
   // -- Body
 
-  --font-size-base  : #{$font-size-base};
-
+  --font-size-base: #{$font-size-base};
   --font-size-body-1: #{$font-size-body-1};
   --font-size-body-2: #{$font-size-body-2};
 

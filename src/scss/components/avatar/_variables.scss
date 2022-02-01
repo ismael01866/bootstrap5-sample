@@ -1,32 +1,29 @@
 $avatar-bg: var(--color-bg-dker);
 $avatar-border-radius: var(--component-border-radius-base);
-
 $avatar-shapes: ("base", "rounded") !default;
-
 $avatar-sizes: (
   "xxs": (
-    "size": '16'
+    "size": "16"
   ),
   "xs": (
-    "size": '20'
+    "size": "20"
   ),
   "sm": (
-    "size": '24'
+    "size": "24"
   ),
   "base": (
-    "size": '32'
+    "size": "32"
   ),
   "md": (
-    "size": '40'
+    "size": "40"
   ),
   "lg": (
-    "size": '48'
+    "size": "48"
   ),
   "xl": (
-    "size": '56'
+    "size": "56"
   ),
   "xxl": (
-    "size": '64'
+    "size": "64"
   )
 ) !default;
-

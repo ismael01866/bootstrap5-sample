@@ -1,3 +1,5 @@
+@use "sass:map";
+
 .button {
   align-items: center;
   border-style: solid;
@@ -6,7 +8,7 @@
   cursor: pointer;
   display: inline-flex;
   text-decoration: none;
-  transition: background $button-transition-duration, border $button-transition-duration, color $button-transition-duration;
+  transition: all $button-transition-duration;
 
   &:hover {
     text-decoration: none;
@@ -16,17 +18,23 @@
 // Color
 
 @each $color in $component-colors {
-  @each $type in $button-types {
-    .button-#{$color}-#{$type} {
-      @include button-pattern-mixin($color, $type);
-    }
+  .button-color-#{$color} {
+    @include component-color-mixin($color);
+  }
+}
+
+// Patern
+
+@each $pattern in $button-patterns {
+  .button-pattern-#{$pattern} {
+    @include button-pattern-mixin($pattern);
   }
 }
 
 // Shape
 
 @each $shape in $button-shapes {
-  $props: map-get($component-shapes, $shape);
+  $props: map.get($component-shapes, $shape);
 
   .button-shape-#{$shape} {
     @include map-props-mixin($props);
@@ -37,22 +45,18 @@
 
 @each $size, $props in $button-sizes {
   .button-size-#{$size} {
-
-    $font-size: map-get($props, "font-size");
-    $gap      : map-get($props, "gap");
-    $height   : map-get($props, "height");
-    $padding-x: map-get($props, "padding-x");
-
-    @include map-props-mixin(
-      map-get($component-font-sizing, $font-size));
+    $font-size: map.get($props, "font-size");
+    $gap: map.get($props, "gap");
+    $height: map.get($props, "height");
+    $padding-x: map.get($props, "padding-x");
 
     @include map-props-mixin(
-      map-get($component-gap-sizing, $gap));
-
+      map.get($component-font-sizing, $font-size));
     @include map-props-mixin(
-      map-get($component-height-sizing, $height));
-
+      map.get($component-gap-sizing, $gap));
     @include map-props-mixin(
-      map-get($component-padding-x-sizing, $padding-x));
+      map.get($component-height-sizing, $height));
+    @include map-props-mixin(
+      map.get($component-padding-x-sizing, $padding-x));
   }
 }

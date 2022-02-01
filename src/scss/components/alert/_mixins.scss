@@ -1,17 +1,17 @@
-@mixin alert-pattern-mixin($color, $type) {
-  @if ($type == 'solid') {
-    @include alert-solid-mixin($color);
+@mixin alert-pattern-mixin($pattern) {
+  @if $pattern == "solid" {
+    @include alert-solid-mixin;
   }
 
-  @if ($type == 'subtle') {
-    @include alert-subtle-mixin($color);
+  @if $pattern == "subtle" {
+    @include alert-subtle-mixin;
   }
 }
 
-@mixin alert-solid-mixin($name) {
-  @include component-solid-mixin($name);
+@mixin alert-solid-mixin {
+  @include component-solid-mixin;
 }
 
-@mixin alert-subtle-mixin($name) {
-  @include component-subtle-mixin($name);
+@mixin alert-subtle-mixin {
+  @include component-subtle-mixin;
 }

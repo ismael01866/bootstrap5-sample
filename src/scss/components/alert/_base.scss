@@ -1,3 +1,5 @@
+@use "sass:map";
+
 .alert {
   border-radius: $alert-border-radius;
   border-style: solid;
@@ -18,10 +20,16 @@
 // Color
 
 @each $color in $component-colors {
-  @each $type in $alert-types {
-    .alert-#{$color}-#{$type} {
-      @include alert-pattern-mixin($color, $type);
-    }
+  .alert-color-#{$color} {
+    @include component-color-mixin($color);
+  }
+}
+
+// Patern
+
+@each $pattern in $alert-patterns {
+  .alert-pattern-#{$pattern} {
+    @include alert-pattern-mixin($pattern);
   }
 }
 
@@ -29,14 +37,12 @@
 
 @each $size, $props in $alert-sizes {
   .alert-size-#{$size} {
-
-    $font-size: map-get($props, "font-size");
-    $padding  : map-get($props, "padding");
-
-    @include map-props-mixin(
-      map-get($component-font-sizing, $font-size));
+    $font-size: map.get($props, "font-size");
+    $padding: map.get($props, "padding");
 
     @include map-props-mixin(
-      map-get($component-padding-sizing, $padding));
+      map.get($component-font-sizing, $font-size));
+    @include map-props-mixin(
+      map.get($component-padding-sizing, $padding));
   }
 }

@@ -1,17 +1,17 @@
-@mixin badge-pattern-mixin($color, $type) {
-  @if ($type == 'solid') {
-    @include badge-solid-mixin($color);
+@mixin badge-pattern-mixin($pattern) {
+  @if $pattern == "solid" {
+    @include badge-solid-mixin;
   }
 
-  @if ($type == 'subtle') {
-    @include badge-subtle-mixin($color);
+  @if $pattern == "subtle" {
+    @include badge-subtle-mixin;
   }
 }
 
-@mixin badge-solid-mixin($name) {
-  @include component-solid-mixin($name);
+@mixin badge-solid-mixin {
+  @include component-solid-mixin;
 }
 
-@mixin badge-subtle-mixin($name) {
-  @include component-subtle-mixin($name);
+@mixin badge-subtle-mixin {
+  @include component-subtle-mixin;
 }

@@ -1,3 +1,5 @@
+@use "sass:map";
+
 /* Colors */
 
 $component-colors: (
@@ -30,7 +32,6 @@ $component-placements: (
 
 $component-border-radius-base: 3px;
 $component-border-radius-rounded: 50rem;
-
 $component-shapes: (
   "base": (
     "border-radius": $component-border-radius-base,
@@ -40,46 +41,46 @@ $component-shapes: (
   ),
 ) !default;
 
-
 /**
  *
  * Sizing
  *
  */
 
-$component-height-sizing   : ();
+$component-height-sizing: ();
 $component-max-width-sizing: ();
 $component-min-width-sizing: ();
-$component-size-sizing     : ();
-$component-width-sizing    : ();
+$component-size-sizing: ();
+$component-width-sizing: ();
 
 @each $name, $value in $sizes {
-  $component-height-sizing: map-merge(
-    $component-height-sizing, (
+  $component-height-sizing: map.merge(
+    $component-height-sizing,
+    (
       "#{$name}": ("height": $value)
     )
   );
-
-  $component-max-width-sizing: map-merge(
-    $component-max-width-sizing, (
+  $component-max-width-sizing: map.merge(
+    $component-max-width-sizing,
+    (
       "#{$name}": ("max-width": $value)
     )
   );
-
-  $component-min-width-sizing: map-merge(
-    $component-min-width-sizing, (
+  $component-min-width-sizing: map.merge(
+    $component-min-width-sizing,
+    (
       "#{$name}": ("min-width": $value)
     )
   );
-
-  $component-size-sizing: map-merge(
-    $component-size-sizing, (
+  $component-size-sizing: map.merge(
+    $component-size-sizing,
+    (
       "#{$name}": ("height": $value, "width": $value)
     )
   );
-
-  $component-width-sizing: map-merge(
-    $component-width-sizing, (
+  $component-width-sizing: map.merge(
+    $component-width-sizing,
+    (
       "#{$name}": ("width": $value)
     )
   );
@@ -91,70 +92,68 @@ $component-width-sizing    : ();
  *
  */
 
-$component-gap-sizing         : ();
-
-$component-margin-sizing      : ();
-$component-margin-x-sizing    : ();
-$component-margin-y-sizing    : ();
-
-$component-padding-sizing     : ();
-$component-padding-x-sizing   : ();
-$component-padding-y-sizing   : ();
-
+$component-gap-sizing: ();
+$component-margin-sizing: ();
+$component-margin-x-sizing: ();
+$component-margin-y-sizing: ();
+$component-padding-sizing: ();
+$component-padding-x-sizing: ();
+$component-padding-y-sizing: ();
 $component-padding-left-sizing: ();
 $component-padding-right-sizing: ();
 
 @each $name, $value in $spaces {
-  $component-gap-sizing: map-merge(
-    $component-gap-sizing, (
+  $component-gap-sizing: map.merge(
+    $component-gap-sizing,
+    (
       "#{$name}": ("gap": $value)
     )
   );
-
-  $component-margin-sizing: map-merge(
-    $component-margin-sizing, (
+  $component-margin-sizing: map.merge(
+    $component-margin-sizing,
+    (
       "#{$name}": ("margin": $value)
     )
   );
-
-  $component-margin-x-sizing: map-merge(
-    $component-margin-x-sizing, (
+  $component-margin-x-sizing: map.merge(
+    $component-margin-x-sizing,
+    (
       "#{$name}": ("margin-left": $value, "margin-right": $value)
     )
   );
-
-  $component-margin-y-sizing: map-merge(
-    $component-margin-y-sizing, (
+  $component-margin-y-sizing: map.merge(
+    $component-margin-y-sizing,
+    (
       "#{$name}": ("margin-top": $value, "margin-bottom": $value)
     )
   );
-
-  $component-padding-sizing: map-merge(
-    $component-padding-sizing, (
+  $component-padding-sizing: map.merge(
+    $component-padding-sizing,
+    (
       "#{$name}": ("padding": $value)
     )
   );
-
-  $component-padding-x-sizing: map-merge(
-    $component-padding-x-sizing, (
+  $component-padding-x-sizing: map.merge(
+    $component-padding-x-sizing,
+    (
       "#{$name}": ("padding-left": $value, "padding-right": $value)
     )
   );
-
-  $component-padding-y-sizing: map-merge(
-    $component-padding-y-sizing, (
+  $component-padding-y-sizing: map.merge(
+    $component-padding-y-sizing,
+    (
       "#{$name}": ("padding-top": $value, "padding-bottom": $value)
     )
   );
-
-  $component-padding-left-sizing: map-merge(
-    $component-padding-left-sizing, (
+  $component-padding-left-sizing: map.merge(
+    $component-padding-left-sizing,
+    (
       "#{$name}": ("padding-left": $value)
     )
   );
-
-  $component-padding-right-sizing: map-merge(
-    $component-padding-right-sizing, (
+  $component-padding-right-sizing: map.merge(
+    $component-padding-right-sizing,
+    (
       "#{$name}": ("padding-right": $value)
     )
   );

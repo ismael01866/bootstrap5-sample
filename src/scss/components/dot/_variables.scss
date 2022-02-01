@@ -1,9 +1,7 @@
 $dot-placements: (
-  'top-left', 'top-right', 'bottom-left', 'bottom-right'
+  "top-left", "top-right", "bottom-left", "bottom-right"
 ) !default;
-
-$dot-shapes: ('rounded') !default;
-
+$dot-shapes: ("rounded") !default;
 $dot-sizes: (
   "sm": (
     "size": "8"
@@ -12,5 +10,4 @@ $dot-sizes: (
     "size": "12"
   )
 ) !default;
-
-$dot-types: ("solid") !default;
+$dot-patterns: ("solid") !default;

@@ -1,0 +1,9 @@
+@mixin tooltip-pattern-mixin($pattern) {
+  @if $pattern == "solid" {
+    @include tooltip-solid-mixin;
+  }
+}
+
+@mixin tooltip-solid-mixin {
+  @include component-solid-mixin;
+}

@@ -1,3 +1,5 @@
+@use "sass:map";
+
 .divider {
   align-items: center;
   box-sizing: border-box;
@@ -58,25 +60,22 @@
 
 @each $size, $props in $divider-sizes {
   .divider-horizontal-#{$size} {
-
-    $gap      : map-get($props, "gap");
-    $font-size: map-get($props, "font-size");
-    $margin-y : map-get($props, "margin");
-
-    @include map-props-mixin(
-      map-get($component-font-sizing, $font-size));
+    $gap: map.get($props, "gap");
+    $font-size: map.get($props, "font-size");
+    $margin-y: map.get($props, "margin");
 
     @include map-props-mixin(
-      map-get($component-gap-sizing, $gap));
-
+      map.get($component-font-sizing, $font-size));
     @include map-props-mixin(
-      map-get($component-margin-y-sizing, $margin-y));
+      map.get($component-gap-sizing, $gap));
+    @include map-props-mixin(
+      map.get($component-margin-y-sizing, $margin-y));
   }
 
   .divider-vertical-#{$size} {
-    $margin-x: map-get($props, "margin");
+    $margin-x: map.get($props, "margin");
 
     @include map-props-mixin(
-      map-get($component-margin-x-sizing, $margin-x));
+      map.get($component-margin-x-sizing, $margin-x));
   }
 }

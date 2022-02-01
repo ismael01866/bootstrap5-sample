@@ -1,3 +1,5 @@
+@use "sass:map";
+
 .dot {
   display: inline-flex;
 }
@@ -5,10 +7,16 @@
 // Color
 
 @each $color in $component-colors {
-  @each $type in $dot-types {
-    .dot-#{$color}-#{$type} {
-      @include dot-pattern-mixin($color, $type);
-    }
+  .dot-color-#{$color} {
+    @include component-color-mixin($color);
+  }
+}
+
+// Patern
+
+@each $pattern in $dot-patterns {
+  .dot-pattern-#{$pattern} {
+    @include dot-pattern-mixin($pattern);
   }
 }
 
@@ -24,16 +32,16 @@
 
 @each $shape in $dot-shapes {
   .dot-shape-#{$shape} {
-    @include map-props-mixin(map-get($component-shapes, $shape));
+    @include map-props-mixin(map.get($component-shapes, $shape));
   }
 }
 
 // Size
 
 @each $name, $props in $dot-sizes {
-  $size: map-get($props, "size");
+  $size: map.get($props, "size");
 
   .dot-size-#{$name} {
-    @include map-props-mixin(map-get($component-size-sizing, $size));
+    @include map-props-mixin(map.get($component-size-sizing, $size));
   }
 }

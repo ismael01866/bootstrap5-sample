@@ -1,65 +1,65 @@
-@mixin menu-item-pattern-mixin($color, $type) {
-  @if ($type == 'solid') {
-    @include menu-item-solid-mixin($color);
+@mixin menu-item-pattern-mixin($pattern) {
+  @if $pattern == "solid" {
+    @include menu-item-solid-mixin;
   }
 
-  @if ($type == 'subtle') {
-    @include menu-item-subtle-mixin($color);
+  @if $pattern == "subtle" {
+    @include menu-item-subtle-mixin;
   }
 
-  @if ($type == 'ghost') {
-    @include menu-item-ghost-mixin($color);
-  }
-}
-
-@mixin menu-item-solid-mixin($name) {
-  @include component-solid-mixin($name);
-
-  &:hover {
-    @include component-solid-hover-mixin($name);
-  }
-
-  &:active {
-    @include component-solid-active-mixin($name);
-  }
-
-  &.menu-item-is-selected {
-    @include component-solid-active-mixin($name);
+  @if $pattern == "ghost" {
+    @include menu-item-ghost-mixin;
   }
 }
 
-@mixin menu-item-subtle-mixin($name) {
-  @include component-subtle-mixin($name);
+@mixin menu-item-solid-mixin {
+  @include component-solid-mixin;
 
   &:hover {
-    @include component-subtle-hover-mixin($name);
+    @include component-solid-hover-mixin;
   }
 
   &:active {
-    @include component-subtle-active-mixin($name);
+    @include component-solid-active-mixin;
   }
 
   &.menu-item-is-selected {
-    @include component-subtle-selected-mixin($name);
-
-    box-shadow: -3px 0 0 0 var(--color-#{$name}) inset;
+    @include component-solid-active-mixin;
   }
 }
 
-@mixin menu-item-ghost-mixin($name) {
-  @include component-ghost-mixin($name);
+@mixin menu-item-subtle-mixin {
+  @include component-subtle-mixin;
 
   &:hover {
-    @include component-ghost-hover-mixin($name);
+    @include component-subtle-hover-mixin;
   }
 
   &:active {
-    @include component-ghost-active-mixin($name);
+    @include component-subtle-active-mixin;
   }
 
   &.menu-item-is-selected {
-    @include component-ghost-selected-mixin($name);
+    @include component-subtle-selected-mixin;
 
-    box-shadow: -3px 0 0 0 var(--color-#{$name}) inset;
+    box-shadow: -3px 0 0 0 var(--color-component) inset;
+  }
+}
+
+@mixin menu-item-ghost-mixin {
+  @include component-ghost-mixin;
+
+  &:hover {
+    @include component-ghost-hover-mixin;
+  }
+
+  &:active {
+    @include component-ghost-active-mixin;
+  }
+
+  &.menu-item-is-selected {
+    @include component-ghost-selected-mixin;
+
+    box-shadow: -3px 0 0 0 var(--color-component) inset;
   }
 }

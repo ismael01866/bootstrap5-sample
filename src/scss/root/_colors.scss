@@ -1,5 +1,4 @@
 :root {
-
   /**
    *
    * Generic
@@ -16,10 +15,8 @@
    */
 
   --color-bg: #{$color-bg};
-
   --color-bg-lt: #{$color-bg-lt};
   --color-bg-lter: #{$color-bg-lter};
-
   --color-bg-dk: #{$color-bg-dk};
   --color-bg-dker: #{$color-bg-dker};
 
@@ -30,10 +27,8 @@
    */
 
   --color-border: #{$color-border};
-
   --color-border-lt: #{$color-border-lt};
   --color-border-lter: #{$color-border-lter};
-
   --color-border-dk: #{$color-border-dk};
   --color-border-dker: #{$color-border-dker};
 
@@ -47,56 +42,50 @@
 
   --color-primary: #{$color-primary};
   --color-primary-yiq: #{$color-primary-yiq};
-
-  --color-primary-hue: #{color-hue-from-hex($color-primary)};
-  --color-primary-saturation: #{color-saturation-from-hex($color-primary)};
-  --color-primary-lightness: #{color-lightness-from-hex($color-primary)};
+  --color-primary-h: #{color-hue-from-hex($color-primary)};
+  --color-primary-s: #{color-saturation-from-hex($color-primary)};
+  --color-primary-l: #{color-lightness-from-hex($color-primary)};
 
   // -- Subtle
 
   --color-primary-subtle: #{$color-primary-subtle};
   --color-primary-subtle-yiq: #{$color-primary-subtle-yiq};
-
-  --color-primary-subtle-hue: #{color-hue-from-hex($color-primary-subtle)};
-  --color-primary-subtle-saturation: #{color-saturation-from-hex($color-primary-subtle)};
-  --color-primary-subtle-lightness: #{color-lightness-from-hex($color-primary-subtle)};
+  --color-primary-subtle-h: #{color-hue-from-hex($color-primary-subtle)};
+  --color-primary-subtle-s: #{color-saturation-from-hex($color-primary-subtle)};
+  --color-primary-subtle-l: #{color-lightness-from-hex($color-primary-subtle)};
 
   /* Secondary */
 
   --color-secondary: #{$color-secondary};
   --color-secondary-yiq: #{$color-secondary-yiq};
-
-  --color-secondary-hue: #{color-hue-from-hex($color-secondary)};
-  --color-secondary-saturation: #{color-saturation-from-hex($color-secondary)};
-  --color-secondary-lightness: #{color-lightness-from-hex($color-secondary)};
+  --color-secondary-h: #{color-hue-from-hex($color-secondary)};
+  --color-secondary-s: #{color-saturation-from-hex($color-secondary)};
+  --color-secondary-l: #{color-lightness-from-hex($color-secondary)};
 
   // -- Subtle
 
   --color-secondary-subtle: #{$color-secondary-subtle};
   --color-secondary-subtle-yiq: #{$color-secondary-subtle-yiq};
-
-  --color-secondary-subtle-hue: #{color-hue-from-hex($color-secondary-subtle)};
-  --color-secondary-subtle-saturation: #{color-saturation-from-hex($color-secondary-subtle)};
-  --color-secondary-subtle-lightness: #{color-lightness-from-hex($color-secondary-subtle)};
+  --color-secondary-subtle-h: #{color-hue-from-hex($color-secondary-subtle)};
+  --color-secondary-subtle-s: #{color-saturation-from-hex($color-secondary-subtle)};
+  --color-secondary-subtle-l: #{color-lightness-from-hex($color-secondary-subtle)};
 
   /* Accent */
 
   --color-accent: #{$color-accent};
   --color-accent-yiq: #{$color-accent-yiq};
   --color-accent-rgb: #{color-hex-to-rgb($color-accent)};
-
-  --color-accent-hue: #{color-hue-from-hex($color-accent)};
-  --color-accent-saturation: #{color-saturation-from-hex($color-accent)};
-  --color-accent-lightness: #{color-lightness-from-hex($color-accent)};
+  --color-accent-h: #{color-hue-from-hex($color-accent)};
+  --color-accent-s: #{color-saturation-from-hex($color-accent)};
+  --color-accent-l: #{color-lightness-from-hex($color-accent)};
 
   // -- Subtle
 
   --color-accent-subtle: #{$color-accent-subtle};
   --color-accent-subtle-yiq: #{$color-accent-subtle-yiq};
-
-  --color-accent-subtle-hue: #{color-hue-from-hex($color-accent-subtle)};
-  --color-accent-subtle-saturation: #{color-saturation-from-hex($color-accent-subtle)};
-  --color-accent-subtle-lightness: #{color-lightness-from-hex($color-accent-subtle)};
+  --color-accent-subtle-h: #{color-hue-from-hex($color-accent-subtle)};
+  --color-accent-subtle-s: #{color-saturation-from-hex($color-accent-subtle)};
+  --color-accent-subtle-l: #{color-lightness-from-hex($color-accent-subtle)};
 
   /**
    *
@@ -108,109 +97,97 @@
 
   --color-success: #{$color-success};
   --color-success-yiq: #{$color-success-yiq};
-
-  --color-success-hue: #{color-hue-from-hex($color-success)};
-  --color-success-saturation: #{color-saturation-from-hex($color-success)};
-  --color-success-lightness: #{color-lightness-from-hex($color-success)};
+  --color-success-h: #{color-hue-from-hex($color-success)};
+  --color-success-s: #{color-saturation-from-hex($color-success)};
+  --color-success-l: #{color-lightness-from-hex($color-success)};
 
   // -- Subtle
 
   --color-success-subtle: #{$color-success-subtle};
   --color-success-subtle-yiq: #{$color-success-subtle-yiq};
-
-  --color-success-subtle-hue: #{color-hue-from-hex($color-success-subtle)};
-  --color-success-subtle-saturation: #{color-saturation-from-hex($color-success-subtle)};
-  --color-success-subtle-lightness: #{color-lightness-from-hex($color-success-subtle)};
+  --color-success-subtle-h: #{color-hue-from-hex($color-success-subtle)};
+  --color-success-subtle-s: #{color-saturation-from-hex($color-success-subtle)};
+  --color-success-subtle-l: #{color-lightness-from-hex($color-success-subtle)};
 
   /* Info */
 
   --color-info: #{$color-info};
   --color-info-yiq: #{$color-info-yiq};
-
-  --color-info-hue: #{color-hue-from-hex($color-info)};
-  --color-info-saturation: #{color-saturation-from-hex($color-info)};
-  --color-info-lightness: #{color-lightness-from-hex($color-info)};
+  --color-info-h: #{color-hue-from-hex($color-info)};
+  --color-info-s: #{color-saturation-from-hex($color-info)};
+  --color-info-l: #{color-lightness-from-hex($color-info)};
 
   // -- Subtle
 
   --color-info-subtle: #{$color-info-subtle};
   --color-info-subtle-yiq: #{$color-info-subtle-yiq};
-
-  --color-info-subtle-hue: #{color-hue-from-hex($color-info-subtle)};
-  --color-info-subtle-saturation: #{color-saturation-from-hex($color-info-subtle)};
-  --color-info-subtle-lightness: #{color-lightness-from-hex($color-info-subtle)};
+  --color-info-subtle-h: #{color-hue-from-hex($color-info-subtle)};
+  --color-info-subtle-s: #{color-saturation-from-hex($color-info-subtle)};
+  --color-info-subtle-l: #{color-lightness-from-hex($color-info-subtle)};
 
   /* Warning */
 
   --color-warning: #{$color-warning};
   --color-warning-yiq: #{$color-warning-yiq};
-
-  --color-warning-hue: #{color-hue-from-hex($color-warning)};
-  --color-warning-saturation: #{color-saturation-from-hex($color-warning)};
-  --color-warning-lightness: #{color-lightness-from-hex($color-warning)};
+  --color-warning-h: #{color-hue-from-hex($color-warning)};
+  --color-warning-s: #{color-saturation-from-hex($color-warning)};
+  --color-warning-l: #{color-lightness-from-hex($color-warning)};
 
   // --Subtle
 
   --color-warning-subtle: #{$color-warning-subtle};
   --color-warning-subtle-yiq: #{$color-warning-subtle-yiq};
-
-  --color-warning-subtle-hue: #{color-hue-from-hex($color-warning-subtle)};
-  --color-warning-subtle-saturation: #{color-saturation-from-hex($color-warning-subtle)};
-  --color-warning-subtle-lightness: #{color-lightness-from-hex($color-warning-subtle)};
+  --color-warning-subtle-h: #{color-hue-from-hex($color-warning-subtle)};
+  --color-warning-subtle-s: #{color-saturation-from-hex($color-warning-subtle)};
+  --color-warning-subtle-l: #{color-lightness-from-hex($color-warning-subtle)};
 
   /* Error */
 
   --color-error: #{$color-error};
   --color-error-yiq: #{$color-error-yiq};
-
-  --color-error-hue: #{color-hue-from-hex($color-error)};
-  --color-error-saturation: #{color-saturation-from-hex($color-error)};
-  --color-error-lightness: #{color-lightness-from-hex($color-error)};
+  --color-error-h: #{color-hue-from-hex($color-error)};
+  --color-error-s: #{color-saturation-from-hex($color-error)};
+  --color-error-l: #{color-lightness-from-hex($color-error)};
 
   // -- Subtle
 
   --color-error-subtle: #{$color-error-subtle};
   --color-error-subtle-yiq: #{$color-error-subtle-yiq};
-
-  --color-error-subtle-hue: #{color-hue-from-hex($color-error-subtle)};
-  --color-error-subtle-saturation: #{color-saturation-from-hex($color-error-subtle)};
-  --color-error-subtle-lightness: #{color-lightness-from-hex($color-error-subtle)};
+  --color-error-subtle-h: #{color-hue-from-hex($color-error-subtle)};
+  --color-error-subtle-s: #{color-saturation-from-hex($color-error-subtle)};
+  --color-error-subtle-l: #{color-lightness-from-hex($color-error-subtle)};
 
   /* Light */
 
   --color-light: #{$color-light};
   --color-light-yiq: #{$color-light-yiq};
-
-  --color-light-hue: #{color-hue-from-hex($color-light)};
-  --color-light-saturation: #{color-saturation-from-hex($color-light)};
-  --color-light-lightness: #{color-lightness-from-hex($color-light)};
+  --color-light-h: #{color-hue-from-hex($color-light)};
+  --color-light-s: #{color-saturation-from-hex($color-light)};
+  --color-light-l: #{color-lightness-from-hex($color-light)};
 
   // -- Subtle
 
   --color-light-subtle: #{$color-light-subtle};
   --color-light-subtle-yiq: #{$color-light-subtle-yiq};
-
-  --color-light-subtle-hue: #{color-hue-from-hex($color-light-subtle)};
-  --color-light-subtle-saturation: #{color-saturation-from-hex($color-light-subtle)};
-  --color-light-subtle-lightness: #{color-lightness-from-hex($color-light-subtle)};
+  --color-light-subtle-h: #{color-hue-from-hex($color-light-subtle)};
+  --color-light-subtle-s: #{color-saturation-from-hex($color-light-subtle)};
+  --color-light-subtle-l: #{color-lightness-from-hex($color-light-subtle)};
 
   /* Dark */
 
   --color-dark: #{$color-dark};
   --color-dark-yiq: #{$color-dark-yiq};
-
-  --color-dark-hue: #{color-hue-from-hex($color-dark)};
-  --color-dark-saturation: #{color-saturation-from-hex($color-dark)};
-  --color-dark-lightness: #{color-lightness-from-hex($color-dark)};
+  --color-dark-h: #{color-hue-from-hex($color-dark)};
+  --color-dark-s: #{color-saturation-from-hex($color-dark)};
+  --color-dark-l: #{color-lightness-from-hex($color-dark)};
 
   // -- Subtle
 
   --color-dark-subtle: #{$color-dark-subtle};
   --color-dark-subtle-yiq: #{$color-dark-subtle-yiq};
-
-  --color-dark-subtle-hue: #{color-hue-from-hex($color-dark-subtle)};
-  --color-dark-subtle-saturation: #{color-saturation-from-hex($color-dark-subtle)};
-  --color-dark-subtle-lightness: #{color-lightness-from-hex($color-dark-subtle)};
+  --color-dark-subtle-h: #{color-hue-from-hex($color-dark-subtle)};
+  --color-dark-subtle-s: #{color-saturation-from-hex($color-dark-subtle)};
+  --color-dark-subtle-l: #{color-lightness-from-hex($color-dark-subtle)};
 
   /**
    *

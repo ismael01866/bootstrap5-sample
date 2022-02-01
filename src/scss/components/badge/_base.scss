@@ -1,3 +1,5 @@
+@use "sass:map";
+
 .badge {
   align-items: center;
   border-style: solid;
@@ -11,10 +13,16 @@
 // Color
 
 @each $color in $component-colors {
-  @each $type in $badge-types {
-    .badge-#{$color}-#{$type} {
-      @include badge-pattern-mixin($color, $type);
-    }
+  .badge-color-#{$color} {
+    @include component-color-mixin($color);
+  }
+}
+
+// Patern
+
+@each $pattern in $badge-patterns {
+  .badge-pattern-#{$pattern} {
+    @include badge-pattern-mixin($pattern);
   }
 }
 
@@ -37,27 +45,22 @@
 // Size
 
 @each $name, $props in $badge-sizes {
-
-  $gap      : map-get($props, "gap");
-  $height   : map-get($props, "height");
-  $font-size: map-get($props, "font-size");
-  $min-width: map-get($props, "min-width");
-  $padding-x: map-get($props, "padding-x");
+  $gap: map.get($props, "gap");
+  $height: map.get($props, "height");
+  $font-size: map.get($props, "font-size");
+  $min-width: map.get($props, "min-width");
+  $padding-x: map.get($props, "padding-x");
 
   .badge-size-#{$name} {
     @include map-props-mixin(
-      map-get($component-font-sizing, $font-size));
-
+      map.get($component-font-sizing, $font-size));
     @include map-props-mixin(
-      map-get($component-gap-sizing, $gap));
-
+      map.get($component-gap-sizing, $gap));
     @include map-props-mixin(
-      map-get($component-height-sizing, $height));
-
+      map.get($component-height-sizing, $height));
     @include map-props-mixin(
-      map-get($component-min-width-sizing, $min-width));
-
+      map.get($component-min-width-sizing, $min-width));
     @include map-props-mixin(
-      map-get($component-padding-x-sizing, $padding-x));
+      map.get($component-padding-x-sizing, $padding-x));
   }
 }

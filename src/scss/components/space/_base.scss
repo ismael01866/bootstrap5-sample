@@ -1,11 +1,13 @@
+@use "sass:map";
+
 .space {
   display: inline-flex;
 }
 
 @each $name, $props in $space-sizes {
-  $gap: map-get($props, "gap");
+  $gap: map.get($props, "gap");
 
   .space-gap-#{$name} {
-    @include map-props-mixin(map-get($component-gap-sizing, $gap));
+    @include map-props-mixin(map.get($component-gap-sizing, $gap));
   }
 }

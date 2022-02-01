@@ -1,8 +1,6 @@
 $button-border-width: var(--component-border-width-base) !default;
 $button-transition-duration: var(--transition-duration-fast) !default;
-
 $button-shapes: ("base", "rounded") !default;
-
 $button-sizes: (
   "sm": (
     "font-size": "xs",   "gap": "8",  "height": "24", "padding-x": "12"
@@ -17,5 +15,4 @@ $button-sizes: (
     "font-size": "base", "gap": "12", "height": "48", "padding-x": "20"
   )
 ) !default;
-
-$button-types: ("solid", "subtle", "outline", "ghost") !default;
+$button-patterns: ("solid", "subtle", "outline", "ghost") !default;

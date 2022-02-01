@@ -1,15 +1,11 @@
-/*
-========================================
-Sizing */
-
-@each $name, $props in $form-control-sizing-map {
-  @if ($name == "") {
-    .form-control {
-      @include form-control-sizing-mixin($props);
-    }
-  } @else {
-    .form-control-#{$name} {
-      @include form-control-sizing-mixin($props);
-    }
-  }
-}
+// @each $name, $props in $form-control-sizing-map {
+//   @if $name == "" {
+//     .form-control {
+//       @include form-control-sizing-mixin($props);
+//     }
+//   } @else {
+//     .form-control-#{$name} {
+//       @include form-control-sizing-mixin($props);
+//     }
+//   }
+// }

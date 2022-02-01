@@ -1,3 +1,5 @@
+@use "sass:map";
+
 .avatar {
   border-radius: $avatar-border-radius;
   box-sizing: border-box;
@@ -34,7 +36,7 @@
 // Shape
 
 @each $shape in $avatar-shapes {
-  $props: map-get($component-shapes, $shape);
+  $props: map.get($component-shapes, $shape);
 
   .avatar-shape-#{$shape} {
     .avatar-img {
@@ -46,9 +48,9 @@
 // Size
 
 @each $name, $props in $avatar-sizes {
-  $size: map-get($props, "size");
+  $size: map.get($props, "size");
 
   .avatar-size-#{$name} {
-    @include map-props-mixin(map-get($component-size-sizing, $size));
+    @include map-props-mixin(map.get($component-size-sizing, $size));
   }
 }

@@ -1,3 +1,5 @@
+@use "sass:math";
+
 /* Scale (Minor Third) */
 
 $font-scale: 1.2 !default;
@@ -11,14 +13,13 @@ $font-family-subtitle: "Open Sans" !default;
 /* Font Size */
 
 $font-size-base: 1rem !default;
-
-$font-size-sm: $font-size-base / ($font-scale) !default;
-$font-size-xs: $font-size-sm / ($font-scale) !default;
-$font-size-xxs: $font-size-xs / ($font-scale) !default;
+$font-size-sm: math.div($font-size-base, $font-scale) !default;
+$font-size-xs: math.div($font-size-sm, $font-scale) !default;
+$font-size-xxs: math.div($font-size-xs, $font-scale) !default;
 
 // -- Body
 
-$font-size-body-2: 1em / ($font-scale) !default;
+$font-size-body-2: math.div(1em, $font-scale) !default;
 $font-size-body-1: $font-size-body-2 * ($font-scale) !default;
 
 // -- Headline

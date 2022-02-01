@@ -1,14 +1,16 @@
+@use "sass:color";
+@use "sass:math";
+
 @function color-yiq(
   $background,
   $dark: #000, $light: #fff
 ) {
-  $r: red($background);
-  $g: green($background);
-  $b: blue($background);
+  $r: color.red($background);
+  $g: color.green($background);
+  $b: color.blue($background);
+  $yiq: math.div((($r * 299) + ($g * 587) + ($b * 114)), 1000);
 
-  $yiq: (($r * 299) + ($g * 587) + ($b * 114)) / 1000;
-
-  @if ($yiq >= 128) {
+  @if $yiq >= 128 {
     @return $dark;
   } @else {
     @return $light;
@@ -44,7 +46,8 @@
 
 @function color-reduce-lightness-from-name($name, $amount) {
   $lightness: calc(
-    var(--color-#{$name}-lightness) - var(--brightness-#{$amount}));
+    var(--color-#{$name}-lightness) - var(--brightness-#{$amount})
+  );
 
   @return hsl(
     var(--color-#{$name}-hue),
@@ -53,7 +56,8 @@
 
 @function color-reduce-lightness-from-name-subtle($name, $amount) {
   $lightness: calc(
-    var(--color-#{$name}-subtle-lightness) - var(--brightness-#{$amount}));
+    var(--color-#{$name}-subtle-lightness) - var(--brightness-#{$amount})
+  );
 
   @return hsl(
     var(--color-#{$name}-subtle-hue),
