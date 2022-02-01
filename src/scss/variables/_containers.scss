@@ -1,0 +1,12 @@
+$container-sm: 540px !default;
+$container-md: 720px !default;
+$container-lg: 960px !default;
+$container-xl: 1140px !default;
+$container-xxl: 1320px !default;
+$container-max-widths-map: (
+  sm: $container-sm,
+  md: $container-md,
+  lg: $container-lg,
+  xl: $container-xl,
+  xxl: $container-xxl
+) !default;

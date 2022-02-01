@@ -33,7 +33,7 @@ $font-size-headline-1: $font-size-headline-2 * ($font-scale) !default;
 
 // -- Subtitle
 
-$font-size-subtitle-2: 1em / ($font-scale) !default;
+$font-size-subtitle-2: math.div(1em, $font-scale) !default;
 $font-size-subtitle-1: $font-size-subtitle-2 * ($font-scale) !default;
 
 /* Font Weight */
