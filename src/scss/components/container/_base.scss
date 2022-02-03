@@ -3,8 +3,7 @@
   box-sizing: border-box;
   margin-left: auto;
   margin-right: auto;
-  padding-left: var(--space-base);
-  padding-right: var(--space-base);
+  padding: $container-padding-y $container-padding-x;
   width: 100%;
 }
 

@@ -1,19 +1,2 @@
-// $badge-border-width: var(--component-border-width-base) !default;
-
-// $badge-placements: (
-//   'top-left', 'top-right', 'bottom-left', 'bottom-right'
-// ) !default;
-
-// $badge-sizes: (
-//   "xs": (
-//     "font-size": "xxs", "gap": "4", "height": "16", "min-width": "16", "padding-x": "4"
-//   ),
-//   "sm": (
-//     "font-size": "xs",  "gap": "8", "height": "24", "min-width": "24", "padding-x": "8"
-//   ),
-//   "base": (
-//     "font-size": "sm",  "gap": "8", "height": "32", "min-width": "32", "padding-x": "12"
-//   )
-// ) !default;
-
-// $badge-patterns: ("solid", "subtle") !default;
+$container-padding-x: var(--space-base);
+$container-padding-y: 0;

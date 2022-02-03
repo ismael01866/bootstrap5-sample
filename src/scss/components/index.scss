@@ -1,4 +1,5 @@
-@import "layout";
+// Components
+
 @import "alert";
 
 // @import "article";
@@ -6,9 +7,7 @@
 @import "badge";
 @import "button";
 @import "close";
-@import "container";
 @import "dot";
-@import "divider";
 @import "icon";
 @import "menu";
 
@@ -18,6 +17,20 @@
 // @import "image";
 // @import "nav";
 // @import "navbar";
-@import "space";
 @import "tooltip";
+
+// Grid
+
+@import "layout";
+@import "container";
+@import "row";
+@import "col";
+
+// Typography
+
 @import "typography";
+
+// Utilities
+
+@import "divider";
+@import "space";
