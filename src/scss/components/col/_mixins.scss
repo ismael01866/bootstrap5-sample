@@ -1,0 +1,46 @@
+@use "sass:math";
+
+@mixin make-col(
+  $size: false,
+  $columns: $grid-columns
+) {
+  .row & {
+    @if $size {
+      flex: 0 0 auto;
+      width: math.percentage(math.div($size, $columns));
+    } @else {
+      flex: 1 1 0;
+      max-width: 100%;
+    }
+  }
+}
+
+@mixin make-cols-mixin(
+  $columns : $grid-columns,
+  $breakpoints: $breakpoints-map,
+) {
+  @each $breakpoint in map-keys($breakpoints) {
+    $infix: breakpoint-infix($breakpoint, $breakpoints);
+
+    @include media-breakpoint-up($breakpoint, $breakpoints) {
+      .col#{$infix} {
+        flex: 1 0 0%; // Flexbugs #4: https://github.com/philipwalton/flexbugs#flexbug-4
+      }
+
+      .col#{$infix}-auto {
+        .row & {
+          flex: 0 0 auto;
+          width: auto;
+        }
+      }
+
+      @if $columns > 0 {
+        @for $i from 1 through $columns {
+          .col#{$infix}-#{$i} {
+            @include make-col($i, $columns);
+          }
+        }
+      }
+    }
+  }
+}

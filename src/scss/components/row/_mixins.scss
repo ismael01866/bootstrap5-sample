@@ -1,0 +1,36 @@
+@use "sass:math";
+
+@mixin row-cols-mixin($count) {
+  > *,
+  > .col {
+    flex: 0 0 auto;
+    width: math.div(100%, $count);
+  }
+}
+
+@mixin make-row-cols-mixin(
+  $columns : $grid-row-columns,
+  $breakpoints: $breakpoints-map,
+) {
+  @each $breakpoint in map-keys($breakpoints) {
+    $infix: breakpoint-infix($breakpoint, $breakpoints);
+
+    @include media-breakpoint-up($breakpoint, $breakpoints) {
+      .row-cols#{$infix}-auto {
+        > *,
+        > .col {
+          flex: 0 0 auto;
+          width: auto;
+        }
+      }
+
+      @if $columns > 0 {
+        @for $i from 1 through $columns {
+          .row-cols#{$infix}-#{$i} {
+            @include row-cols-mixin($i);
+          }
+        }
+      }
+    }
+  }
+}
