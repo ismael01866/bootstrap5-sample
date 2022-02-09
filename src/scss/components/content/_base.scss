@@ -1,0 +1,37 @@
+@use "sass:map";
+
+.content {
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+}
+
+// Color
+
+@each $color in $content-colors {
+  .content-color-#{$color} {
+    @include component-color-mixin($color);
+  }
+}
+
+// Patern
+
+@each $pattern in $content-patterns {
+  .content-pattern-#{$pattern} {
+    @include content-pattern-mixin($pattern);
+  }
+}
+
+// Size
+
+@each $size, $props in $content-sizes {
+  .content-size-#{$size} {
+    $padding-x: map.get($props, "padding-x");
+    $padding-y: map.get($props, "padding-y");
+
+    @include map-props-mixin(
+      map.get($component-padding-x-sizing, $padding-x));
+    @include map-props-mixin(
+      map.get($component-padding-y-sizing, $padding-y));
+  }
+}

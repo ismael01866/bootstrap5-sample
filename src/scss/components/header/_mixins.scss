@@ -1,0 +1,17 @@
+@mixin header-pattern-mixin($pattern) {
+  @if $pattern == "solid" {
+    @include header-solid-mixin;
+  }
+
+  @if $pattern == "subtle" {
+    @include header-subtle-mixin;
+  }
+}
+
+@mixin header-solid-mixin {
+  @include component-solid-mixin;
+}
+
+@mixin header-subtle-mixin {
+  @include component-subtle-mixin;
+}

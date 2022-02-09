@@ -1,14 +1,5 @@
 /**
  *
- * Generic
- *
- */
-
-$color-black: #000 !default;
-$color-white: #fff !default;
-
-/**
- *
  * Background
  *
  */
@@ -92,18 +83,34 @@ $color-error-yiq: color-yiq($color-error) !default;
 $color-error-subtle: color-subtle-light-mix($color-error) !default;
 $color-error-subtle-yiq: color-yiq($color-error-subtle) !default;
 
+/**
+ *
+ * Theme (Light & Dark)
+ *
+ */
+
+/* White */
+
+$color-white: #fff !default;
+$color-white-yiq: color-yiq($color-white) !default;
+
 /* Light */
 
 $color-light: #e0e0e0 !default;
 $color-light-yiq: color-yiq($color-light) !default;
-$color-light-subtle: color-subtle-light-mix($color-light) !default;
+$color-light-subtle: color-subtle-light-mix($color-light, $brightness-24) !default;
 $color-light-subtle-yiq: color-yiq($color-light-subtle) !default;
+
+/* Black */
+
+$color-black: #000 !default;
+$color-black-yiq: color-yiq($color-black) !default;
 
 /* Dark */
 
 $color-dark: #212121 !default;
 $color-dark-yiq: color-yiq($color-dark) !default;
-$color-dark-subtle: color-subtle-light-mix($color-dark) !default;
+$color-dark-subtle: color-subtle-light-mix($color-dark, $brightness-24) !default;
 $color-dark-subtle-yiq: color-yiq($color-dark-subtle) !default;
 
 /**

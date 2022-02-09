@@ -19,18 +19,21 @@
 // @import "navbar";
 @import "tooltip";
 
-// Grid
+// Layout
 
 @import "layout";
-@import "container";
+@import "header";
+@import "content";
+@import "footer";
+@import "divider";
+@import "space";
+
+// Grid
+
 @import "row";
 @import "col";
+@import "container";
 
 // Typography
 
 @import "typography";
-
-// Utilities
-
-@import "divider";
-@import "space";
