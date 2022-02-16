@@ -1,16 +1,16 @@
 $divider-border-color: var(--color-border) !default;
 $divider-border-width: var(--component-border-width-base) !default;
 $divider-sizes: (
+  "1": (
+    "font-size": "sm", "gap": "3", "margin": "1"
+  ),
+  "2": (
+    "font-size": "sm", "gap": "3", "margin": "2"
+  ),
+  "3": (
+    "font-size": "sm", "gap": "3", "margin": "3",
+  ),
   "4": (
-    "font-size": "sm", "gap": "12",  "margin": "4"
-  ),
-  "8": (
-    "font-size": "sm", "gap": "12", "margin": "8"
-  ),
-  "12": (
-    "font-size": "sm", "gap": "12", "margin": "12",
-  ),
-  "16": (
-    "font-size": "sm", "gap": "12", "margin": "16",
+    "font-size": "sm", "gap": "3", "margin": "4",
   )
 ) !default;

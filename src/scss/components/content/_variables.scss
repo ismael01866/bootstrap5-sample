@@ -1,7 +1,7 @@
 $content-colors: ("white") !default;
+$content-patterns: ("solid", "subtle") !default;
 $content-sizes: (
   "base": (
-    "padding-x": "16", "padding-y": "16"
+    "font-size": "sm", "padding-x": "6", "padding-y": "4"
   )
 ) !default;
-$content-patterns: ("solid", "subtle") !default;

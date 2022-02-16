@@ -3,27 +3,27 @@ $avatar-border-radius: var(--component-border-radius-base);
 $avatar-shapes: ("base", "rounded") !default;
 $avatar-sizes: (
   "xxs": (
-    "size": "16"
+    "size": "4"
   ),
   "xs": (
-    "size": "20"
+    "size": "5"
   ),
   "sm": (
-    "size": "24"
+    "size": "6"
   ),
   "base": (
-    "size": "32"
+    "size": "8"
   ),
   "md": (
-    "size": "40"
+    "size": "10"
   ),
   "lg": (
-    "size": "48"
+    "size": "12"
   ),
   "xl": (
-    "size": "56"
+    "size": "14"
   ),
   "xxl": (
-    "size": "64"
+    "size": "16"
   )
 ) !default;

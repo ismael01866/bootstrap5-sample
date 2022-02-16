@@ -1,0 +1,28 @@
+.scroller {
+  overflow: auto;
+  scrollbar-width: thin;
+
+  &::-webkit-scrollbar {
+    height: $scroller-height;
+    width: $scroller-width;
+  }
+
+  &::-webkit-scrollbar-track {
+    background: $scroller-bg;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background-color: $scroller-track;
+    border: 1px solid transparent;
+  }
+
+  &:hover,
+  &:focus,
+  &:active {
+    &::-webkit-scrollbar {}
+
+    &::-webkit-scrollbar-thumb {
+      background-color: $scroller-track-active;
+    }
+  }
+}

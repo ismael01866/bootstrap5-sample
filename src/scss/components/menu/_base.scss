@@ -70,11 +70,11 @@
 
 // --Menu item -- Patern
 
-@each $pattern in $menu-item-patterns {
-  .menu-item-pattern-#{$pattern} {
-    @include menu-item-pattern-mixin($pattern);
-  }
-}
+// @each $pattern in $component-patterns {
+//   .menu-item-pattern-#{$pattern} {
+//     @include menu-item-pattern-mixin($pattern);
+//   }
+// }
 
 // -- Menu item -- Size
 
@@ -83,6 +83,7 @@
     $font-size: map.get($props, "font-size");
     $gap: map.get($props, "gap");
     $height: map.get($props, "height");
+    $min-height: map.get($props, "min-height");
     $margin-y: map.get($props, "margin-y");
     $padding-left: map.get($props, "padding-left");
     $padding-right: map.get($props, "padding-right");
@@ -93,6 +94,8 @@
       map.get($component-gap-sizing, $gap));
     @include map-props-mixin(
       map.get($component-height-sizing, $height));
+    @include map-props-mixin(
+      map.get($component-min-height-sizing, $min-height));
     @include map-props-mixin(
       map.get($component-margin-y-sizing, $margin-y));
     @include map-props-mixin(

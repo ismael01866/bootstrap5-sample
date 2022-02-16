@@ -1,5 +1,5 @@
 $menu-bg: var(--color-bg-dk);
-$menu-widths: ("128", "256") !default;
+$menu-widths: ("80", "128", "256") !default;
 
 // Children
 
@@ -7,7 +7,8 @@ $menu-widths: ("128", "256") !default;
 
 $menu-title-sizes: (
   "base": (
-    "font-size": "sm", "gap": "8", "height": "32", "margin-y": "4", "padding-left": "16", "padding-right": "16"
+    "font-size": "sm", "gap": "2", "height": "8", "min-height": "8",
+    "margin-y": "1", "padding-left": "4", "padding-right": "4"
   )
 ) !default;
 
@@ -16,7 +17,7 @@ $menu-title-sizes: (
 $menu-item-transition-duration: var(--transition-duration-fast) !default;
 $menu-item-sizes: (
   "base": (
-    "font-size": "sm", "gap": "8", "height": "40", "margin-y": "4", "padding-left": "24", "padding-right": "16"
+    "font-size": "sm", "gap": "2", "height": "10", "min-height": "10",
+    "margin-y": "1", "padding-left": "4", "padding-right": "4"
   )
 ) !default;
-$menu-item-patterns: ("solid", "subtle", "ghost") !default;

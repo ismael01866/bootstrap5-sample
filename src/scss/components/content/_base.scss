@@ -4,6 +4,7 @@
   box-sizing: border-box;
   display: flex;
   flex-direction: column;
+  flex: 1 1 auto;
 }
 
 // Color
@@ -26,9 +27,12 @@
 
 @each $size, $props in $content-sizes {
   .content-size-#{$size} {
+    $font-size: map.get($props, "font-size");
     $padding-x: map.get($props, "padding-x");
     $padding-y: map.get($props, "padding-y");
 
+    @include map-props-mixin(
+      map.get($component-font-sizing, $font-size));
     @include map-props-mixin(
       map.get($component-padding-x-sizing, $padding-x));
     @include map-props-mixin(

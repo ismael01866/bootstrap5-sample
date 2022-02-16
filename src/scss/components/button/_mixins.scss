@@ -7,12 +7,20 @@
     @include button-subtle-mixin;
   }
 
+  @if $pattern == "colored" {
+    @include button-colored-mixin;
+  }
+
   @if $pattern == "outline" {
     @include button-outline-mixin;
   }
 
   @if $pattern == "ghost" {
     @include button-ghost-mixin;
+  }
+
+  @if $pattern == "link" {
+    @include button-link-mixin;
   }
 }
 
@@ -48,6 +56,22 @@
   }
 }
 
+@mixin button-colored-mixin {
+  @include component-colored-mixin;
+
+  &:hover {
+    @include component-colored-hover-mixin;
+  }
+
+  &:active {
+    @include component-colored-active-mixin;
+  }
+
+  &:focus {
+    @include component-colored-focus-mixin;
+  }
+}
+
 @mixin button-outline-mixin {
   @include component-outline-mixin;
 
@@ -77,5 +101,21 @@
 
   &:focus {
     @include component-ghost-focus-mixin;
+  }
+}
+
+@mixin button-link-mixin {
+  @include component-link-mixin;
+
+  &:hover {
+    @include component-link-hover-mixin;
+  }
+
+  &:active {
+    @include component-link-active-mixin;
+  }
+
+  &:focus {
+    @include component-link-focus-mixin;
   }
 }

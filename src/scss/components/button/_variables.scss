@@ -1,18 +1,23 @@
 $button-border-width: var(--component-border-width-base) !default;
-$button-transition-duration: var(--transition-duration-fast) !default;
-$button-shapes: ("base", "rounded") !default;
+$button-patterns: (
+  "solid", "subtle", "colored", "outline", "ghost", "link"
+) !default;
+$button-shapes: (
+  "base",
+  "rounded"
+) !default;
 $button-sizes: (
   "sm": (
-    "font-size": "xs",   "gap": "8",  "height": "24", "padding-x": "12"
+    "font-size": "xs",   "gap": "1", "height": "6",  "padding-x": "3",  "width": "6"
   ),
   "base": (
-    "font-size": "sm",   "gap": "8",  "height": "32", "padding-x": "16"
+    "font-size": "sm",   "gap": "1", "height": "8",  "padding-x": "4",  "width": "8"
   ),
   "md": (
-    "font-size": "base", "gap": "8",  "height": "40", "padding-x": "16"
+    "font-size": "base", "gap": "1", "height": "10",  "padding-x": "4", "width": "10"
   ),
   "lg": (
-    "font-size": "base", "gap": "12", "height": "48", "padding-x": "20"
+    "font-size": "base", "gap": "2",  "height": "12", "padding-x": "5", "width": "12"
   )
 ) !default;
-$button-patterns: ("solid", "subtle", "outline", "ghost") !default;
+$button-transition-duration: var(--transition-duration-fast) !default;

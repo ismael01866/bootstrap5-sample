@@ -1,6 +1,7 @@
 /* Headline */
 
 .headline {
+  color: $headline-color;
   font-family: $headline-font-family;
   line-height: $headline-line-height;
 
@@ -39,7 +40,7 @@
     h6#{&} {
       font-size: $headline-6-font-size;
       font-weight: $headline-6-font-weight;
-      letter-spacing: 0.15px;
+      letter-spacing: 0;
     }
   }
 }
@@ -47,6 +48,7 @@
 /* Subtitle */
 
 .subtitle {
+  color: $subtitle-color;
   font-family: $subtitle-font-family;
   line-height: $subtitle-line-height;
 }
@@ -66,6 +68,7 @@
 /* Text */
 
 .text {
+  color: $text-color;
   font-family: $text-font-family;
   line-height: $text-line-height;
 }
@@ -73,7 +76,7 @@
 .text-level-1 {
   font-size: $text-1-font-size;
   font-weight: $text-1-font-weight;
-  letter-spacing: 0.5px;
+  letter-spacing: 0.25px;
 }
 
 .text-level-2 {

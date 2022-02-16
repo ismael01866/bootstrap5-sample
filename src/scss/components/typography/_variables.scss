@@ -1,5 +1,6 @@
 /* Headline */
 
+$headline-color: var(--color-headline);
 $headline-font-family: var(--font-family-headline);
 $headline-line-height: var(--line-height-headline);
 $headline-1-font-size: var(--font-size-headline-1);
@@ -17,6 +18,7 @@ $headline-6-font-weight: var(--font-weight-medium);
 
 /* Subtitle */
 
+$subtitle-color: var(--color-body);
 $subtitle-font-family: var(--font-family-body);
 $subtitle-line-height: var(--line-height-body);
 $subtitle-1-font-size: var(--font-size-body-1);
@@ -26,6 +28,7 @@ $subtitle-2-font-weight: var(--font-weight-medium);
 
 /* Text */
 
+$text-color: var(--color-body);
 $text-font-family: var(--font-family-body);
 $text-line-height: var(--line-height-body);
 $text-1-font-size: var(--font-size-body-1);

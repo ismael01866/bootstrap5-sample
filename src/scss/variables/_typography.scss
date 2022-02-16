@@ -1,14 +1,15 @@
 @use "sass:math";
 
-/* Scale (Minor Third) */
+/* Scale (Major Second) */
 
-$font-scale: 1.2 !default;
+$font-scale: 1.125 !default;
 
 /* Font Familiy */
 
-$font-family-body: "Open Sans" !default;
-$font-family-headline: "Open Sans" !default;
-$font-family-subtitle: "Open Sans" !default;
+$font-family-sans: "Open Sans";
+$font-family-body: $font-family-sans !default;
+$font-family-headline: $font-family-sans !default;
+$font-family-subtitle: $font-family-sans !default;
 
 /* Font Size */
 

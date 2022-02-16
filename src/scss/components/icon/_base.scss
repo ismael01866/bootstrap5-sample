@@ -4,8 +4,19 @@
   display: inline-flex;
   position: relative;
 
-  > * {
+  > svg {
     height: 100%;
+    width: 100%;
+  }
+}
+
+// Color
+
+@each $color in $component-colors {
+  .icon-color-#{$color} {
+    @include component-color-mixin($color);
+
+    color: var(--component-color);
   }
 }
 

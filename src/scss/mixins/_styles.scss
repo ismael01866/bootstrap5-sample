@@ -1,0 +1,193 @@
+@use "sass:map";
+
+/*
+========================================
+Solid */
+
+@mixin component-solid-mixin {
+  @include solid-mixin;
+}
+
+// Hover
+
+@mixin component-solid-hover-mixin {
+  @include solid-interaction-mixin($brightness: 4);
+}
+
+// Active
+
+@mixin component-solid-active-mixin {
+  @include solid-interaction-mixin($brightness: 8);
+}
+
+// Focus
+
+@mixin component-solid-focus-mixin {
+  &:not(:active) {
+    @include component-solid-hover-mixin;
+  }
+}
+
+// Selected
+
+@mixin component-solid-selected-mixin {
+}
+
+/*
+========================================
+Subtle */
+
+@mixin component-subtle-mixin {
+  @include subtle-mixin;
+}
+
+// Hover
+
+@mixin component-subtle-hover-mixin {
+  @include subtle-interaction-mixin($brightness: 4);
+}
+
+// Active
+
+@mixin component-subtle-active-mixin {
+  @include subtle-interaction-mixin($brightness: 8);
+}
+
+// Focus
+
+@mixin component-subtle-focus-mixin {
+  &:not(:active) {
+    @include component-subtle-hover-mixin;
+  }
+}
+
+// Selected
+
+@mixin component-subtle-selected-mixin {
+}
+
+/*
+========================================
+Colored */
+
+@mixin component-colored-mixin {
+  @include colored-mixin;
+}
+
+// Hover
+
+@mixin component-colored-hover-mixin {
+  @include colored-interaction-mixin($brightness: 4);
+}
+
+// Active
+
+@mixin component-colored-active-mixin {
+  @include colored-interaction-mixin($brightness: 8);
+}
+
+// Focus
+
+@mixin component-colored-focus-mixin {
+  &:not(:active) {
+    @include component-colored-hover-mixin;
+  }
+}
+
+// Selected
+
+@mixin component-colored-selected-mixin {
+}
+
+// OUTLINE
+
+@mixin component-outline-mixin {
+  @include outline-mixin;
+}
+
+// Hover
+
+@mixin component-outline-hover-mixin {
+  @include outline-interaction-mixin($brightness: 1);
+}
+
+// Active
+
+@mixin component-outline-active-mixin {
+  @include outline-interaction-mixin($brightness: 4);
+}
+
+// Focus
+
+@mixin component-outline-focus-mixin {
+  &:not(:active) {
+    @include component-outline-hover-mixin;
+  }
+}
+
+// Selected
+
+@mixin component-ghost-selected-mixin {
+}
+
+// GHOST
+
+@mixin component-ghost-mixin {
+  @include ghost-mixin;
+}
+
+// Hover
+
+@mixin component-ghost-hover-mixin {
+  @include ghost-interaction-mixin($brightness: 0);
+}
+
+// Active
+
+@mixin component-ghost-active-mixin {
+  @include ghost-interaction-mixin($brightness: 8);
+}
+
+// Focus
+
+@mixin component-ghost-focus-mixin {
+  &:not(:active) {
+    @include component-ghost-hover-mixin;
+  }
+}
+
+// Selected
+
+@mixin component-ghost-selected-mixin {
+}
+
+// LINK
+
+@mixin component-link-mixin {
+  @include link-mixin;
+}
+
+// Hover
+
+@mixin component-link-hover-mixin {
+  @include link-interaction-mixin($brightness: 4);
+}
+
+// Active
+
+@mixin component-link-active-mixin {
+  @include link-interaction-mixin($brightness: 8);
+}
+
+// Focus
+
+@mixin component-link-focus-mixin {
+  &:not(:active) {
+    @include component-link-hover-mixin;
+  }
+}
+
+// Selected
+
+@mixin component-link-selected-mixin {
+}

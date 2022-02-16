@@ -1,30 +1,6 @@
 :root {
   /**
    *
-   * Background
-   *
-   */
-
-  --color-bg: #{$color-bg};
-  --color-bg-lt: #{$color-bg-lt};
-  --color-bg-lter: #{$color-bg-lter};
-  --color-bg-dk: #{$color-bg-dk};
-  --color-bg-dker: #{$color-bg-dker};
-
-  /**
-   *
-   * Border
-   *
-   */
-
-  --color-border: #{$color-border};
-  --color-border-lt: #{$color-border-lt};
-  --color-border-lter: #{$color-border-lter};
-  --color-border-dk: #{$color-border-dk};
-  --color-border-dker: #{$color-border-dker};
-
-  /**
-   *
    * Theme (Base)
    *
    */
@@ -36,6 +12,10 @@
   --color-primary-h: #{color-hue-from-hex($color-primary)};
   --color-primary-s: #{color-saturation-from-hex($color-primary)};
   --color-primary-l: #{color-lightness-from-hex($color-primary)};
+
+  // -- Light
+
+  --color-primary-lt: #{$color-primary-lt};
 
   // -- Subtle
 
@@ -221,6 +201,8 @@
   /* Icon */
 
   --color-icon: #{$color-icon};
+  --color-icon-subtle: #{$color-icon-subtle};
+  --color-icon-lt: #{$color-icon-lt};
 
   /* Vendor */
 

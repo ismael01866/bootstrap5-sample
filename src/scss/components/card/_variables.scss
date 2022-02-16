@@ -1,0 +1,29 @@
+$card-border-radius: var(--component-border-radius-base);
+$card-border-width: var(--component-border-width-base);
+$card-patterns: ("solid") !default;
+
+// Children
+
+// -- Header
+
+$card-header-sizes: (
+  "base": (
+    "font-size": "sm", "min-height": "14", "padding-x": "6", "padding-top": "4"
+  )
+) !default;
+
+// -- Body
+
+$card-body-sizes: (
+  "base": (
+    "font-size": "sm", "padding-x": "6", "padding-y": "4"
+  )
+) !default;
+
+// -- Footer
+
+$card-footer-sizes: (
+  "base": (
+    "font-size": "sm", "padding-x": "6", "padding-y": "4"
+  )
+) !default;

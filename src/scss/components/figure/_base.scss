@@ -1,0 +1,62 @@
+@use "sass:map";
+
+.figure {
+  align-items: center;
+  border-style: solid;
+  border-width: $figure-border-width;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  overflow: hidden;
+}
+
+// Color
+
+@each $color in $component-colors {
+  .figure-color-#{$color} {
+    @include component-color-mixin($color);
+  }
+}
+
+// Patern
+
+@each $pattern in $figure-patterns {
+  .figure-pattern-#{$pattern} {
+    @include figure-pattern-mixin($pattern);
+  }
+}
+
+// Shape
+
+@each $shape in $figure-shapes {
+  $props: map.get($component-shapes, $shape);
+
+  .figure-shape-#{$shape} {
+    @include map-props-mixin($props);
+  }
+}
+
+// Size
+
+@each $size, $props in $figure-sizes {
+  .figure-size-#{$size} {
+    $height: map.get($props, "height");
+    $padding: map.get($props, "padding");
+
+    @include map-props-mixin(
+      map.get($component-height-sizing, $height));
+    @include map-props-mixin(
+      map.get($component-padding-sizing, $padding));
+  }
+
+  .figure-fixed-size-#{$size} {
+    $height: map.get($props, "height");
+    $width: map.get($props, "width");
+
+    @include map-props-mixin(
+      map.get($component-height-sizing, $height));
+    @include map-props-mixin(
+      map.get($component-width-sizing, $width));
+  }
+}

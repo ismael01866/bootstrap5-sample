@@ -1,17 +1,19 @@
 $space-base: 1rem !default;
-$space-4: $space-base * 0.25;
-$space-8: $space-base * 0.5;
-$space-12: $space-base * 0.75;
-$space-16: $space-base;
-$space-20: $space-base * 1.25;
-$space-24: $space-base * 1.5;
-$space-32: $space-base * 2;
+$space-1: $space-base * 0.25;  // 4
+$space-2: $space-base * 0.5;   // 8
+$space-3: $space-base * 0.75;  // 12
+$space-4: $space-base * 1;     // 16
+$space-5: $space-base * 1.25;  // 20
+$space-6: $space-base * 1.5;   // 24
+$space-7: $space-base * 1.75;  // 28
+$space-8: $space-base * 2;     // 32
 $spaces: (
-  "4" : $space-4,
-  "8" : $space-8,
-  "12": $space-12,
-  "16": $space-16,
-  "20": $space-20,
-  "24": $space-24,
-  "32": $space-32
+  "1": $space-1,
+  "2": $space-2,
+  "3": $space-3,
+  "4": $space-4,
+  "5": $space-5,
+  "6": $space-6,
+  "7": $space-7,
+  "8": $space-8
 );

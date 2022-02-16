@@ -34,6 +34,12 @@ Sizing */
   }
 }
 
+@each $name, $props in $component-min-height-sizing {
+  .component-min-height-#{$name} {
+    @include map-props-mixin($props);
+  }
+}
+
 @each $name, $props in $component-padding-sizing {
   .component-padding-#{$name} {
     @include map-props-mixin($props);
@@ -51,27 +57,3 @@ Sizing */
     @include map-props-mixin($props);
   }
 }
-
-/*
-========================================
-Styles */
-
-// @each $color in $component-colors {
-//   .component-#{$color}-solid {
-//     @include component-solid-mixin($color);
-//   }
-
-//   .component-#{$color}-subtle {
-//     @include component-subtle-mixin($color);
-//   }
-
-//   .component-#{$color}-ghost {
-//     @include component-ghost-mixin($color);
-//   }
-// }
-
-// @each $name, $props in $component-shapes {
-//   .component-shape-#{$name} {
-//     @include map-props-mixin($props);
-//   }
-// }

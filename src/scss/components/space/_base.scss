@@ -4,7 +4,7 @@
   display: inline-flex;
 }
 
-@each $name, $props in $space-sizes {
+@each $name, $props in $space-gaps {
   $gap: map.get($props, "gap");
 
   .space-gap-#{$name} {

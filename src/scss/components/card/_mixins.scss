@@ -1,0 +1,9 @@
+@mixin card-pattern-mixin($pattern) {
+  @if $pattern == "solid" {
+    @include card-solid-mixin;
+  }
+}
+
+@mixin card-solid-mixin {
+  @include component-solid-mixin;
+}

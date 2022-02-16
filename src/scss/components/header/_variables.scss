@@ -1,6 +1,6 @@
+$header-patterns: ("solid", "subtle") !default;
 $header-sizes: (
   "base": (
-    "height": "64", "padding-x": "16"
+    "font-size": "sm", "min-height": "14", "padding-x": "6", "padding-top": "4"
   )
 ) !default;
-$header-patterns: ("solid", "subtle") !default;

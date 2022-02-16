@@ -26,12 +26,18 @@
 
 @each $size, $props in $header-sizes {
   .header-size-#{$size} {
-    $height: map.get($props, "height");
+    $font-size: map.get($props, "font-size");
+    $min-height: map.get($props, "min-height");
     $padding-x: map.get($props, "padding-x");
+    $padding-top: map.get($props, "padding-top");
 
     @include map-props-mixin(
-      map.get($component-height-sizing, $height));
+      map.get($component-font-sizing, $font-size));
+    @include map-props-mixin(
+      map.get($component-min-height-sizing, $min-height));
     @include map-props-mixin(
       map.get($component-padding-x-sizing, $padding-x));
+    @include map-props-mixin(
+      map.get($component-padding-top-sizing, $padding-top));
   }
 }

@@ -2,11 +2,13 @@
 
 .button {
   align-items: center;
+  border-color: transparent;
   border-style: solid;
   border-width: $button-border-width;
   box-sizing: border-box;
   cursor: pointer;
   display: inline-flex;
+  justify-content: center;
   text-decoration: none;
   transition: all $button-transition-duration;
 
@@ -58,5 +60,18 @@
       map.get($component-height-sizing, $height));
     @include map-props-mixin(
       map.get($component-padding-x-sizing, $padding-x));
+  }
+
+  .button-fixed-size-#{$size} {
+    gap: unset;
+    padding: unset;
+
+    $height: map.get($props, "height");
+    $width: map.get($props, "width");
+
+    @include map-props-mixin(
+      map.get($component-height-sizing, $height));
+    @include map-props-mixin(
+      map.get($component-width-sizing, $width));
   }
 }

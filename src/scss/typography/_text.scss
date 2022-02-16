@@ -17,16 +17,6 @@ strong {
 }
 
 a {
-  color: var(--color-link);
   cursor: pointer;
   text-decoration: none;
-
-  &:hover,
-  &:focus {
-    color: var(--color-link-hover);
-  }
-
-  &:active {
-    color: var(--color-link-active);
-  }
 }

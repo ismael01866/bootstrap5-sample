@@ -7,8 +7,16 @@
     @include menu-item-subtle-mixin;
   }
 
+  @if $pattern == "outline" {
+    @include menu-item-outline-mixin;
+  }
+
   @if $pattern == "ghost" {
     @include menu-item-ghost-mixin;
+  }
+
+  @if $pattern == "link" {
+    @include menu-item-link-mixin;
   }
 }
 
@@ -46,6 +54,24 @@
   }
 }
 
+@mixin menu-item-outline-mixin {
+  @include component-outline-mixin;
+
+  &:hover {
+    @include component-outline-hover-mixin;
+  }
+
+  &:active {
+    @include component-outline-active-mixin;
+  }
+
+  &.menu-item-is-selected {
+    @include component-subtle-selected-mixin;
+
+    box-shadow: -3px 0 0 0 var(--color-component) inset;
+  }
+}
+
 @mixin menu-item-ghost-mixin {
   @include component-ghost-mixin;
 
@@ -59,6 +85,24 @@
 
   &.menu-item-is-selected {
     @include component-ghost-selected-mixin;
+
+    box-shadow: -3px 0 0 0 var(--color-component) inset;
+  }
+}
+
+@mixin menu-item-link-mixin {
+  @include component-link-mixin;
+
+  &:hover {
+    @include component-link-hover-mixin;
+  }
+
+  &:active {
+    @include component-link-active-mixin;
+  }
+
+  &.menu-item-is-selected {
+    @include component-link-selected-mixin;
 
     box-shadow: -3px 0 0 0 var(--color-component) inset;
   }

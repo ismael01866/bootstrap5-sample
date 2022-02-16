@@ -1,0 +1,119 @@
+@use "sass:map";
+
+.card {
+  border-radius: $card-border-radius;
+  border-style: solid;
+  border-width: $card-border-width;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  flex: 1 1 auto;
+  overflow: hidden;
+}
+
+// Color
+
+@each $color in $component-colors {
+  .card-color-#{$color} {
+    @include component-color-mixin($color);
+  }
+}
+
+// Patern
+
+@each $pattern in $card-patterns {
+  .card-pattern-#{$pattern} {
+    @include card-pattern-mixin($pattern);
+  }
+}
+
+// Children
+
+.card-header {
+  align-items: center;
+  box-sizing: border-box;
+  display: flex;
+}
+
+.card-body {
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  flex: 1 1 auto;
+}
+
+.card-footer {
+  align-items: center;
+  box-sizing: border-box;
+  display: flex;
+}
+
+// -- Color
+
+@each $color in $component-colors {
+  .card-body-color-#{$color},
+  .card-header-color-#{$color},
+  .card-footer-color-#{$color} {
+    @include component-color-mixin($color);
+  }
+}
+
+// -- Patern
+
+@each $pattern in $card-patterns {
+  .card-body-pattern-#{$pattern},
+  .card-header-pattern-#{$pattern},
+  .card-footer-pattern-#{$pattern} {
+    @include card-pattern-mixin($pattern);
+  }
+}
+
+// -- Size
+
+@each $size, $props in $card-header-sizes {
+  .card-header-size-#{$size} {
+    $min-height: map.get($props, "min-height");
+    $font-size: map.get($props, "font-size");
+    $padding-x: map.get($props, "padding-x");
+    $padding-top: map.get($props, "padding-top");
+
+    @include map-props-mixin(
+      map.get($component-font-sizing, $font-size));
+    @include map-props-mixin(
+      map.get($component-min-height-sizing, $min-height));
+    @include map-props-mixin(
+      map.get($component-padding-x-sizing, $padding-x));
+    @include map-props-mixin(
+      map.get($component-padding-top-sizing, $padding-top));
+  }
+}
+
+@each $size, $props in $card-body-sizes {
+  .card-body-size-#{$size} {
+    $font-size: map.get($props, "font-size");
+    $padding-x: map.get($props, "padding-x");
+    $padding-y: map.get($props, "padding-y");
+
+    @include map-props-mixin(
+      map.get($component-font-sizing, $font-size));
+    @include map-props-mixin(
+      map.get($component-padding-x-sizing, $padding-x));
+    @include map-props-mixin(
+      map.get($component-padding-y-sizing, $padding-y));
+  }
+}
+
+@each $size, $props in $card-footer-sizes {
+  .card-footer-size-#{$size} {
+    $font-size: map.get($props, "font-size");
+    $padding-x: map.get($props, "padding-x");
+    $padding-y: map.get($props, "padding-y");
+
+    @include map-props-mixin(
+      map.get($component-font-sizing, $font-size));
+    @include map-props-mixin(
+      map.get($component-padding-x-sizing, $padding-x));
+    @include map-props-mixin(
+      map.get($component-padding-y-sizing, $padding-y));
+  }
+}

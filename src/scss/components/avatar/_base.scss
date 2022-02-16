@@ -19,6 +19,7 @@
 
 .avatar-img {
   background-color: $avatar-bg;
+  box-sizing: border-box;
   height: 100%;
   overflow: hidden;
   position: relative;
@@ -29,6 +30,21 @@
 
     &:not([src]) {
       visibility: hidden;
+    }
+  }
+}
+
+.avatar-group {
+  box-sizing: border-box;
+  display: inline-flex;
+
+  > .avatar {
+    .avatar-img {
+      border: 2px solid white;
+    }
+
+    &:not(:first-child) {
+      margin-left: -0.5rem;
     }
   }
 }

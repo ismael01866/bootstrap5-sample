@@ -15,6 +15,7 @@ Colors */
   --component-color-subtle-s: var(--color-#{$color}-subtle-s);
   --component-color-subtle-l: var(--color-#{$color}-subtle-l);
   --component-color-subtle-yiq: var(--color-#{$color}-subtle-yiq);
+  --component-color-lt: var(--color-#{$color}-lt);
 }
 
 /*
@@ -45,181 +46,158 @@ Placement */
 
 /*
 ========================================
-Styles */
+STYLES */
 
-// SOLID
+/*
+========================================
+Solid */
 
-@mixin component-solid-mixin {
-  $color: var(--component-color);
-  $color-yiq: var(--component-color-yiq);
-
-  background-color: $color;
-  border-color: $color;
-  color: $color-yiq;
+@mixin solid-mixin {
+  background-color: var(--component-color);
+  border-color: var(--component-color);
+  color: var(--component-color-yiq);
 }
 
-// Hover
+@mixin solid-interaction-mixin($brightness) {
+  @include solid-mixin;
 
-@mixin component-solid-hover-mixin {
   $h: var(--component-color-h);
   $s: var(--component-color-s);
   $l: var(--component-color-l);
-  $color: hsl($h, $s, calc(#{$l} - var(--brightness-4)));
+  $color: hsl($h, $s, calc(#{$l} - var(--brightness-#{$brightness})));
 
   background-color: $color;
   border-color: $color;
 }
 
-// Active
+/*
+========================================
+Subtle */
 
-@mixin component-solid-active-mixin {
-  $h: var(--component-color-h);
-  $s: var(--component-color-s);
-  $l: var(--component-color-l);
-  $color: hsl($h, $s, calc(#{$l} - var(--brightness-8)));
-
-  background-color: $color;
-  border-color: $color;
+@mixin subtle-mixin {
+  background-color: var(--component-color-subtle);
+  border-color: var(--component-color-subtle);
+  color: var(--component-color-subtle-yiq);
 }
 
-// Focus
+@mixin subtle-interaction-mixin($brightness) {
+  @include subtle-mixin;
 
-@mixin component-solid-focus-mixin {
-  &:not(:active) {
-    @include component-solid-hover-mixin;
-  }
-}
-
-// SUBTLE
-
-@mixin component-subtle-mixin {
-  $color: var(--component-color-subtle);
-  $color-yiq: var(--component-color-subtle-yiq);
-
-  background-color: $color;
-  border-color: $color;
-  color: $color-yiq;
-}
-
-// Hover
-
-@mixin component-subtle-hover-mixin {
   $h: var(--component-color-subtle-h);
   $s: var(--component-color-subtle-s);
   $l: var(--component-color-subtle-l);
-  $color: hsl($h, $s, calc(#{$l} - var(--brightness-4)));
+  $color: hsl($h, $s, calc(#{$l} - var(--brightness-#{$brightness})));
 
   background-color: $color;
   border-color: $color;
 }
 
-// Active
+/*
+========================================
+Colored */
 
-@mixin component-subtle-active-mixin {
+@mixin colored-mixin {
+  background-color: var(--component-color-subtle);
+  border-color: var(--component-color-subtle);
+  color: var(--component-color);
+}
+
+@mixin colored-interaction-mixin($brightness) {
+  @include colored-mixin;
+
   $h: var(--component-color-subtle-h);
   $s: var(--component-color-subtle-s);
   $l: var(--component-color-subtle-l);
-  $color: hsl($h, $s, calc(#{$l} - var(--brightness-8)));
+  $color: hsl($h, $s, calc(#{$l} - var(--brightness-#{$brightness})));
 
   background-color: $color;
   border-color: $color;
+  color: var(--component-color);
 }
 
-// Focus
+/*
+========================================
+Outline */
 
-@mixin component-subtle-focus-mixin {
-  &:not(:active) {
-    @include component-subtle-hover-mixin;
-  }
-}
-
-// -- Selected
-
-@mixin component-subtle-selected-mixin {
-  color: var(--component-color-subtle);
-}
-
-// OUTLINE
-
-@mixin component-outline-mixin {
-  $color: var(--component-color);
-
+@mixin outline-mixin {
   background-color: transparent;
-  border-color: $color;
-  color: $color;
+  border-color: var(--component-color);
+  color: var(--component-color);
 }
 
-// Hover
+@mixin outline-interaction-mixin($brightness) {
+  @include outline-mixin;
 
-@mixin component-outline-hover-mixin {
-  $h: var(--component-color-h);
-  $s: var(--component-color-s);
-  $l: var(--component-color-l);
-  $color: hsl($h, $s, calc(#{$l} - var(--brightness-8)));
+  $h: var(--component-color-subtle-h);
+  $s: var(--component-color-subtle-s);
+  $l: var(--component-color-subtle-l);
+  $color: hsl($h, $s, calc(#{$l} - var(--brightness-#{$brightness})));
 
-  border-color: $color;
-  color: $color;
+  background-color: $color;
 }
 
-// Active
+/*
+========================================
+Ghost */
 
-@mixin component-outline-active-mixin {
-  $h: var(--component-color-h);
-  $s: var(--component-color-s);
-  $l: var(--component-color-l);
-  $color: hsl($h, $s, calc(#{$l} - var(--brightness-16)));
-
-  border-color: $color;
-  color: $color;
+@mixin ghost-mixin {
+  background-color: transparent;
+  border-color: transparent;
+  color: var(--component-color);
 }
 
-// Focus
+@mixin ghost-interaction-mixin($brightness) {
+  @include ghost-mixin;
 
-@mixin component-outline-focus-mixin {
-  &:not(:active) {
-    @include component-outline-hover-mixin;
-  }
+  $h: var(--component-color-subtle-h);
+  $s: var(--component-color-subtle-s);
+  $l: var(--component-color-subtle-l);
+  $color: hsl($h, $s, calc(#{$l} - var(--brightness-#{$brightness})));
+
+  background-color: $color;
 }
 
-// GHOST
+/*
+========================================
+Icon */
 
-@mixin component-ghost-mixin {
-  $color: var(--component-color);
+@mixin icon-mixin {
+  --component-color: var(--color-icon);
+  --component-color-lt: var(--color-icon-subtle);
 
   background-color: transparent;
   border-color: transparent;
-  color: $color;
+  color: var(--component-color);
 }
 
-// Hover
+@mixin ghost-icon-interaction-mixin($brightness) {
+  @include icon-mixin;
 
-@mixin component-ghost-hover-mixin {
-  $color: var(--component-color-subtle);
-
-  background-color: $color;
-}
-
-// Active
-
-@mixin component-ghost-active-mixin {
   $h: var(--component-color-subtle-h);
   $s: var(--component-color-subtle-s);
   $l: var(--component-color-subtle-l);
-  $color: hsl($h, $s, calc(#{$l} - var(--brightness-8)));
+  $color: hsl($h, $s, calc(#{$l} - var(--brightness-#{$brightness})));
 
   background-color: $color;
 }
 
-// Focus
+/*
+========================================
+Link */
 
-@mixin component-ghost-focus-mixin {
-  &:not(:active) {
-    @include component-ghost-hover-mixin;
-  }
+@mixin link-mixin {
+  background-color: transparent;
+  border-color: transparent;
+  color: var(--component-color);
 }
 
-// -- Selected
+@mixin link-interaction-mixin($brightness) {
+  @include link-mixin;
 
-@mixin component-ghost-selected-mixin {
-  background-color: var(--component-color-subtle);
+  $h: var(--component-color-h);
+  $s: var(--component-color-s);
+  $l: var(--component-color-l);
+  $color: hsl($h, $s, calc(#{$l} - var(--brightness-#{$brightness})));
+
+  color: $color;
 }
