@@ -1,0 +1,21 @@
+@use "sass:map";
+
+.spacer {
+  display: inline-flex;
+}
+
+.spacer-orientation-horizontal {
+  flex-direction: row;
+}
+
+.spacer-orientation-vertical {
+  flex-direction: column;
+}
+
+@each $name, $props in $spacer-gaps {
+  $gap: map.get($props, "gap");
+
+  .spacer-gap-#{$name} {
+    @include map-props-mixin(map.get($component-gap-sizing, $gap));
+  }
+}

@@ -14,6 +14,10 @@ $size-14: $size-base * 3.5;  // 56
 $size-16: $size-base * 4;    // 64
 $size-20: $size-base * 5;    // 80
 $size-24: $size-base * 6;    // 96
+$size-32: $size-base * 8;    // 128
+$size-48: $size-base * 12;   // 192
+$size-64: $size-base * 16;   // 256
+
 $sizes: (
   "1": $size-1,
   "2": $size-2,
@@ -29,5 +33,8 @@ $sizes: (
   "14": $size-14,
   "16": $size-16,
   "20": $size-20,
-  "24": $size-24
+  "24": $size-24,
+  "32": $size-32,
+  "48": $size-48,
+  "64": $size-64
 );

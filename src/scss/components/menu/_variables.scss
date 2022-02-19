@@ -1,5 +1,15 @@
 $menu-bg: var(--color-bg-dk);
-$menu-widths: ("80", "128", "256") !default;
+$menu-widths: (
+  "sm": (
+    "min-width": "20", "width": "20"
+  ),
+  "base": (
+    "min-width": "32", "width": "32"
+  ),
+  "lg": (
+    "min-width": "64", "width": "64"
+  )
+) !default;
 
 // Children
 

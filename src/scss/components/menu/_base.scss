@@ -9,8 +9,13 @@
 
 // Width
 
-@each $width in $menu-widths {
+@each $width, $props in $menu-widths {
   .menu-width-#{$width} {
+    $min-width: map.get($props, "min-width");
+    $width: map.get($props, "width");
+
+    @include map-props-mixin(
+      map.get($component-min-width-sizing, $min-width));
     @include map-props-mixin(
       map.get($component-width-sizing, $width));
   }

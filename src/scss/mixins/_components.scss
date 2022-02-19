@@ -10,11 +10,17 @@ Colors */
   --component-color-s: var(--color-#{$color}-s);
   --component-color-l: var(--color-#{$color}-l);
   --component-color-yiq: var(--color-#{$color}-yiq);
+
+  // subtle
+
   --component-color-subtle: var(--color-#{$color}-subtle);
   --component-color-subtle-h: var(--color-#{$color}-subtle-h);
   --component-color-subtle-s: var(--color-#{$color}-subtle-s);
   --component-color-subtle-l: var(--color-#{$color}-subtle-l);
   --component-color-subtle-yiq: var(--color-#{$color}-subtle-yiq);
+
+  // lt
+
   --component-color-lt: var(--color-#{$color}-lt);
 }
 
@@ -148,30 +154,6 @@ Ghost */
 
 @mixin ghost-interaction-mixin($brightness) {
   @include ghost-mixin;
-
-  $h: var(--component-color-subtle-h);
-  $s: var(--component-color-subtle-s);
-  $l: var(--component-color-subtle-l);
-  $color: hsl($h, $s, calc(#{$l} - var(--brightness-#{$brightness})));
-
-  background-color: $color;
-}
-
-/*
-========================================
-Icon */
-
-@mixin icon-mixin {
-  --component-color: var(--color-icon);
-  --component-color-lt: var(--color-icon-subtle);
-
-  background-color: transparent;
-  border-color: transparent;
-  color: var(--component-color);
-}
-
-@mixin ghost-icon-interaction-mixin($brightness) {
-  @include icon-mixin;
 
   $h: var(--component-color-subtle-h);
   $s: var(--component-color-subtle-s);

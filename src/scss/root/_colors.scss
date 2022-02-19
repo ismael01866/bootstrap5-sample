@@ -33,6 +33,10 @@
   --color-secondary-s: #{color-saturation-from-hex($color-secondary)};
   --color-secondary-l: #{color-lightness-from-hex($color-secondary)};
 
+  // -- Light
+
+  --color-secondary-lt: #{$color-secondary-lt};
+
   // -- Subtle
 
   --color-secondary-subtle: #{$color-secondary-subtle};
@@ -49,6 +53,10 @@
   --color-accent-h: #{color-hue-from-hex($color-accent)};
   --color-accent-s: #{color-saturation-from-hex($color-accent)};
   --color-accent-l: #{color-lightness-from-hex($color-accent)};
+
+  // -- Light
+
+  --color-accent-lt: #{$color-accent-lt};
 
   // -- Subtle
 
@@ -72,6 +80,10 @@
   --color-success-s: #{color-saturation-from-hex($color-success)};
   --color-success-l: #{color-lightness-from-hex($color-success)};
 
+  // -- Light
+
+  --color-success-lt: #{$color-success-lt};
+
   // -- Subtle
 
   --color-success-subtle: #{$color-success-subtle};
@@ -87,6 +99,10 @@
   --color-info-h: #{color-hue-from-hex($color-info)};
   --color-info-s: #{color-saturation-from-hex($color-info)};
   --color-info-l: #{color-lightness-from-hex($color-info)};
+
+  // -- Light
+
+  --color-info-lt: #{$color-info-lt};
 
   // -- Subtle
 
@@ -104,6 +120,10 @@
   --color-warning-s: #{color-saturation-from-hex($color-warning)};
   --color-warning-l: #{color-lightness-from-hex($color-warning)};
 
+  // -- Light
+
+  --color-warning-lt: #{$color-warning-lt};
+
   // --Subtle
 
   --color-warning-subtle: #{$color-warning-subtle};
@@ -119,6 +139,10 @@
   --color-error-h: #{color-hue-from-hex($color-error)};
   --color-error-s: #{color-saturation-from-hex($color-error)};
   --color-error-l: #{color-lightness-from-hex($color-error)};
+
+  // -- Light
+
+  --color-error-lt: #{$color-error-lt};
 
   // -- Subtle
 
