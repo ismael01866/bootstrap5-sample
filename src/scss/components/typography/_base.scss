@@ -56,13 +56,13 @@
 .subtitle-level-1 {
   font-size: $subtitle-1-font-size;
   font-weight: $subtitle-1-font-weight;
-  letter-spacing: 0.15px;
+  letter-spacing: 0;
 }
 
 .subtitle-level-2 {
   font-size: $subtitle-2-font-size;
   font-weight: $subtitle-2-font-weight;
-  letter-spacing: 0.1px;
+  letter-spacing: 0;
 }
 
 /* Text */
@@ -83,4 +83,14 @@
   font-size: $text-2-font-size;
   font-weight: $text-2-font-weight;
   letter-spacing: 0.25px;
+}
+
+/* Caption */
+
+.caption {
+  color: $caption-color;
+  font-family: $caption-font-family;
+  font-size: $caption-font-size;
+  letter-spacing: 0.4px;
+  line-height: $caption-line-height;
 }

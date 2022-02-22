@@ -19,11 +19,6 @@
   --font-size-xs: #{$font-size-xs};
   --font-size-xxs: #{$font-size-xxs};
 
-  // -- Body
-
-  --font-size-body-1: #{$font-size-body-1};
-  --font-size-body-2: #{$font-size-body-2};
-
   // -- Headline
 
   --font-size-headline-1: #{$font-size-headline-1};
@@ -37,6 +32,15 @@
 
   --font-size-subtitle-1: #{$font-size-subtitle-1};
   --font-size-subtitle-2: #{$font-size-subtitle-2};
+
+  // -- Body
+
+  --font-size-body-1: #{$font-size-body-1};
+  --font-size-body-2: #{$font-size-body-2};
+
+  // -- Caption
+
+  --font-size-caption: #{$font-size-caption};
 
   /* Font Weight */
 

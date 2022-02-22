@@ -66,39 +66,6 @@ Subtle */
 @mixin component-subtle-selected-mixin {
 }
 
-/*
-========================================
-Colored */
-
-@mixin component-colored-mixin {
-  @include colored-mixin;
-}
-
-// Hover
-
-@mixin component-colored-hover-mixin {
-  @include colored-interaction-mixin($brightness: 4);
-}
-
-// Active
-
-@mixin component-colored-active-mixin {
-  @include colored-interaction-mixin($brightness: 8);
-}
-
-// Focus
-
-@mixin component-colored-focus-mixin {
-  &:not(:active) {
-    @include component-colored-hover-mixin;
-  }
-}
-
-// Selected
-
-@mixin component-colored-selected-mixin {
-}
-
 // OUTLINE
 
 @mixin component-outline-mixin {

@@ -33,6 +33,7 @@
   align-items: center;
   box-sizing: border-box;
   display: flex;
+  flex-shrink: 0;
 }
 
 .card-body {
@@ -73,18 +74,15 @@
 @each $size, $props in $card-header-sizes {
   .card-header-size-#{$size} {
     $min-height: map.get($props, "min-height");
-    $font-size: map.get($props, "font-size");
     $padding-x: map.get($props, "padding-x");
-    $padding-top: map.get($props, "padding-top");
+    $padding-y: map.get($props, "padding-y");
 
-    @include map-props-mixin(
-      map.get($component-font-sizing, $font-size));
     @include map-props-mixin(
       map.get($component-min-height-sizing, $min-height));
     @include map-props-mixin(
       map.get($component-padding-x-sizing, $padding-x));
     @include map-props-mixin(
-      map.get($component-padding-top-sizing, $padding-top));
+      map.get($component-padding-y-sizing, $padding-y));
   }
 }
 

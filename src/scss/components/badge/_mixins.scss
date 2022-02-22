@@ -7,10 +7,6 @@
     @include badge-subtle-mixin;
   }
 
-  @if $pattern == "colored" {
-    @include badge-colored-mixin;
-  }
-
   @if $pattern == "outline" {
     @include badge-outline-mixin;
   }
@@ -22,10 +18,6 @@
 
 @mixin badge-subtle-mixin {
   @include component-subtle-mixin;
-}
-
-@mixin badge-colored-mixin {
-  @include component-colored-mixin;
 }
 
 @mixin badge-outline-mixin {

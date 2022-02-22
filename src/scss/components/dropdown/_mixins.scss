@@ -1,0 +1,9 @@
+@mixin dropdown-pattern-mixin($pattern) {
+  @if $pattern == "solid" {
+    @include dropdown-solid-mixin;
+  }
+}
+
+@mixin dropdown-solid-mixin {
+  @include component-solid-mixin;
+}

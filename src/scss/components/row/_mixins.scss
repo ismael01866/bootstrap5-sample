@@ -3,15 +3,17 @@
 @mixin make-row-mixin() {
   box-sizing: border-box;
   display: flex;
+  flex: 1 1 auto;
   flex-wrap: wrap;
-  max-width: 100%;
-  width: 100%;
+  margin-right: calc(-0.5 * (var(--component-gap)));
+  margin-left: calc(-0.5 * var(--component-gap));
+  min-width: 100%;
 }
 
 @mixin row-cols-mixin($count) {
   > *,
   > .col {
-    // flex: 0 0 auto;
+    flex: 0 0 auto;
     width: math.div(100%, $count);
   }
 }
@@ -20,6 +22,8 @@
   box-sizing: border-box;
   flex-shrink: 0;
   max-width: 100%;
+  padding-right: calc(0.5 * var(--component-gap));
+  padding-left: calc(0.5 * var(--component-gap));
   width: 100%;
 }
 

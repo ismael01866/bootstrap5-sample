@@ -37,11 +37,8 @@
 
 @each $size, $props in $alert-sizes {
   .alert-size-#{$size} {
-    $font-size: map.get($props, "font-size");
     $padding: map.get($props, "padding");
 
-    @include map-props-mixin(
-      map.get($component-font-sizing, $font-size));
     @include map-props-mixin(
       map.get($component-padding-sizing, $padding));
   }

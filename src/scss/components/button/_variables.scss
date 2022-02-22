@@ -1,7 +1,7 @@
-$button-border-width: var(--component-border-width-base) !default;
+$button-border-width: var(--border-width-base) !default;
 $button-letter-spacing: 0.5px !default;
 $button-patterns: (
-  "solid", "subtle", "colored", "outline", "ghost", "link"
+  "solid", "subtle", "outline", "ghost", "link"
 ) !default;
 $button-shapes: (
   "base",
@@ -12,7 +12,7 @@ $button-sizes: (
     "font-size": "xs",   "gap": "1", "height": "6",  "padding-x": "3",  "width": "6"
   ),
   "base": (
-    "font-size": "sm",   "gap": "1", "height": "8",  "padding-x": "4",  "width": "8"
+    "font-size": "xs",   "gap": "1", "height": "8",  "padding-x": "4",  "width": "8"
   ),
   "md": (
     "font-size": "sm", "gap": "1", "height": "10",  "padding-x": "4", "width": "10"

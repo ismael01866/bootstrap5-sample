@@ -26,6 +26,14 @@ Colors */
 
 /*
 ========================================
+Gap */
+
+@mixin component-gap-mixin($gap) {
+  --component-gap: var(--space-#{$gap});
+}
+
+/*
+========================================
 Placement */
 
 @mixin component-placement-mixin($name) {
@@ -83,7 +91,7 @@ Subtle */
 @mixin subtle-mixin {
   background-color: var(--component-color-subtle);
   border-color: var(--component-color-subtle);
-  color: var(--component-color-subtle-yiq);
+  color: var(--component-color);
 }
 
 @mixin subtle-interaction-mixin($brightness) {
@@ -93,32 +101,14 @@ Subtle */
   $s: var(--component-color-subtle-s);
   $l: var(--component-color-subtle-l);
   $color: hsl($h, $s, calc(#{$l} - var(--brightness-#{$brightness})));
+  $h: var(--component-color-h);
+  $s: var(--component-color-s);
+  $l: var(--component-color-l);
+  $text: hsl($h, $s, calc(#{$l} - var(--brightness-#{$brightness * 8})));
 
   background-color: $color;
   border-color: $color;
-}
-
-/*
-========================================
-Colored */
-
-@mixin colored-mixin {
-  background-color: var(--component-color-subtle);
-  border-color: var(--component-color-subtle);
-  color: var(--component-color);
-}
-
-@mixin colored-interaction-mixin($brightness) {
-  @include colored-mixin;
-
-  $h: var(--component-color-subtle-h);
-  $s: var(--component-color-subtle-s);
-  $l: var(--component-color-subtle-l);
-  $color: hsl($h, $s, calc(#{$l} - var(--brightness-#{$brightness})));
-
-  background-color: $color;
-  border-color: $color;
-  color: var(--component-color);
+  color: $text;
 }
 
 /*

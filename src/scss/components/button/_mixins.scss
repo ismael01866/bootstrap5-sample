@@ -7,10 +7,6 @@
     @include button-subtle-mixin;
   }
 
-  @if $pattern == "colored" {
-    @include button-colored-mixin;
-  }
-
   @if $pattern == "outline" {
     @include button-outline-mixin;
   }
@@ -53,22 +49,6 @@
 
   &:focus {
     @include component-subtle-focus-mixin;
-  }
-}
-
-@mixin button-colored-mixin {
-  @include component-colored-mixin;
-
-  &:hover {
-    @include component-colored-hover-mixin;
-  }
-
-  &:active {
-    @include component-colored-active-mixin;
-  }
-
-  &:focus {
-    @include component-colored-focus-mixin;
   }
 }
 

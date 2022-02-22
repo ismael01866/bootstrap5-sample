@@ -163,6 +163,10 @@
   --color-white: #{$color-white};
   --color-white-yiq: #{$color-white-yiq};
 
+  // -- Subtle
+
+  --color-white-subtle: #{$color-white-subtle};
+
   /* Light */
 
   --color-light: #{$color-light};
@@ -184,6 +188,10 @@
   --color-black: #{$color-black};
   --color-black-yiq: #{$color-black-yiq};
 
+  // -- Subtle
+
+  --color-black-subtle: #{$color-black-subtle};
+
   /* Dark */
 
   --color-dark: #{$color-dark};
@@ -199,6 +207,14 @@
   --color-dark-subtle-h: #{color-hue-from-hex($color-dark-subtle)};
   --color-dark-subtle-s: #{color-saturation-from-hex($color-dark-subtle)};
   --color-dark-subtle-l: #{color-lightness-from-hex($color-dark-subtle)};
+
+  /**
+   *
+   * Shadow
+   *
+   */
+
+  --color-shadow: $color-shadow;
 
   /**
    *

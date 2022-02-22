@@ -1,0 +1,5 @@
+:root {
+  @each $name, $value in $shadows {
+    #{inspect(--shadow-#{$name})}: #{$value};
+  }
+}

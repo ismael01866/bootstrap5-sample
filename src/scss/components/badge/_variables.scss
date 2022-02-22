@@ -1,5 +1,5 @@
-$badge-border-width: var(--component-border-width-base) !default;
-$badge-patterns: ("solid", "subtle", "colored", "outline") !default;
+$badge-border-width: var(--border-width-base) !default;
+$badge-patterns: ("solid", "subtle", "outline") !default;
 $badge-placements: (
   "top-left", "top-right", "bottom-left", "bottom-right"
 ) !default;

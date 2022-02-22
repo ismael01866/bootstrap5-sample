@@ -13,7 +13,9 @@
   $gap: map.get($props, "gap");
 
   .row-gap-#{$name} {
-    @include map-props-mixin(map.get($component-gap-sizing, $gap));
+    @include component-gap-mixin($gap);
+
+    gap: calc(var(--component-gap)) 0;
   }
 }
 

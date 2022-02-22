@@ -1,9 +1,9 @@
 @use "sass:map";
 
-.figure {
+.box {
   align-items: center;
   border-style: solid;
-  border-width: $figure-border-width;
+  border-width: $box-border-width;
   box-sizing: border-box;
   display: flex;
   flex-direction: column;
@@ -14,33 +14,33 @@
 // Color
 
 @each $color in $component-colors {
-  .figure-color-#{$color} {
+  .box-color-#{$color} {
     @include component-color-mixin($color);
   }
 }
 
 // Patern
 
-@each $pattern in $figure-patterns {
-  .figure-pattern-#{$pattern} {
-    @include figure-pattern-mixin($pattern);
+@each $pattern in $box-patterns {
+  .box-pattern-#{$pattern} {
+    @include box-pattern-mixin($pattern);
   }
 }
 
 // Shape
 
-@each $shape in $figure-shapes {
+@each $shape in $box-shapes {
   $props: map.get($component-shapes, $shape);
 
-  .figure-shape-#{$shape} {
+  .box-shape-#{$shape} {
     @include map-props-mixin($props);
   }
 }
 
 // Size
 
-@each $size, $props in $figure-sizes {
-  .figure-size-#{$size} {
+@each $size, $props in $box-sizes {
+  .box-size-#{$size} {
     $height: map.get($props, "height");
     $padding: map.get($props, "padding");
 
@@ -50,7 +50,7 @@
       map.get($component-padding-sizing, $padding));
   }
 
-  .figure-fixed-size-#{$size} {
+  .box-fixed-size-#{$size} {
     $height: map.get($props, "height");
     $width: map.get($props, "width");
 

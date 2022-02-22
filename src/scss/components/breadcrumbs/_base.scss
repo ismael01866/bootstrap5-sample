@@ -2,7 +2,6 @@
   align-items: center;
   box-sizing: border-box;
   display: flex;
-  font-size: $breadcrumbs-font-size;
   flex-wrap: wrap;
 }
 
@@ -31,7 +30,6 @@
     max-width: unset;
 
     a {
-      // color: $breadcrumbs-item-active-color;
       pointer-events: none;
     }
   }

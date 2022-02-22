@@ -1,0 +1,28 @@
+@use "sass:map";
+
+.dropdown {
+  border-radius: $dropdown-border-radius;
+  border-style: solid;
+  border-width: $dropdown-border-width;
+  box-shadow: $dropdown-box-shadow;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+// Color
+
+@each $color in $component-colors {
+  .dropdown-color-#{$color} {
+    @include component-color-mixin($color);
+  }
+}
+
+// Patern
+
+@each $pattern in $dropdown-patterns {
+  .dropdown-pattern-#{$pattern} {
+    @include dropdown-pattern-mixin($pattern);
+  }
+}
