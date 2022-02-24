@@ -1,0 +1,14 @@
+$progress-patterns: ("solid", "subtle") !default;
+$progress-shapes: ("base", "rounded") !default;
+$progress-sizes: (
+  "sm": (
+    "size": "2"
+  ),
+  "base": (
+    "size": "4"
+  )
+) !default;
+
+// Children
+
+$progress-bar-patterns: ("solid", "subtle") !default;

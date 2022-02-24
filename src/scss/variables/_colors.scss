@@ -79,6 +79,7 @@ $color-error-lt: color-subtle-light-mix($color-error, $brightness-48) !default;
 $color-white: #fff !default;
 $color-white-yiq: color-yiq($color-white) !default;
 $color-white-subtle: color.adjust($color-white, $blackness: $brightness-4) !default;
+$color-white-lt: color.adjust($color-white, $blackness: $brightness-8) !default;
 
 /* Light */
 
@@ -86,12 +87,14 @@ $color-light: #bdbdbd !default;
 $color-light-yiq: color-yiq($color-light) !default;
 $color-light-subtle: color-subtle-light-mix($color-light, $brightness-16) !default;
 $color-light-subtle-yiq: color-yiq($color-light-subtle) !default;
+$color-light-lt: color-subtle-light-mix($color-light, $brightness-48) !default;
 
 /* Black */
 
 $color-black: #000 !default;
 $color-black-yiq: color-yiq($color-black) !default;
 $color-black-subtle: color-subtle-light-mix($color-black) !default;
+$color-black-lt: color-subtle-light-mix($color-black, $brightness-48) !default;
 
 /* Dark */
 
@@ -99,6 +102,7 @@ $color-dark: #212121 !default;
 $color-dark-yiq: color-yiq($color-dark) !default;
 $color-dark-subtle: color-subtle-light-mix($color-dark, $brightness-24) !default;
 $color-dark-subtle-yiq: color-yiq($color-dark-subtle) !default;
+$color-dark-lt: color-subtle-light-mix($color-dark, $brightness-48) !default;
 
 /**
  *
@@ -114,15 +118,7 @@ $color-shadow: #9e9e9e !default;
  *
  */
 
-/* Headline */
-
-$color-headline: #212121 !default;
-
-/* Body */
-
-$color-body: #424242 !default;
-$color-body-subtle: #757575 !default;
-$color-body-disabled: #bdbdbd !default;
+$color-text: #000 !default;
 
 /* Link */
 

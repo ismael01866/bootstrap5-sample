@@ -1,0 +1,12 @@
+$list-group-patterns: ("solid", "subtle") !default;
+
+// Children
+
+$list-group-item-border-width: var(--border-width-base) !default;
+$list-group-item-border-color: var(--component-color-lt) !default;
+$list-group-item-patterns: ("solid", "subtle") !default;
+$list-group-item-sizes: (
+  "base": (
+    "padding-x": "6", "padding-y": "4"
+  )
+) !default;

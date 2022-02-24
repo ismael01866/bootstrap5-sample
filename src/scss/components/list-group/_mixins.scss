@@ -1,0 +1,53 @@
+@mixin list-group-pattern-mixin($pattern) {
+  @if $pattern == "solid" {
+    @include list-group-solid-mixin;
+  }
+
+  @if $pattern == "subtle" {
+    @include list-group-subtle-mixin;
+  }
+
+  @if $pattern == "outline" {
+    @include list-group-outline-mixin;
+  }
+}
+
+@mixin list-group-solid-mixin {
+  @include component-solid-mixin;
+}
+
+@mixin list-group-subtle-mixin {
+  @include component-subtle-mixin;
+}
+
+@mixin list-group-outline-mixin {
+  @include component-outline-mixin;
+}
+
+// Children
+
+@mixin list-group-item-pattern-mixin($pattern) {
+  @if $pattern == "solid" {
+    @include list-group-item-solid-mixin;
+  }
+
+  @if $pattern == "subtle" {
+    @include list-group-item-subtle-mixin;
+  }
+
+  @if $pattern == "outline" {
+    @include list-group-item-outline-mixin;
+  }
+}
+
+@mixin list-group-item-solid-mixin {
+  @include component-solid-mixin;
+}
+
+@mixin list-group-item-subtle-mixin {
+  @include component-subtle-mixin;
+}
+
+@mixin list-group-item-outline-mixin {
+  @include component-outline-mixin;
+}

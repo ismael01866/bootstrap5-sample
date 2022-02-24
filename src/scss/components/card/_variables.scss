@@ -1,5 +1,4 @@
 $card-border-radius: var(--border-radius-base);
-$card-border-width: var(--border-width-base);
 $card-patterns: ("solid") !default;
 
 // Children
@@ -8,7 +7,7 @@ $card-patterns: ("solid") !default;
 
 $card-header-sizes: (
   "base": (
-    "min-height": "14", "padding-x": "6", "padding-y": "6"
+    "padding-x": "6", "padding-y": "6"
   )
 ) !default;
 

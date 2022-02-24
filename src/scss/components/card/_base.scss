@@ -2,12 +2,10 @@
 
 .card {
   border-radius: $card-border-radius;
-  border-style: solid;
-  border-width: $card-border-width;
   box-sizing: border-box;
   display: flex;
-  flex-direction: column;
   flex: 1 1 auto;
+  flex-direction: column;
   overflow: hidden;
 }
 
@@ -30,21 +28,18 @@
 // Children
 
 .card-header {
-  align-items: center;
   box-sizing: border-box;
   display: flex;
-  flex-shrink: 0;
 }
 
 .card-body {
   box-sizing: border-box;
   display: flex;
-  flex-direction: column;
   flex: 1 1 auto;
+  flex-direction: column;
 }
 
 .card-footer {
-  align-items: center;
   box-sizing: border-box;
   display: flex;
 }
@@ -73,12 +68,9 @@
 
 @each $size, $props in $card-header-sizes {
   .card-header-size-#{$size} {
-    $min-height: map.get($props, "min-height");
     $padding-x: map.get($props, "padding-x");
     $padding-y: map.get($props, "padding-y");
 
-    @include map-props-mixin(
-      map.get($component-min-height-sizing, $min-height));
     @include map-props-mixin(
       map.get($component-padding-x-sizing, $padding-x));
     @include map-props-mixin(
@@ -88,12 +80,9 @@
 
 @each $size, $props in $card-body-sizes {
   .card-body-size-#{$size} {
-    $font-size: map.get($props, "font-size");
     $padding-x: map.get($props, "padding-x");
     $padding-y: map.get($props, "padding-y");
 
-    @include map-props-mixin(
-      map.get($component-font-sizing, $font-size));
     @include map-props-mixin(
       map.get($component-padding-x-sizing, $padding-x));
     @include map-props-mixin(
@@ -103,12 +92,9 @@
 
 @each $size, $props in $card-footer-sizes {
   .card-footer-size-#{$size} {
-    $font-size: map.get($props, "font-size");
     $padding-x: map.get($props, "padding-x");
     $padding-y: map.get($props, "padding-y");
 
-    @include map-props-mixin(
-      map.get($component-font-sizing, $font-size));
     @include map-props-mixin(
       map.get($component-padding-x-sizing, $padding-x));
     @include map-props-mixin(

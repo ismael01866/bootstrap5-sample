@@ -163,6 +163,10 @@
   --color-white: #{$color-white};
   --color-white-yiq: #{$color-white-yiq};
 
+  // -- Light
+
+  --color-white-lt: #{$color-white-lt};
+
   // -- Subtle
 
   --color-white-subtle: #{$color-white-subtle};
@@ -174,6 +178,10 @@
   --color-light-h: #{color-hue-from-hex($color-light)};
   --color-light-s: #{color-saturation-from-hex($color-light)};
   --color-light-l: #{color-lightness-from-hex($color-light)};
+
+  // -- Light
+
+  --color-light-lt: #{$color-light-lt};
 
   // -- Subtle
 
@@ -188,6 +196,10 @@
   --color-black: #{$color-black};
   --color-black-yiq: #{$color-black-yiq};
 
+  // -- Light
+
+  --color-black-lt: #{$color-black-lt};
+
   // -- Subtle
 
   --color-black-subtle: #{$color-black-subtle};
@@ -199,6 +211,10 @@
   --color-dark-h: #{color-hue-from-hex($color-dark)};
   --color-dark-s: #{color-saturation-from-hex($color-dark)};
   --color-dark-l: #{color-lightness-from-hex($color-dark)};
+
+  // -- Light
+
+  --color-dark-lt: #{$color-dark-lt};
 
   // -- Subtle
 
@@ -222,15 +238,7 @@
    *
    */
 
-  /* Headline */
-
-  --color-headline: #{$color-headline};
-
-  /* Body */
-
-  --color-body: #{$color-body};
-  --color-body-subtle: #{$color-body-subtle};
-  --color-body-disabled: #{$color-body-disabled};
+  --color-text: #{$color-text};
 
   /* Link */
 

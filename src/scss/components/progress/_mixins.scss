@@ -1,0 +1,9 @@
+@mixin progress-pattern-mixin($pattern) {
+  @if $pattern == "solid" {
+    @include progress-solid-mixin;
+  }
+}
+
+@mixin progress-solid-mixin {
+  @include component-solid-mixin;
+}

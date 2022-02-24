@@ -1,9 +1,10 @@
 /* Headline */
 
 .headline {
-  color: $headline-color;
+  color: $text-color;
   font-family: $headline-font-family;
   line-height: $headline-line-height;
+  opacity: 0.88;
 
   @at-root {
 
@@ -48,9 +49,10 @@
 /* Subtitle */
 
 .subtitle {
-  color: $subtitle-color;
+  color: $text-color;
   font-family: $subtitle-font-family;
   line-height: $subtitle-line-height;
+  opacity: 0.88;
 }
 
 .subtitle-level-1 {
@@ -71,6 +73,7 @@
   color: $text-color;
   font-family: $text-font-family;
   line-height: $text-line-height;
+  opacity: 0.6;
 }
 
 .text-level-1 {
@@ -88,9 +91,10 @@
 /* Caption */
 
 .caption {
-  color: $caption-color;
+  color: $text-color;
   font-family: $caption-font-family;
   font-size: $caption-font-size;
   letter-spacing: 0.4px;
   line-height: $caption-line-height;
+  opacity: 0.64;
 }
