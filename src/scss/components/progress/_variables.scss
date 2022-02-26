@@ -1,11 +1,14 @@
 $progress-patterns: ("solid", "subtle") !default;
 $progress-shapes: ("base", "rounded") !default;
-$progress-sizes: (
+$progress-heights: (
+  "xs": (
+    "height": "1"
+  ),
   "sm": (
-    "size": "2"
+    "height": "2"
   ),
   "base": (
-    "size": "4"
+    "height": "4"
   )
 ) !default;
 

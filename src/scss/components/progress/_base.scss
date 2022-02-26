@@ -2,6 +2,7 @@
 
 .progress {
   display: flex;
+  flex: 1 1 auto;
   overflow: hidden;
 }
 
@@ -31,11 +32,11 @@
 
 // Size
 
-@each $name, $props in $progress-sizes {
-  $size: map.get($props, "size");
+@each $name, $props in $progress-heights {
+  $height: map.get($props, "height");
 
   .progress-size-#{$name} {
-    @include map-props-mixin(map.get($component-size-sizing, $size));
+    @include map-props-mixin(map.get($component-height-sizing, $height));
   }
 }
 

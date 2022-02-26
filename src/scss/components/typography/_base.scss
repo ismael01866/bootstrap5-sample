@@ -67,13 +67,19 @@
   letter-spacing: 0;
 }
 
+.subtitle-level-3 {
+  font-size: $subtitle-3-font-size;
+  font-weight: $subtitle-3-font-weight;
+  letter-spacing: 0;
+}
+
 /* Text */
 
 .text {
   color: $text-color;
   font-family: $text-font-family;
   line-height: $text-line-height;
-  opacity: 0.6;
+  opacity: 0.64;
 }
 
 .text-level-1 {
@@ -88,6 +94,12 @@
   letter-spacing: 0.25px;
 }
 
+.text-level-3 {
+  font-size: $text-3-font-size;
+  font-weight: $text-3-font-weight;
+  letter-spacing: 0.25px;
+}
+
 /* Caption */
 
 .caption {
@@ -96,5 +108,5 @@
   font-size: $caption-font-size;
   letter-spacing: 0.4px;
   line-height: $caption-line-height;
-  opacity: 0.64;
+  opacity: 0.48;
 }

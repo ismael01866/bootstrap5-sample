@@ -29,7 +29,7 @@
   box-sizing: border-box;
   display: flex;
 
-  .list-group-has-borders & {
+  .list-group-bordered & {
     &:not(:last-child) {
       border-bottom: $list-group-item-border-width solid $list-group-item-border-color;
     }

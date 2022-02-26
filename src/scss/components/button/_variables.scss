@@ -9,16 +9,16 @@ $button-shapes: (
 ) !default;
 $button-sizes: (
   "sm": (
-    "font-size": "xs",   "gap": "1", "height": "6",  "padding-x": "3",  "width": "6"
+    "font-size": "xs",  "gap": "1", "height": "6",  "padding-x": "3",  "min-width": "6"
   ),
   "base": (
-    "font-size": "xs",   "gap": "1", "height": "8",  "padding-x": "4",  "width": "8"
+    "font-size": "xs",  "gap": "1", "height": "8",  "padding-x": "4",  "min-width": "8"
   ),
   "md": (
-    "font-size": "sm", "gap": "1", "height": "10",  "padding-x": "4", "width": "10"
+    "font-size": "sm",  "gap": "1", "height": "10",  "padding-x": "4", "min-width": "10"
   ),
   "lg": (
-    "font-size": "base", "gap": "2",  "height": "12", "padding-x": "5", "width": "12"
+    "font-size": "base", "gap": "2", "height": "12", "padding-x": "5", "min-width": "12"
   )
 ) !default;
 $button-transition-duration: var(--transition-duration-fast) !default;

@@ -3,7 +3,7 @@
 .avatar {
   border-radius: $avatar-border-radius;
   box-sizing: border-box;
-  display: inline-flex;
+  display: flex;
   position: relative;
 
   // Children components

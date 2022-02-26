@@ -11,7 +11,7 @@
   justify-content: center;
   letter-spacing: $button-letter-spacing;
   text-decoration: none;
-  transition: all $button-transition-duration;
+  transition: all $button-transition-duration, visibility 0s;
 
   &:hover {
     text-decoration: none;
@@ -51,6 +51,7 @@
     $font-size: map.get($props, "font-size");
     $gap: map.get($props, "gap");
     $height: map.get($props, "height");
+    $min-width: map.get($props, "min-width");
     $padding-x: map.get($props, "padding-x");
 
     @include map-props-mixin(
@@ -60,19 +61,14 @@
     @include map-props-mixin(
       map.get($component-height-sizing, $height));
     @include map-props-mixin(
+      map.get($component-min-width-sizing, $min-width));
+    @include map-props-mixin(
       map.get($component-padding-x-sizing, $padding-x));
   }
+}
 
-  .button-fixed-size-#{$size} {
-    gap: unset;
-    padding: unset;
+// Variants
 
-    $height: map.get($props, "height");
-    $width: map.get($props, "width");
-
-    @include map-props-mixin(
-      map.get($component-height-sizing, $height));
-    @include map-props-mixin(
-      map.get($component-width-sizing, $width));
-  }
+.button-icon {
+  padding: 0;
 }

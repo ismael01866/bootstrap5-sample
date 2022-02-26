@@ -6,8 +6,9 @@ $font-scale: 1.125 !default;
 
 /* Font Familiy */
 
-$font-family-sans: "Open Sans";
+$font-family-sans: "Open Sans" !default;
 $font-family-body: $font-family-sans !default;
+$font-family-caption: $font-family-sans !default;
 $font-family-headline: $font-family-sans !default;
 $font-family-subtitle: $font-family-sans !default;
 
@@ -17,6 +18,7 @@ $font-size-base: 1rem !default;
 $font-size-sm: math.div($font-size-base, $font-scale) !default;
 $font-size-xs: math.div($font-size-sm, $font-scale) !default;
 $font-size-xxs: math.div($font-size-xs, $font-scale) !default;
+$font-size-xxxs: math.div($font-size-xxs, $font-scale) !default;
 
 // -- Headline
 
@@ -29,17 +31,19 @@ $font-size-headline-1: $font-size-headline-2 * ($font-scale) !default;
 
 // -- Subtitle
 
-$font-size-subtitle-2: math.div(1em, $font-scale) !default;
+$font-size-subtitle-3: math.div(1em, $font-scale) !default;
+$font-size-subtitle-2: $font-size-subtitle-3 !default;
 $font-size-subtitle-1: $font-size-subtitle-2 * ($font-scale) !default;
 
 // -- Body
 
-$font-size-body-2: math.div(1em, $font-scale) !default;
+$font-size-body-3: $font-size-xs !default;
+$font-size-body-2: $font-size-body-3 * ($font-scale) !default;
 $font-size-body-1: $font-size-body-2 * ($font-scale) !default;
 
 // -- Caption
 
-$font-size-caption: math.div(math.div(1em, $font-scale), $font-scale) !default;
+$font-size-caption: $font-size-xs !default;
 
 /* Font Weight */
 
@@ -51,5 +55,6 @@ $font-weight-light: 300 !default;
 /* Line Height */
 
 $line-height-body: 1.6 !default;
+$line-height-caption: 1.2 !default;
 $line-height-headline: 1.7 !default;
-$line-height-subtitle: 1.5 !default;
+$line-height-subtitle: 1.6 !default;

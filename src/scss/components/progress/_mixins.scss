@@ -2,8 +2,16 @@
   @if $pattern == "solid" {
     @include progress-solid-mixin;
   }
+
+  @if $pattern == "subtle" {
+    @include progress-subtle-mixin;
+  }
 }
 
 @mixin progress-solid-mixin {
   @include component-solid-mixin;
+}
+
+@mixin progress-subtle-mixin {
+  @include component-subtle-mixin;
 }

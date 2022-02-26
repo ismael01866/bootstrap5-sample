@@ -40,18 +40,11 @@
 @each $size, $props in $box-sizes {
   .box-size-#{$size} {
     $height: map.get($props, "height");
-
-    @include map-props-mixin(
-      map.get($component-height-sizing, $height));
-  }
-
-  .box-fixed-size-#{$size} {
-    $height: map.get($props, "height");
-    $width: map.get($props, "width");
+    $min-width: map.get($props, "min-width");
 
     @include map-props-mixin(
       map.get($component-height-sizing, $height));
     @include map-props-mixin(
-      map.get($component-width-sizing, $width));
+      map.get($component-min-width-sizing, $min-width));
   }
 }

@@ -22,9 +22,11 @@ $headline-6-font-weight: var(--font-weight-medium);
 $subtitle-font-family: var(--font-family-subtitle);
 $subtitle-line-height: var(--line-height-subtitle);
 $subtitle-1-font-size: var(--font-size-subtitle-1);
-$subtitle-1-font-weight: var(--font-weight-bold);
+$subtitle-1-font-weight: var(--font-weight-medium);
 $subtitle-2-font-size: var(--font-size-subtitle-2);
 $subtitle-2-font-weight: var(--font-weight-medium);
+$subtitle-3-font-size: var(--font-size-subtitle-3);
+$subtitle-3-font-weight: var(--font-weight-regular);
 
 /* Text */
 
@@ -34,9 +36,11 @@ $text-1-font-size: var(--font-size-body-1);
 $text-1-font-weight: var(--font-weight-regular);
 $text-2-font-size: var(--font-size-body-2);
 $text-2-font-weight: var(--font-weight-regular);
+$text-3-font-size: var(--font-size-body-3);
+$text-3-font-weight: var(--font-weight-regular);
 
 /* Caption */
 
-$caption-font-family: var(--font-family-body);
-$caption-line-height: var(--line-height-body);
+$caption-font-family: var(--font-family-caption);
+$caption-line-height: var(--line-height-caption);
 $caption-font-size: var(--font-size-caption);

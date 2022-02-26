@@ -126,12 +126,6 @@ $color-link: $color-primary !default;
 $color-link-hover: color.adjust($color-link, $lightness: $brightness-8) !default;
 $color-link-active: color.adjust($color-link, $blackness: $brightness-24) !default;
 
-/* Icon */
-
-$color-icon: #9e9e9e !default;
-$color-icon-subtle: color-subtle-light-mix($color-icon) !default;
-$color-icon-lt: color-subtle-light-mix($color-icon, $brightness-48) !default;
-
 /* Vendor */
 
 $color-google: #4285f4 !default;

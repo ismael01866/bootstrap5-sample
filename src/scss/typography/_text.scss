@@ -16,6 +16,10 @@ strong {
   font-weight: bold;
 }
 
+small {
+  font-size: var(--font-size-xxs);
+}
+
 a {
   color: var(--color-link);
   cursor: pointer;
