@@ -1,0 +1,160 @@
+%animated {
+  animation-duration: var(--animation-duration-base);
+  animation-fill-mode: both;
+}
+
+%animation-infinite {
+  animation-iteration-count: infinite;
+}
+
+%animation-duration-slow {
+  animation-duration: var(--animation-duration-slow);
+}
+
+%animation-duration-fast {
+  animation-duration: var(--animation-duration-fast);
+}
+
+// fade
+
+@keyframes animation-fade-in {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+%animation-fade-in {
+  animation-name: animation-fade-in;
+}
+
+@keyframes animation-fade-out {
+  from {
+    opacity: 1;
+  }
+
+  to {
+    opacity: 0;
+  }
+}
+
+%animation-fade-out {
+  animation-name: animation-fade-out;
+}
+
+// slide
+
+@keyframes animation-slide-in-down {
+  from {
+    transform: translateY(-100%);
+  }
+
+  to {
+    transform: translateY(0);
+  }
+}
+
+%animation-slide-in-down {
+  animation-name: animation-slide-in-down;
+}
+
+@keyframes animation-slide-in-up {
+  from {
+    transform: translateY(100%);
+  }
+
+  to {
+    transform: translateY(0);
+  }
+}
+
+%animation-slide-in-up {
+  animation-name: animation-slide-in-up;
+}
+
+@keyframes animation-slide-in-left {
+  from {
+    transform: translateX(-100%);
+  }
+
+  to {
+    transform: translateY(0);
+  }
+}
+
+%animation-slide-in-left {
+  animation-name: animation-slide-in-left;
+}
+
+@keyframes animation-slide-in-right {
+  from {
+    transform: translateX(100%);
+  }
+
+  to {
+    transform: translateY(0);
+  }
+}
+
+%animation-slide-in-right {
+  animation-name: animation-slide-in-right;
+}
+
+@keyframes animation-slide-out-down {
+  from {
+    transform: translateY(0);
+  }
+
+  to {
+    transform: translateY(-100%);
+  }
+}
+
+%animation-slide-out-down {
+  animation-name: animation-slide-out-down;
+}
+
+@keyframes animation-slide-out-up {
+  from {
+    transform: translateY(100%);
+  }
+
+  to {
+    transform: translateY(0);
+  }
+}
+
+%animation-slide-out-up {
+  animation-name: animation-slide-out-up;
+}
+
+@keyframes animation-slide-out-left {
+  from {
+    transform: translateY(0);
+  }
+
+  to {
+    transform: translateX(-100%);
+  }
+}
+
+%animation-slide-out-left {
+  animation-name: animation-slide-out-left;
+}
+
+@keyframes animation-slide-out-right {
+  from {
+    transform: translateY(0);
+  }
+
+  to {
+    transform: translateX(100%);
+  }
+}
+
+%animation-slide-out-right {
+  animation-name: animation-slide-out-right;
+}

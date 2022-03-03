@@ -104,7 +104,7 @@ Subtle */
   $h: var(--component-color-h);
   $s: var(--component-color-s);
   $l: var(--component-color-l);
-  $text: hsl($h, $s, calc(#{$l} - var(--brightness-#{$brightness * 8})));
+  $text: hsl($h, $s, calc(#{$l} - var(--brightness-#{$brightness * 4})));
 
   background-color: $color;
   border-color: $color;

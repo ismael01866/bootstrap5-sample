@@ -1,0 +1,92 @@
+@use "sass:map";
+
+.table {
+  border-collapse: collapse;
+  border-color: $table-border-color;
+  table-layout: auto;
+  width: 100%;
+
+  tbody,
+  td,
+  tfoot,
+  th,
+  thead,
+  tr {
+    border: 0;
+    text-align: inherit;
+    vertical-align: inherit;
+  }
+
+  > thead {
+    vertical-align: middle;
+
+    > tr {
+      height: $thead-row-height;
+    }
+  }
+
+  > tbody {
+    vertical-align: middle;
+
+    > tr {
+      height: $tbody-row-height;
+    }
+  }
+
+  > :not(caption) > * {
+    border-width: $table-border-width 0;
+
+    > * {
+      border-bottom: $table-border-width solid $table-border-color;
+    }
+
+    &:not(:first-child):last-child {
+      > * {
+        border-bottom: 0;
+      }
+    }
+  }
+}
+
+// Color
+
+@each $color in $component-colors {
+  .table-color-#{$color} {
+    @include component-color-mixin($color);
+  }
+}
+
+// Patern
+
+@each $pattern in $table-patterns {
+  .table-pattern-#{$pattern} {
+    @include table-pattern-mixin($pattern);
+  }
+}
+
+// -- Size
+
+@each $size, $props in $table-sizes {
+  $padding-x: map.get($props, "padding-x");
+  $padding-y: map.get($props, "padding-y");
+
+  .table-size-#{$size} {
+    > :not(caption) > * > * {
+      @include map-props-mixin(
+        map.get($component-padding-x-sizing, $padding-x));
+      @include map-props-mixin(
+        map.get($component-padding-y-sizing, $padding-y));
+    }
+  }
+}
+
+.table-borderless {
+  /* stylelint-disable-next-line no-descending-specificity */
+  > :not(caption) > * > * {
+    border-bottom-width: 0;
+  }
+
+  > :not(:first-child) {
+    border-top-width: 0;
+  }
+}

@@ -13,10 +13,12 @@ $size-12: $size-base * 3;    // 48
 $size-14: $size-base * 3.5;  // 56
 $size-16: $size-base * 4;    // 64
 $size-20: $size-base * 5;    // 80
-$size-24: $size-base * 6;    // 96
 $size-32: $size-base * 8;    // 128
-$size-48: $size-base * 12;   // 192
 $size-64: $size-base * 16;   // 256
+$size-96: $size-base * 24;   // 384
+$size-128: $size-base * 32;  // 512
+$size-160: $size-base * 40;  // 640
+$size-192: $size-base * 48;  // 768
 
 $sizes: (
   "1": $size-1,
@@ -33,8 +35,10 @@ $sizes: (
   "14": $size-14,
   "16": $size-16,
   "20": $size-20,
-  "24": $size-24,
   "32": $size-32,
-  "48": $size-48,
-  "64": $size-64
+  "64": $size-64,
+  "96": $size-96,
+  "128": $size-128,
+  "160": $size-160,
+  "192": $size-192
 );

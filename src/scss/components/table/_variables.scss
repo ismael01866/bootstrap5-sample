@@ -1,0 +1,13 @@
+$table-border-color: var(--component-color-lt) !default;
+$table-border-width: var(--border-width-base) !default;
+$table-patterns: ("solid") !default;
+$table-sizes: (
+  "base": (
+    "padding-x": "6", "padding-y": "4"
+  )
+) !default;
+
+// Children
+
+$thead-row-height: var(--size-14);
+$tbody-row-height: var(--size-12);

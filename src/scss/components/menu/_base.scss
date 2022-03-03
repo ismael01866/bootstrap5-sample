@@ -7,10 +7,10 @@
   flex-direction: column;
 }
 
-// Width
+// Size
 
-@each $width, $props in $menu-widths {
-  .menu-width-#{$width} {
+@each $size, $props in $menu-sizes {
+  .menu-size-#{$size} {
     $min-width: map.get($props, "min-width");
     $width: map.get($props, "width");
 

@@ -21,4 +21,4 @@ $button-sizes: (
     "font-size": "base", "gap": "2", "height": "12", "padding-x": "5", "min-width": "12"
   )
 ) !default;
-$button-transition-duration: var(--transition-duration-fast) !default;
+$button-transition-duration: var(--animation-duration-fast) !default;

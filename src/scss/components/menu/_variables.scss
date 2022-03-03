@@ -1,12 +1,12 @@
 $menu-bg: var(--color-bg-dk);
-$menu-widths: (
-  "sm": (
+$menu-sizes: (
+  "xs": (
     "min-width": "20", "width": "20"
   ),
-  "base": (
+  "sm": (
     "min-width": "32", "width": "32"
   ),
-  "lg": (
+  "base": (
     "min-width": "64", "width": "64"
   )
 ) !default;
@@ -24,7 +24,7 @@ $menu-title-sizes: (
 
 // -- Menu Item
 
-$menu-item-transition-duration: var(--transition-duration-fast) !default;
+$menu-item-transition-duration: var(--animation-duration-fast) !default;
 $menu-item-sizes: (
   "base": (
     "font-size": "sm", "gap": "2", "height": "10", "min-height": "10",

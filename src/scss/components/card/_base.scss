@@ -27,21 +27,16 @@
 
 // Children
 
-.card-header {
+.card-body,
+.card-header,
+.card-footer {
   box-sizing: border-box;
   display: flex;
 }
 
 .card-body {
-  box-sizing: border-box;
-  display: flex;
   flex: 1 1 auto;
   flex-direction: column;
-}
-
-.card-footer {
-  box-sizing: border-box;
-  display: flex;
 }
 
 // -- Color

@@ -1,0 +1,23 @@
+$form-input-border-width: var(--border-width-base) !default;
+$form-input-patterns: (
+  "subtle"
+) !default;
+$form-input-shapes: (
+  "base",
+  "rounded"
+) !default;
+$form-input-sizes: (
+  "sm": (
+    "font-size": "xs",  "height": "6",  "padding-x": "3"
+  ),
+  "base": (
+    "font-size": "xs",  "height": "8",  "padding-x": "4"
+  ),
+  "md": (
+    "font-size": "sm",  "height": "10",  "padding-x": "4"
+  ),
+  "lg": (
+    "font-size": "base", "height": "12", "padding-x": "5"
+  )
+) !default;
+$form-input-transition-duration: var(--animation-duration-fast) !default;

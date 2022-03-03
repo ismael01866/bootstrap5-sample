@@ -1,12 +1,12 @@
 $sider-patterns: ("solid", "subtle") !default;
-$sider-widths: (
-  "sm": (
+$sider-sizes: (
+  "xs": (
     "min-width": "20", "width": "20"
   ),
-  "base": (
+  "sm": (
     "min-width": "32", "width": "32"
   ),
-  "lg": (
+  "base": (
     "min-width": "64", "width": "64"
   )
 ) !default;

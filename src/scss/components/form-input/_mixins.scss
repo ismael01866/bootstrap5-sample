@@ -1,0 +1,17 @@
+@mixin form-input-pattern-mixin($pattern) {
+  @if $pattern == "subtle" {
+    @include form-input-subtle-mixin;
+  }
+}
+
+@mixin form-input-subtle-mixin {
+  @include component-subtle-mixin;
+
+  &:hover {
+    @include subtle-interaction-mixin($brightness: 2);
+  }
+
+  &:focus {
+    @include component-subtle-focus-mixin;
+  }
+}

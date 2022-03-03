@@ -1,0 +1,31 @@
+@use "sass:map";
+
+@mixin drawer-pattern-mixin($pattern) {
+  @if $pattern == "solid" {
+    @include drawer-solid-mixin;
+  }
+}
+
+@mixin drawer-solid-mixin {
+  @include component-solid-mixin;
+}
+
+/*
+========================================
+Placement */
+
+@mixin drawer-placement-mixin($name) {
+  $props: map.get(
+    (
+      "top"    : (top: 0, left: 0, right: 0 ),
+      "right"  : (top: 0, right: 0, bottom: 0),
+      "bottom" : (bottom: 0, left: 0, right: 0),
+      "left"   : (top: 0, left: 0, bottom: 0)
+    ),
+    $name
+  );
+
+  @include map-props-mixin($props);
+
+  position: fixed;
+}

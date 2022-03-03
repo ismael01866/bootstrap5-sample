@@ -1,0 +1,78 @@
+@use "sass:map";
+
+.form-select {
+  appearance: none;
+  border-style: solid;
+  border-width: $form-select-border-width;
+  box-sizing: border-box;
+  display: inline-flex;
+  outline: none;
+  position: relative;
+  transition: all $form-select-transition-duration, visibility 0s;
+
+  @supports (-moz-appearance: none) {
+    text-indent: -2px;
+  }
+}
+
+.form-select-wrapper {
+  position: relative;
+
+  > svg {
+    position: absolute;
+    right: 0.5rem;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
+  .form-select {
+    padding-right: 2rem;
+  }
+}
+
+// Color
+
+@each $color in $component-colors {
+  .form-select-color-#{$color} {
+    @include component-color-mixin($color);
+
+    + svg {
+      @include component-color-mixin($color);
+    }
+  }
+}
+
+// Patern
+
+@each $pattern in $form-select-patterns {
+  .form-select-pattern-#{$pattern} {
+    @include form-select-pattern-mixin($pattern);
+  }
+}
+
+// Shape
+
+@each $shape in $form-select-shapes {
+  $props: map.get($component-shapes, $shape);
+
+  .form-select-shape-#{$shape} {
+    @include map-props-mixin($props);
+  }
+}
+
+// Size
+
+@each $size, $props in $form-select-sizes {
+  .form-select-size-#{$size} {
+    $font-size: map.get($props, "font-size");
+    $height: map.get($props, "height");
+    $padding-x: map.get($props, "padding-x");
+
+    @include map-props-mixin(
+      map.get($component-font-sizing, $font-size));
+    @include map-props-mixin(
+      map.get($component-height-sizing, $height));
+    @include map-props-mixin(
+      map.get($component-padding-x-sizing, $padding-x));
+  }
+}

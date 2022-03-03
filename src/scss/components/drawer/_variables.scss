@@ -1,0 +1,59 @@
+$drawer-patterns: ("solid") !default;
+$drawer-placements: (
+  "top", "right", "bottom", "left"
+) !default;
+$drawer-sizes: (
+  "xs": (
+    "min-width": "20", "width": "20"
+  ),
+  "sm": (
+    "min-width": "32", "width": "32"
+  ),
+  "base": (
+    "min-width": "64", "width": "64"
+  ),
+  "md": (
+    "min-width": "96", "width": "96"
+  ),
+  "lg": (
+    "min-width": "128", "width": "128"
+  ),
+  "xl": (
+    "min-width": "160", "width": "160"
+  ),
+  "xxl": (
+    "min-width": "192", "width": "192"
+  )
+) !default;
+$drawer-z-index: var(--z-index-drawer);
+
+// Backdrop
+
+$drawer-backdrop-bg: rgb(0 0 0 / 64%);
+$drawer-backdrop-z-index: var(--z-index-drawer-backdrop);
+
+// Children
+
+// -- Header
+
+$drawer-header-sizes: (
+  "base": (
+    "padding-x": "6", "padding-y": "5"
+  )
+) !default;
+
+// -- Body
+
+$drawer-body-sizes: (
+  "base": (
+    "padding-x": "6", "padding-y": "6"
+  )
+) !default;
+
+// -- Footer
+
+$drawer-footer-sizes: (
+  "base": (
+    "padding-x": "6", "padding-y": "5"
+  )
+) !default;

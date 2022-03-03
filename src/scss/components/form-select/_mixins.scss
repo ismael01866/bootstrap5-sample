@@ -1,0 +1,21 @@
+@mixin form-select-pattern-mixin($pattern) {
+  @if $pattern == "subtle" {
+    @include form-select-subtle-mixin;
+  }
+}
+
+@mixin form-select-subtle-mixin {
+  @include component-subtle-mixin;
+
+  + svg {
+    color: var(--component-color);
+  }
+
+  &:hover {
+    @include subtle-interaction-mixin($brightness: 2);
+  }
+
+  &:focus {
+    @include component-subtle-focus-mixin;
+  }
+}

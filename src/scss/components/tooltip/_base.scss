@@ -5,6 +5,7 @@
   display: inline-flex;
   position: absolute;
   text-align: center;
+  z-index: $tooltip-z-index;
 }
 
 // Color

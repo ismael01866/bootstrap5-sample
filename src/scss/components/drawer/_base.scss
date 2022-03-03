@@ -1,0 +1,144 @@
+@use "sass:map";
+
+.drawer {
+  @extend %animated;
+  @extend %animation-slide-in-right;
+
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  z-index: $drawer-z-index;
+}
+
+.drawer-backdrop {
+  @extend %animated;
+  @extend %animation-fade-in;
+
+  background-color: $drawer-backdrop-bg;
+  bottom: 0;
+  left: 0;
+  position: fixed;
+  right: 0;
+  top: 0;
+  z-index: $drawer-backdrop-z-index;
+}
+
+.drawer-container.closing {
+  .drawer {
+    @extend %animation-slide-out-right;
+  }
+
+  .drawer-backdrop {
+    @extend %animation-fade-out;
+  }
+}
+
+// Color
+
+@each $color in $component-colors {
+  .drawer-color-#{$color} {
+    @include component-color-mixin($color);
+  }
+}
+
+// Patern
+
+@each $pattern in $drawer-patterns {
+  .drawer-pattern-#{$pattern} {
+    @include drawer-pattern-mixin($pattern);
+  }
+}
+
+// Placement
+
+@each $placement in $drawer-placements {
+  .drawer-placement-#{$placement} {
+    @include drawer-placement-mixin($placement);
+  }
+}
+
+// Size
+
+@each $size, $props in $drawer-sizes {
+  .drawer-size-#{$size} {
+    $min-width: map.get($props, "min-width");
+    $width: map.get($props, "width");
+
+    @include map-props-mixin(
+      map.get($component-min-width-sizing, $min-width));
+    @include map-props-mixin(
+      map.get($component-width-sizing, $width));
+  }
+}
+
+// Children
+
+.drawer-body,
+.drawer-header,
+.drawer-footer {
+  box-sizing: border-box;
+  display: flex;
+}
+
+.drawer-body {
+  flex: 1 1 auto;
+  flex-direction: column;
+}
+
+// -- Color
+
+@each $color in $component-colors {
+  .drawer-body-color-#{$color},
+  .drawer-header-color-#{$color},
+  .drawer-footer-color-#{$color} {
+    @include component-color-mixin($color);
+  }
+}
+
+// -- Patern
+
+@each $pattern in $drawer-patterns {
+  .drawer-body-pattern-#{$pattern},
+  .drawer-header-pattern-#{$pattern},
+  .drawer-footer-pattern-#{$pattern} {
+    @include drawer-pattern-mixin($pattern);
+  }
+}
+
+// -- Size
+
+@each $size, $props in $drawer-header-sizes {
+  .drawer-header-size-#{$size} {
+    $padding-x: map.get($props, "padding-x");
+    $padding-y: map.get($props, "padding-y");
+
+    @include map-props-mixin(
+      map.get($component-padding-x-sizing, $padding-x));
+    @include map-props-mixin(
+      map.get($component-padding-y-sizing, $padding-y));
+  }
+}
+
+@each $size, $props in $drawer-body-sizes {
+  .drawer-body-size-#{$size} {
+    $padding-x: map.get($props, "padding-x");
+    $padding-y: map.get($props, "padding-y");
+
+    @include map-props-mixin(
+      map.get($component-padding-x-sizing, $padding-x));
+    @include map-props-mixin(
+      map.get($component-padding-y-sizing, $padding-y));
+  }
+}
+
+@each $size, $props in $drawer-footer-sizes {
+  .drawer-footer-size-#{$size} {
+    $padding-x: map.get($props, "padding-x");
+    $padding-y: map.get($props, "padding-y");
+
+    @include map-props-mixin(
+      map.get($component-padding-x-sizing, $padding-x));
+    @include map-props-mixin(
+      map.get($component-padding-y-sizing, $padding-y));
+  }
+}

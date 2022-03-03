@@ -1,0 +1,23 @@
+$form-select-border-width: var(--border-width-base) !default;
+$form-select-patterns: (
+  "subtle"
+) !default;
+$form-select-shapes: (
+  "base",
+  "rounded"
+) !default;
+$form-select-sizes: (
+  "sm": (
+    "font-size": "xs",  "height": "6",  "padding-x": "3"
+  ),
+  "base": (
+    "font-size": "xs",  "height": "8",  "padding-x": "4"
+  ),
+  "md": (
+    "font-size": "sm",  "height": "10",  "padding-x": "4"
+  ),
+  "lg": (
+    "font-size": "base", "height": "12", "padding-x": "5"
+  )
+) !default;
+$form-select-transition-duration: var(--animation-duration-fast) !default;

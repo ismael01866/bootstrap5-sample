@@ -22,10 +22,10 @@
   }
 }
 
-// Width
+// Size
 
-@each $width, $props in $sider-widths {
-  .sider-width-#{$width} {
+@each $size, $props in $sider-sizes {
+  .sider-size-#{$size} {
     $min-width: map.get($props, "min-width");
     $width: map.get($props, "width");
 

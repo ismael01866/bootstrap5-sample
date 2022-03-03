@@ -31,14 +31,12 @@ $font-size-headline-1: $font-size-headline-2 * ($font-scale) !default;
 
 // -- Subtitle
 
-$font-size-subtitle-3: math.div(1em, $font-scale) !default;
-$font-size-subtitle-2: $font-size-subtitle-3 !default;
+$font-size-subtitle-2: math.div(1em, $font-scale) !default;
 $font-size-subtitle-1: $font-size-subtitle-2 * ($font-scale) !default;
 
 // -- Body
 
-$font-size-body-3: $font-size-xs !default;
-$font-size-body-2: $font-size-body-3 * ($font-scale) !default;
+$font-size-body-2: math.div(1em, $font-scale) !default;
 $font-size-body-1: $font-size-body-2 * ($font-scale) !default;
 
 // -- Caption
