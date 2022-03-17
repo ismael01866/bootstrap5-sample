@@ -23,13 +23,15 @@
   z-index: $drawer-backdrop-z-index;
 }
 
-.drawer-container.closing {
-  .drawer {
-    @extend %animation-slide-out-right;
-  }
+.drawer-container {
+  &.closing {
+    .drawer {
+      @extend %animation-slide-out-right;
+    }
 
-  .drawer-backdrop {
-    @extend %animation-fade-out;
+    .drawer-backdrop {
+      @extend %animation-fade-out;
+    }
   }
 }
 

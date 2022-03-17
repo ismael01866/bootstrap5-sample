@@ -1,6 +1,10 @@
 @use "sass:map";
 
 .dropdown {
+  @extend %animated;
+  @extend %animation-zoom-in;
+  @extend %animation-duration-fast;
+
   border-radius: $dropdown-border-radius;
   border-style: solid;
   border-width: $dropdown-border-width;
@@ -9,7 +13,16 @@
   display: inline-flex;
   flex-direction: column;
   overflow: hidden;
+}
+
+.dropdown-container {
   z-index: $dropdown-z-index;
+
+  &.closing {
+    .dropdown {
+      @extend %animation-zoom-out;
+    }
+  }
 }
 
 // Color
