@@ -31,6 +31,11 @@ Solid */
 // Selected
 
 @mixin component-solid-selected-mixin {
+  &.component-is-selected {
+    @include component-solid-mixin;
+
+    box-shadow: -3px 0 0 0 var(--color-component) inset;
+  }
 }
 
 /*

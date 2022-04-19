@@ -2,58 +2,98 @@
 ========================================
 General */
 
-.component-block {
-  display: block;
-  width: 100%;
+// .component-block {
+//   display: block;
+//   width: 100%;
+// }
+
+// .component-flex {
+//   display: flex;
+//   width: 100%;
+// }
+
+/*
+========================================
+Color */
+
+@each $color, $props in $component-colors {
+  .component-color-#{$color} {
+    @include component-color-mixin($color);
+  }
 }
 
-.component-flex {
-  display: flex;
-  width: 100%;
-}
+/*
+========================================
+Orientation */
+
+// @each $orientation, $props in $component-orientations {
+//   .component-orientation-#{$orientation} {
+//     @include map-props-mixin($props);
+//   }
+// }
+
+/*
+========================================
+Pattern */
+
+// @each $pattern, $props in $component-patterns {
+//   .component-pattern-#{$pattern} {
+//     @include component-pattern-mixin($pattern);
+//   }
+// }
+
+/*
+========================================
+Shape */
+
+// @each $shape, $props in $component-shapes {
+//   .component-shape-#{$shape} {
+//     @include map-props-mixin($props);
+//   }
+// }
 
 /*
 ========================================
 Sizing */
 
-@each $name, $props in $component-font-sizing {
-  .component-font-#{$name} {
-    @include map-props-mixin($props);
-  }
-}
+// @each $name, $props in $component-font-sizing {
+//   .component-font-#{$name} {
+//     @include map-props-mixin($props);
+//   }
+// }
 
-@each $name, $props in $component-gap-sizing {
-  .component-gap-#{$name} {
-    @include map-props-mixin($props);
-  }
-}
+// @each $name, $props in $component-gap-sizing {
+//   .component-gap-#{$name} {
+//     @include map-props-mixin($props);
+//   }
+// }
 
-@each $name, $props in $component-height-sizing {
-  .component-height-#{$name} {
-    @include map-props-mixin($props);
-  }
-}
+// @each $name, $props in $component-height-sizing {
+//   .component-height-#{$name} {
+//     @include map-props-mixin($props);
+//   }
+// }
 
-@each $name, $props in $component-min-height-sizing {
-  .component-min-height-#{$name} {
-    @include map-props-mixin($props);
-  }
-}
+// @each $name, $props in $component-min-height-sizing {
+//   .component-min-height-#{$name} {
+//     @include map-props-mixin($props);
+//   }
+// }
 
-@each $name, $props in $component-padding-sizing {
-  .component-padding-#{$name} {
-    @include map-props-mixin($props);
-  }
-}
+// @each $name, $props in $component-padding-sizing {
+//   .component-padding-#{$name} {
+//     @include map-props-mixin($props);
+//   }
+// }
 
-@each $name, $props in $component-padding-x-sizing {
-  .component-padding-x-#{$name} {
-    @include map-props-mixin($props);
-  }
-}
+// @each $name, $props in $component-padding-x-sizing {
+//   .component-padding-x-#{$name} {
+//     @include map-props-mixin($props);
+//   }
+// }
 
-@each $name, $props in $component-size-sizing {
-  .component-size-#{$name} {
-    @include map-props-mixin($props);
-  }
-}
+// @each $name, $props in $component-size-sizing {
+//   .component-size-#{$name} {
+//     @include map-props-mixin($props);
+//   }
+// }

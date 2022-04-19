@@ -72,6 +72,27 @@
    *
    */
 
+
+  /* Default */
+
+  --color-default: #{$color-default};
+  --color-default-yiq: #{$color-default-yiq};
+  --color-default-h: #{color-hue-from-hex($color-default)};
+  --color-default-s: #{color-saturation-from-hex($color-default)};
+  --color-default-l: #{color-lightness-from-hex($color-default)};
+
+  // -- Light
+
+  --color-default-lt: #{$color-default-lt};
+
+  // -- Subtle
+
+  --color-default-subtle: #{$color-default-subtle};
+  --color-default-subtle-yiq: #{$color-default-subtle-yiq};
+  --color-default-subtle-h: #{color-hue-from-hex($color-default-subtle)};
+  --color-default-subtle-s: #{color-saturation-from-hex($color-default-subtle)};
+  --color-default-subtle-l: #{color-lightness-from-hex($color-default-subtle)};
+
   /* Success */
 
   --color-success: #{$color-success};
@@ -238,7 +259,11 @@
    *
    */
 
+  --color-headline: #{$color-headline};
+  --color-subtitle: #{$color-subtitle};
   --color-text: #{$color-text};
+  --color-caption: #{$color-caption};
+  --color-overline: #{$color-overline};
 
   /* Link */
 

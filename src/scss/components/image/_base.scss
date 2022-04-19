@@ -1,11 +1,16 @@
 .img {
   box-sizing: border-box;
-  display: inline-flex;
-  height: $img-height;
-  vertical-align: middle;
+  transition: all $img-transition-duration;
 }
 
 .img-fluid {
   height: auto;
   max-width: 100%;
+}
+
+.img-fit {
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  width: 100%;
 }

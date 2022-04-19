@@ -3,6 +3,7 @@
 .button {
   align-items: center;
   border-color: transparent;
+  border-radius: $button-border-radius;
   border-style: solid;
   border-width: $button-border-width;
   box-sizing: border-box;
@@ -18,36 +19,18 @@
   }
 }
 
-// Color
-
-@each $color in $component-colors {
-  .button-color-#{$color} {
-    @include component-color-mixin($color);
-  }
-}
-
 // Patern
 
-@each $pattern in $button-patterns {
-  .button-pattern-#{$pattern} {
+@each $pattern in $component-patterns {
+  .button.component-pattern-#{$pattern} {
     @include button-pattern-mixin($pattern);
-  }
-}
-
-// Shape
-
-@each $shape in $button-shapes {
-  $props: map.get($component-shapes, $shape);
-
-  .button-shape-#{$shape} {
-    @include map-props-mixin($props);
   }
 }
 
 // Size
 
 @each $size, $props in $button-sizes {
-  .button-size-#{$size} {
+  .button.component-size-#{$size} {
     $font-size: map.get($props, "font-size");
     $gap: map.get($props, "gap");
     $height: map.get($props, "height");
@@ -65,10 +48,4 @@
     @include map-props-mixin(
       map.get($component-padding-x-sizing, $padding-x));
   }
-}
-
-// Variants
-
-.button-icon {
-  padding: 0;
 }

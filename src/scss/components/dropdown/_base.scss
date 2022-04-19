@@ -28,7 +28,7 @@
 // Color
 
 @each $color in $component-colors {
-  .dropdown-color-#{$color} {
+  .dropdown.component-color-#{$color} {
     @include component-color-mixin($color);
   }
 }
@@ -36,7 +36,7 @@
 // Patern
 
 @each $pattern in $dropdown-patterns {
-  .dropdown-pattern-#{$pattern} {
+  .dropdown.component-pattern-#{$pattern} {
     @include dropdown-pattern-mixin($pattern);
   }
 }

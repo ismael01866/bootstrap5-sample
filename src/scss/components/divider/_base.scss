@@ -25,27 +25,27 @@
     width: 50%;
   }
 
-  &.divider-align-start {
-    justify-content: flex-start;
+  // &.divider-align-start {
+  //   justify-content: flex-start;
 
-    &::before {
-      flex-grow: 0;
-      width: 0%;
-    }
-  }
+  //   &::before {
+  //     flex-grow: 0;
+  //     width: 0%;
+  //   }
+  // }
 
-  &.divider-align-center {
-    justify-content: center;
-  }
+  // &.divider-align-center {
+  //   justify-content: center;
+  // }
 
-  &.divider-align-end {
-    justify-content: flex-end;
+  // &.divider-align-end {
+  //   justify-content: flex-end;
 
-    &::after {
-      flex-grow: 0;
-      width: 0%;
-    }
-  }
+  //   &::after {
+  //     flex-grow: 0;
+  //     width: 0%;
+  //   }
+  // }
 }
 
 [class*="divider-vertical"] {

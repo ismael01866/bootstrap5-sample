@@ -1,4 +1,3 @@
-$icon-patterns: ("solid") !default;
 $icon-sizes: (
   "12": (
     "size": "3"
@@ -30,16 +29,11 @@ $icon-sizes: (
   "80": (
     "size": "20"
   ),
-  "96": (
-    "size": "24"
-  ),
   "128": (
     "size": "32"
-  ),
-  "192": (
-    "size": "48"
   ),
   "256": (
     "size": "64"
   )
 ) !default;
+$icon-transition-duration: var(--animation-duration-fast) !default;

@@ -1,15 +1,18 @@
 @use "sass:map";
 
 .spacer {
+  box-sizing: border-box;
   display: flex;
+}
+
+// orientation
+
+.spacer-orientation-vertical {
+  flex-direction: column;
 }
 
 .spacer-orientation-horizontal {
   flex-direction: row;
-}
-
-.spacer-orientation-vertical {
-  flex-direction: column;
 }
 
 @each $name, $props in $spacer-gaps {

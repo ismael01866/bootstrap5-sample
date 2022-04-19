@@ -36,6 +36,14 @@ $color-accent-lt: color-subtle-light-mix($color-accent, $brightness-48) !default
  *
  */
 
+/* Default */
+
+$color-default: #9e9e9e !default;
+$color-default-yiq: color-yiq($color-default) !default;
+$color-default-subtle: color-subtle-light-mix($color-default) !default;
+$color-default-subtle-yiq: color-yiq($color-default-subtle) !default;
+$color-default-lt: color-subtle-light-mix($color-default, $brightness-48) !default;
+
 /* Success */
 
 $color-success: #43a047 !default;
@@ -118,7 +126,12 @@ $color-shadow: #9e9e9e !default;
  *
  */
 
-$color-text: #000 !default;
+$text-color: #000;
+$color-headline: rgba($text-color, 0.88) !default;
+$color-subtitle: rgba($text-color, 0.88) !default;
+$color-text: rgba($text-color, 0.64) !default;
+$color-caption: rgba($text-color, 0.48) !default;
+$color-overline: rgba($text-color, 0.88) !default;
 
 /* Link */
 

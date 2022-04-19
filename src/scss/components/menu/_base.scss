@@ -1,16 +1,47 @@
 @use "sass:map";
 
 .menu {
-  background-color: $menu-bg;
   box-sizing: border-box;
-  display: inline-flex;
+  display: flex;
   flex-direction: column;
 }
 
-// Size
+// -- Size
 
 @each $size, $props in $menu-sizes {
-  .menu-size-#{$size} {
+  .menu.component-size-#{$size} {
+    $height: map.get($props, "height");
+    $min-height: map.get($props, "min-height");
+    $spacing: map.get($props, "spacing");
+
+    .menu-item {
+      @include map-props-mixin(
+        map.get($component-margin-x-sizing, $spacing));
+    }
+
+    .menu-link {
+      $margin: map.get(
+        map.get($component-margin-sizing, $spacing),
+        "margin"
+      );
+
+      @include map-props-mixin(
+        map.get($component-height-sizing, $height));
+      @include map-props-mixin(
+        map.get($component-min-height-sizing, $min-height));
+      @include map-props-mixin(
+        map.get($component-padding-x-sizing, $spacing));
+
+      margin-left: -#{$margin};
+      margin-right: -#{$margin};
+    }
+  }
+}
+
+// Width
+
+@each $width, $props in $menu-widths {
+  .menu.component-width-#{$width} {
     $min-width: map.get($props, "min-width");
     $width: map.get($props, "width");
 
@@ -23,96 +54,17 @@
 
 // Children
 
-// -- Menu title
-
-.menu-title {
+.menu-item,
+.menu-link {
   align-items: center;
   display: flex;
 }
 
-// -- Menu title -- Size
+.menu-link {
+  flex: 1 1 auto;
+  transition: all $menu-transition-duration;
 
-@each $size, $props in $menu-title-sizes {
-  .menu-title-size-#{$size} {
-    $font-size: map.get($props, "font-size");
-    $gap: map.get($props, "gap");
-    $height: map.get($props, "height");
-    $margin-y: map.get($props, "margin-y");
-    $padding-left: map.get($props, "padding-left");
-    $padding-right: map.get($props, "padding-right");
-
-    @include map-props-mixin(
-      map.get($component-font-sizing, $font-size));
-    @include map-props-mixin(
-      map.get($component-gap-sizing, $gap));
-    @include map-props-mixin(
-      map.get($component-height-sizing, $height));
-    @include map-props-mixin(
-      map.get($component-margin-y-sizing, $margin-y));
-    @include map-props-mixin(
-      map.get($component-padding-left-sizing, $padding-left));
-    @include map-props-mixin(
-      map.get($component-padding-right-sizing, $padding-right));
+  &.component-is-selected {
+    pointer-events: none;
   }
-}
-
-// -- Menu item
-
-.menu-item {
-  align-items: center;
-  cursor: pointer;
-  display: flex;
-  transition: all $menu-item-transition-duration;
-}
-
-// --Menu item -- Color
-
-@each $color in $component-colors {
-  .menu-item-color-#{$color} {
-    @include component-color-mixin($color);
-  }
-}
-
-// --Menu item -- Patern
-
-// @each $pattern in $component-patterns {
-//   .menu-item-pattern-#{$pattern} {
-//     @include menu-item-pattern-mixin($pattern);
-//   }
-// }
-
-// -- Menu item -- Size
-
-@each $size, $props in $menu-item-sizes {
-  .menu-item-size-#{$size} {
-    $font-size: map.get($props, "font-size");
-    $gap: map.get($props, "gap");
-    $height: map.get($props, "height");
-    $min-height: map.get($props, "min-height");
-    $margin-y: map.get($props, "margin-y");
-    $padding-left: map.get($props, "padding-left");
-    $padding-right: map.get($props, "padding-right");
-
-    @include map-props-mixin(
-      map.get($component-font-sizing, $font-size));
-    @include map-props-mixin(
-      map.get($component-gap-sizing, $gap));
-    @include map-props-mixin(
-      map.get($component-height-sizing, $height));
-    @include map-props-mixin(
-      map.get($component-min-height-sizing, $min-height));
-    @include map-props-mixin(
-      map.get($component-margin-y-sizing, $margin-y));
-    @include map-props-mixin(
-      map.get($component-padding-left-sizing, $padding-left));
-    @include map-props-mixin(
-      map.get($component-padding-right-sizing, $padding-right));
-  }
-}
-
-// -- Menu item group
-
-.menu-item-group {
-  display: flex;
-  flex-direction: column;
 }

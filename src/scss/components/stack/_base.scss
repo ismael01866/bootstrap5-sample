@@ -1,0 +1,15 @@
+@use "sass:map";
+
+.stack {
+  box-sizing: border-box;
+  display: flex;
+  flex: 1 1 auto;
+}
+
+.stack-horizontal {
+  flex-direction: row;
+}
+
+.stack-vertical {
+  flex-direction: column;
+}

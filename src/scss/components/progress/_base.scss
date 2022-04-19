@@ -6,27 +6,11 @@
   overflow: hidden;
 }
 
-// Color
-
-@each $color in $component-colors {
-  .progress-color-#{$color} {
-    @include component-color-mixin($color);
-  }
-}
-
 // Patern
 
 @each $pattern in $progress-patterns {
-  .progress-pattern-#{$pattern} {
+  .progress.component-pattern-#{$pattern} {
     @include progress-pattern-mixin($pattern);
-  }
-}
-
-// Shape
-
-@each $shape in $progress-shapes {
-  .progress-shape-#{$shape} {
-    @include map-props-mixin(map.get($component-shapes, $shape));
   }
 }
 
@@ -35,7 +19,7 @@
 @each $name, $props in $progress-heights {
   $height: map.get($props, "height");
 
-  .progress-size-#{$name} {
+  .progress.component-size-#{$name} {
     @include map-props-mixin(map.get($component-height-sizing, $height));
   }
 }
@@ -46,18 +30,10 @@
   display: inline-flex;
 }
 
-// Color
-
-@each $color in $component-colors {
-  .progress-bar-color-#{$color} {
-    @include component-color-mixin($color);
-  }
-}
-
 // Patern
 
 @each $pattern in $progress-bar-patterns {
-  .progress-bar-pattern-#{$pattern} {
+  .progress-bar.component-pattern-#{$pattern} {
     @include progress-pattern-mixin($pattern);
   }
 }

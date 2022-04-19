@@ -1,0 +1,29 @@
+@use "sass:map";
+
+.list {
+  box-sizing: border-box;
+  display: flex;
+}
+
+// Size
+
+@each $size, $props in $list-sizes {
+  .list.component-size-#{$size} {
+    $gap: map.get($props, "gap");
+    $padding: map.get($props, "padding");
+
+    .list-item {
+      @include map-props-mixin(
+        map.get($component-gap-sizing, $gap));
+      @include map-props-mixin(
+        map.get($component-padding-sizing, $padding));
+    }
+  }
+}
+
+// Children
+
+.list-item {
+  box-sizing: border-box;
+  display: flex;
+}

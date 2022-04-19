@@ -24,6 +24,7 @@ a {
   color: var(--color-link);
   cursor: pointer;
   text-decoration: none;
+  transition: var(--animation-duration-fast);
 
   &:hover,
   &:focus {

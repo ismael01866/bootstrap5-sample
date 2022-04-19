@@ -1,4 +1,4 @@
-$drawer-patterns: ("solid") !default;
+$drawer-patterns: ("solid", "subtle") !default;
 $drawer-placements: (
   "top", "right", "bottom", "left"
 ) !default;
@@ -31,29 +31,3 @@ $drawer-z-index: var(--z-index-drawer);
 
 $drawer-backdrop-bg: rgb(0 0 0 / 64%);
 $drawer-backdrop-z-index: var(--z-index-drawer-backdrop);
-
-// Children
-
-// -- Header
-
-$drawer-header-sizes: (
-  "base": (
-    "padding-x": "6", "padding-y": "5"
-  )
-) !default;
-
-// -- Body
-
-$drawer-body-sizes: (
-  "base": (
-    "padding-x": "6", "padding-y": "6"
-  )
-) !default;
-
-// -- Footer
-
-$drawer-footer-sizes: (
-  "base": (
-    "padding-x": "6", "padding-y": "5"
-  )
-) !default;

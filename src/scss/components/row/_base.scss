@@ -9,14 +9,12 @@
   }
 }
 
-@each $name, $props in $row-gaps {
-  $gap: map.get($props, "gap");
+@include make-row-cols-mixin;
 
-  .row-gap-#{$name} {
+// Gap
+
+@each $gap, $props in $component-gaps {
+  .row.component-gap-#{$gap} {
     @include component-gap-mixin($gap);
-
-    gap: calc(var(--component-gap)) 0;
   }
 }
-
-@include make-row-cols-mixin;

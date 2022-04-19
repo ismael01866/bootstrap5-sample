@@ -1,5 +1,19 @@
-$menu-bg: var(--color-bg-dk);
 $menu-sizes: (
+  "sm": (
+    "height": "6",  "spacing": "3", "min-height": "6"
+  ),
+  "base": (
+    "height": "8",  "spacing": "4", "min-height": "8"
+  ),
+  "md": (
+    "height": "10", "spacing": "4", "min-height": "10"
+  ),
+  "lg": (
+    "height": "12", "spacing": "5", "min-height": "12"
+  )
+) !default;
+$menu-transition-duration: var(--animation-duration-fast) !default;
+$menu-widths: (
   "xs": (
     "min-width": "20", "width": "20"
   ),
@@ -8,26 +22,5 @@ $menu-sizes: (
   ),
   "base": (
     "min-width": "64", "width": "64"
-  )
-) !default;
-
-// Children
-
-// -- Menu Title
-
-$menu-title-sizes: (
-  "base": (
-    "font-size": "sm", "gap": "2", "height": "8", "min-height": "8",
-    "margin-y": "1", "padding-left": "4", "padding-right": "4"
-  )
-) !default;
-
-// -- Menu Item
-
-$menu-item-transition-duration: var(--animation-duration-fast) !default;
-$menu-item-sizes: (
-  "base": (
-    "font-size": "sm", "gap": "2", "height": "10", "min-height": "10",
-    "margin-y": "1", "padding-left": "4", "padding-right": "4"
   )
 ) !default;

@@ -1,24 +1,18 @@
+$button-border-radius: var(--border-radius-base) !default;
 $button-border-width: var(--border-width-base) !default;
 $button-letter-spacing: 0.5px !default;
-$button-patterns: (
-  "solid", "subtle", "outline", "ghost", "link"
-) !default;
-$button-shapes: (
-  "base",
-  "rounded"
-) !default;
 $button-sizes: (
   "sm": (
-    "font-size": "xs",  "gap": "1", "height": "6",  "padding-x": "3",  "min-width": "6"
+    "font-size": "xs",  "gap": "2", "height": "6",  "padding-x": "2",  "min-width": "6"
   ),
   "base": (
-    "font-size": "xs",  "gap": "1", "height": "8",  "padding-x": "4",  "min-width": "8"
+    "font-size": "xs",  "gap": "3", "height": "8",  "padding-x": "3",  "min-width": "8"
   ),
   "md": (
-    "font-size": "sm",  "gap": "1", "height": "10",  "padding-x": "4", "min-width": "10"
+    "font-size": "sm",  "gap": "4", "height": "10",  "padding-x": "4", "min-width": "10"
   ),
   "lg": (
-    "font-size": "base", "gap": "2", "height": "12", "padding-x": "5", "min-width": "12"
+    "font-size": "base", "gap": "5", "height": "12", "padding-x": "5", "min-width": "12"
   )
 ) !default;
 $button-transition-duration: var(--animation-duration-fast) !default;

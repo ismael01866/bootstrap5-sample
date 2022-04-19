@@ -3,18 +3,54 @@
 /* Colors */
 
 $component-colors: (
-  "primary",
-  "secondary",
-  "accent",
-  "success",
-  "info",
-  "warning",
-  "error",
-  "light",
-  "dark",
-  "white",
-  "black"
-) !default;
+  "primary", "secondary", "accent", "default", "success", "info", "warning", "error", "light", "dark", "white", "black"
+);
+$component-gaps: (
+  "0": (
+    "gap": "0"
+  ),
+  "1": (
+    "gap": "1"
+  ),
+  "2": (
+    "gap": "2"
+  ),
+  "3": (
+    "gap": "3"
+  ),
+  "4": (
+    "gap": "4"
+  ),
+  "5": (
+    "gap": "5"
+  ),
+  "6": (
+    "gap": "6"
+  ),
+  "7": (
+    "gap": "7"
+  ),
+  "8": (
+    "gap": "8"
+  )
+);
+
+/* Orientation */
+
+$component-orientations: (
+  "horizontal": (
+    "flex-direction": "row",
+  ),
+  "vertical": (
+    "flex-direction": "column"
+  ),
+);
+
+/* Patterns */
+
+$component-patterns: (
+  "solid", "subtle", "outline", "ghost", "link"
+);
 
 /* Placements */
 
@@ -28,7 +64,7 @@ $component-placements: (
   "bottom-left",
   "bottom-center",
   "bottom-right"
-) !default;
+);
 
 /* Shapes */
 
@@ -41,7 +77,7 @@ $component-shapes: (
   "rounded": (
     "border-radius": $component-border-radius-rounded,
   ),
-) !default;
+);
 
 /**
  *
@@ -190,4 +226,4 @@ $component-font-sizing: (
   "base": (
     "font-size": $font-size-base
   )
-) !default;
+);

@@ -5,8 +5,7 @@
   display: flex;
   flex: 1 1 auto;
   flex-wrap: wrap;
-  margin-right: calc(-0.5 * (var(--component-gap)));
-  margin-left: calc(-0.5 * var(--component-gap));
+  margin: 0 calc(-0.5 * (var(--component-gap)));
   min-width: 100%;
 }
 
@@ -22,8 +21,7 @@
   box-sizing: border-box;
   flex-shrink: 0;
   max-width: 100%;
-  padding-right: calc(0.5 * var(--component-gap));
-  padding-left: calc(0.5 * var(--component-gap));
+  padding: calc(0.5 * var(--component-gap));
   width: 100%;
 }
 

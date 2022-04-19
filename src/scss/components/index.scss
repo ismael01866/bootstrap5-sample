@@ -18,7 +18,7 @@
 @import "avatar";
 @import "badge";
 @import "dot";
-@import "list-group";
+@import "list";
 @import "menu";
 @import "table";
 
@@ -34,11 +34,7 @@
 
 // Layout
 
-@import "content";
-@import "footer";
-@import "header";
-@import "layout";
-@import "sider";
+@import "stack";
 
 // Layout - Containers
 
@@ -55,6 +51,7 @@
 // Media
 
 @import "icon";
+@import "image";
 
 // Navigation
 

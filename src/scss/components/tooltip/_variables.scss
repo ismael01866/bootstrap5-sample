@@ -1,10 +1,7 @@
 $tooltip-max-widths: ("128", "256") !default;
-$tooltip-placements: (
-  "top-center", "center-left", "center-right", "bottom-center"
-) !default;
 $tooltip-sizes: (
   "base": (
-    "font-size": "sm", "padding-x": "2", "padding-y": "1"
+    "font-size": "xs", "padding-x": "2", "padding-y": "1"
   )
 ) !default;
 $tooltip-patterns: ("solid") !default;

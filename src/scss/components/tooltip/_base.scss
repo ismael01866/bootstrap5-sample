@@ -2,24 +2,14 @@
 
 .tooltip {
   box-sizing: border-box;
-  display: inline-flex;
-  position: absolute;
   text-align: center;
   z-index: $tooltip-z-index;
-}
-
-// Color
-
-@each $color in $component-colors {
-  .tooltip-color-#{$color} {
-    @include component-color-mixin($color);
-  }
 }
 
 // Patern
 
 @each $pattern in $tooltip-patterns {
-  .tooltip-pattern-#{$pattern} {
+  .tooltip.component-pattern-#{$pattern} {
     @include tooltip-pattern-mixin($pattern);
   }
 }
@@ -27,42 +17,16 @@
 // Max-Width
 
 @each $max-width in $tooltip-max-widths {
-  .tooltip-max-width-#{$max-width} {
+  .tooltip.component-width-#{$max-width} {
     @include map-props-mixin(
       map.get($component-max-width-sizing, $max-width));
-  }
-}
-
-// Placement
-
-.tooltip-placement-top {
-  transform: translate(-50%, -100%);
-}
-
-.tooltip-placement-bottom {
-  transform: translate(-50%, 0%);
-}
-
-.tooltip-placement-right {
-  transform: translate(0%, -50%);
-}
-
-.tooltip-placement-left {
-  transform: translate(-100%, -50%);
-}
-
-// Shape
-
-@each $shape, $props in $component-shapes {
-  .tooltip-shape-#{$shape} {
-    @include map-props-mixin($props);
   }
 }
 
 // Size
 
 @each $size, $props in $tooltip-sizes {
-  .tooltip-size-#{$size} {
+  .tooltip.component-size-#{$size} {
     $font-size: map.get($props, "font-size");
     $padding-x: map.get($props, "padding-x");
     $padding-y: map.get($props, "padding-y");

@@ -3,6 +3,7 @@
 .icon {
   display: inline-flex;
   position: relative;
+  transition: all $icon-transition-duration;
 
   > svg {
     height: 100%;
@@ -12,10 +13,8 @@
 
 // Color
 
-@each $color in $component-colors {
-  .icon-color-#{$color} {
-    @include component-color-mixin($color);
-
+@each $color, $props in $component-colors {
+  .icon.component-color-#{$color} {
     color: var(--component-color);
   }
 }
@@ -25,7 +24,7 @@
 @each $name, $props in $icon-sizes {
   $size: map.get($props, "size");
 
-  .icon-size-#{$name} {
+  .icon.component-size-#{$name} {
     @include map-props-mixin(
       map.get($component-size-sizing, $size));
   }

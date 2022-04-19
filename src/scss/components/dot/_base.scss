@@ -1,38 +1,15 @@
 @use "sass:map";
 
 .dot {
+  border-radius: 50%;
   display: inline-flex;
-}
-
-// Color
-
-@each $color in $component-colors {
-  .dot-color-#{$color} {
-    @include component-color-mixin($color);
-  }
 }
 
 // Patern
 
 @each $pattern in $dot-patterns {
-  .dot-pattern-#{$pattern} {
+  .dot.component-pattern-#{$pattern} {
     @include dot-pattern-mixin($pattern);
-  }
-}
-
-// Placement
-
-@each $placement in $dot-placements {
-  .dot-placement-#{$placement} {
-    @include component-placement-mixin($placement);
-  }
-}
-
-// Shape
-
-@each $shape in $dot-shapes {
-  .dot-shape-#{$shape} {
-    @include map-props-mixin(map.get($component-shapes, $shape));
   }
 }
 
@@ -41,7 +18,7 @@
 @each $name, $props in $dot-sizes {
   $size: map.get($props, "size");
 
-  .dot-size-#{$name} {
+  .dot.component-size-#{$name} {
     @include map-props-mixin(map.get($component-size-sizing, $size));
   }
 }

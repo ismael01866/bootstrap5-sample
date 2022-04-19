@@ -2,6 +2,8 @@
 
 .badge {
   align-items: center;
+  border-color: transparent;
+  border-radius: $badge-border-radius;
   border-style: solid;
   border-width: $badge-border-width;
   box-sizing: border-box;
@@ -10,35 +12,11 @@
   position: relative;
 }
 
-// Color
-
-@each $color in $component-colors {
-  .badge-color-#{$color} {
-    @include component-color-mixin($color);
-  }
-}
-
 // Patern
 
 @each $pattern in $badge-patterns {
-  .badge-pattern-#{$pattern} {
+  .badge.component-pattern-#{$pattern} {
     @include badge-pattern-mixin($pattern);
-  }
-}
-
-// Position
-
-@each $placement in $badge-placements {
-  .badge-placement-#{$placement} {
-    @include component-placement-mixin($placement);
-  }
-}
-
-// Shape
-
-@each $shape, $props in $component-shapes {
-  .badge-shape-#{$shape} {
-    @include map-props-mixin($props);
   }
 }
 
@@ -51,7 +29,7 @@
   $min-width: map.get($props, "min-width");
   $padding-x: map.get($props, "padding-x");
 
-  .badge-size-#{$name} {
+  .badge.component-size-#{$name} {
     @include map-props-mixin(
       map.get($component-font-sizing, $font-size));
     @include map-props-mixin(
