@@ -1,36 +1,19 @@
 @use "sass:map";
 
 .avatar {
+  background-color: $avatar-bg;
   border-radius: $avatar-border-radius;
   box-sizing: border-box;
   display: flex;
+  overflow: hidden;
   position: relative;
-
-  // Children components
-
-  .badge {
-    box-shadow: 0 0 0 2px #fff;
-  }
-
-  .dot {
-    box-shadow: 0 0 0 2px #fff;
-  }
 }
 
 .avatar-img {
-  background-color: $avatar-bg;
-  box-sizing: border-box;
-  height: 100%;
-  overflow: hidden;
-  position: relative;
-  width: 100%;
+  @include img-fit;
 
-  img {
-    @include img-fit;
-
-    &:not([src]) {
-      visibility: hidden;
-    }
+  &:not([src]) {
+    visibility: hidden;
   }
 }
 
@@ -43,24 +26,6 @@
       margin-left: -0.5rem;
     }
   }
-
-  > .avatar {
-    .avatar-img {
-      border: 2px solid white;
-    }
-  }
-}
-
-// Shape
-
-@each $shape in $avatar-shapes {
-  $props: map.get($component-shapes, $shape);
-
-  .avatar-shape-#{$shape} {
-    .avatar-img {
-      @include map-props-mixin($props);
-    }
-  }
 }
 
 // Size
@@ -68,7 +33,7 @@
 @each $name, $props in $avatar-sizes {
   $size: map.get($props, "size");
 
-  .avatar-size-#{$name} {
+  .avatar.component-size-#{$name} {
     @include map-props-mixin(map.get($component-size-sizing, $size));
   }
 }

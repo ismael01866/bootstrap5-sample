@@ -1,6 +1,5 @@
-$avatar-bg: var(--color-bg-dker);
+$avatar-bg: var(--color-default-lt);
 $avatar-border-radius: var(--border-radius-base);
-$avatar-shapes: ("base", "rounded") !default;
 $avatar-sizes: (
   "xxs": (
     "size": "4"

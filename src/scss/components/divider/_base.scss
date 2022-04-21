@@ -1,80 +1,17 @@
 @use "sass:map";
 
 .divider {
+  border: 0;
+  border-color: $divider-border-color;
+  border-style: solid;
   box-sizing: border-box;
-  position: relative;
-  white-space: nowrap;
+  margin: 0;
 }
 
-.divider-children {
-  display: inline-flex;
+.divider.component-orientation-vertical {
+  border-left-width: $divider-border-width;
 }
 
-// Orientation
-
-[class*="divider-horizontal"] {
-  display: flex;
-
-  &::after,
-  &::before {
-    border-top: $divider-border-width solid $divider-border-color;
-    content: "";
-    flex-grow: 1;
-    position: relative;
-    top: 50%;
-    width: 50%;
-  }
-
-  // &.divider-align-start {
-  //   justify-content: flex-start;
-
-  //   &::before {
-  //     flex-grow: 0;
-  //     width: 0%;
-  //   }
-  // }
-
-  // &.divider-align-center {
-  //   justify-content: center;
-  // }
-
-  // &.divider-align-end {
-  //   justify-content: flex-end;
-
-  //   &::after {
-  //     flex-grow: 0;
-  //     width: 0%;
-  //   }
-  // }
-}
-
-[class*="divider-vertical"] {
-  border-left: $divider-border-width solid $divider-border-color;
-  display: inline-flex;
-  height: 1em;
-  vertical-align: middle;
-}
-
-// Size
-
-@each $size, $props in $divider-sizes {
-  .divider-horizontal-#{$size} {
-    $gap: map.get($props, "gap");
-    $font-size: map.get($props, "font-size");
-    $margin-y: map.get($props, "margin");
-
-    @include map-props-mixin(
-      map.get($component-font-sizing, $font-size));
-    @include map-props-mixin(
-      map.get($component-gap-sizing, $gap));
-    @include map-props-mixin(
-      map.get($component-margin-y-sizing, $margin-y));
-  }
-
-  .divider-vertical-#{$size} {
-    $margin-x: map.get($props, "margin");
-
-    @include map-props-mixin(
-      map.get($component-margin-x-sizing, $margin-x));
-  }
+.divider.component-orientation-horizontal {
+  border-top-width: $divider-border-width;
 }
