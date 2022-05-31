@@ -1,7 +1,7 @@
 {
-  "name": "design-system-boilerplate",
-  "version": "1.0.1",
-  "description": "",
+  "name": "@ismael01866/design-system-boilerplate",
+  "version": "1.1.0",
+  "description": "Simple design system boilerplate",
   "main": "",
   "scripts": {
     "build": "webpack --config webpack/webpack.build.js --progress"

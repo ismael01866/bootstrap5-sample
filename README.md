@@ -15,7 +15,7 @@ It was tested with version 16 and newer.
 1. Clone the repository into a new folder for your new project.
 
    ```bash
-   git clone git@github.com:ismael01866/html-webpack-boilerplate.git new-project
+   git clone git@github.com:ismael01866/design-system-boilerplate.git
    ```
 
 2. Install dependencies
@@ -24,7 +24,7 @@ It was tested with version 16 and newer.
    npm install
    ```
 
-5. Run webpack
+3. Run webpack
 
    ```bash
    npm run build
