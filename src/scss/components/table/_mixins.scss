@@ -1,9 +1,0 @@
-@mixin table-pattern-mixin($pattern) {
-  @if $pattern == "solid" {
-    @include table-solid-mixin;
-  }
-}
-
-@mixin table-solid-mixin {
-  @include component-solid-mixin;
-}

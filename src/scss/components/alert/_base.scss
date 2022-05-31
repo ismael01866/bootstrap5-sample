@@ -9,26 +9,13 @@
 }
 
 .alert-close {
-  position: relative;
-}
-
-.alert-children {
-  display: flex;
-  flex-direction: column;
-}
-
-// Color
-
-@each $color in $component-colors {
-  .alert-color-#{$color} {
-    @include component-color-mixin($color);
-  }
+  margin-left: auto;
 }
 
 // Patern
 
 @each $pattern in $alert-patterns {
-  .alert-pattern-#{$pattern} {
+  .alert.component-pattern-#{$pattern} {
     @include alert-pattern-mixin($pattern);
   }
 }
@@ -36,10 +23,13 @@
 // Size
 
 @each $size, $props in $alert-sizes {
-  .alert-size-#{$size} {
-    $padding: map.get($props, "padding");
+  .alert.component-size-#{$size} {
+    $padding-x: map.get($props, "padding-x");
+    $padding-y: map.get($props, "padding-y");
 
     @include map-props-mixin(
-      map.get($component-padding-sizing, $padding));
+      map.get($component-padding-x-sizing, $padding-x));
+    @include map-props-mixin(
+      map.get($component-padding-y-sizing, $padding-y));
   }
 }

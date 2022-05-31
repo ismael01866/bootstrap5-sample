@@ -1,11 +1,11 @@
+$list-border-color: var(--color-default-lt) !default;
+$list-border-radius: var(--border-radius-base) !default;
+$list-border-width: var(--border-width-base) !default;
 $list-sizes: (
   "sm": (
-    "padding": "3"
+    "padding-x": "4", "padding-y": "3"
   ),
   "base": (
-    "padding": "4"
-  ),
-  "lg": (
-    "padding": "5"
+    "padding-x": "6", "padding-y": "4"
   )
 ) !default;

@@ -33,34 +33,43 @@
     }
   }
 
-  > :not(caption) > * {
-    border-width: $table-border-width 0;
+  > tfoot {
+    vertical-align: middle;
 
+    > tr {
+      height: $tfoot-row-height;
+    }
+  }
+}
+
+// -- Borders
+
+/* stylelint-disable no-descending-specificity */
+
+.table.component-border-bordered {
+  border: $table-border-width solid $table-border-color;
+  border-radius: $table-border-radius;
+
+  > :not(caption) > * {
     > * {
       border-bottom: $table-border-width solid $table-border-color;
     }
+  }
+}
 
-    &:not(:first-child):last-child {
+.table.component-border-flushed {
+  > tfoot {
+    > * {
       > * {
-        border-bottom: 0;
+        border-bottom: 0 !important;
       }
     }
   }
-}
 
-// Color
-
-@each $color in $component-colors {
-  .table-color-#{$color} {
-    @include component-color-mixin($color);
-  }
-}
-
-// Patern
-
-@each $pattern in $table-patterns {
-  .table-pattern-#{$pattern} {
-    @include table-pattern-mixin($pattern);
+  > :not(caption) > * {
+    > * {
+      border-bottom: $table-border-width solid $table-border-color;
+    }
   }
 }
 
@@ -70,23 +79,12 @@
   $padding-x: map.get($props, "padding-x");
   $padding-y: map.get($props, "padding-y");
 
-  .table-size-#{$size} {
+  .table.component-size-#{$size} {
     > :not(caption) > * > * {
       @include map-props-mixin(
         map.get($component-padding-x-sizing, $padding-x));
       @include map-props-mixin(
         map.get($component-padding-y-sizing, $padding-y));
     }
-  }
-}
-
-.table-borderless {
-  /* stylelint-disable-next-line no-descending-specificity */
-  > :not(caption) > * > * {
-    border-bottom-width: 0;
-  }
-
-  > :not(:first-child) {
-    border-top-width: 0;
   }
 }

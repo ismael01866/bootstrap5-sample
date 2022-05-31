@@ -1,7 +1,10 @@
-$table-border-color: var(--component-color-lt) !default;
+$table-border-color: var(--color-default-lt) !default;
+$table-border-radius: var(--border-radius-base) !default;
 $table-border-width: var(--border-width-base) !default;
-$table-patterns: ("solid") !default;
 $table-sizes: (
+  "sm": (
+    "padding-x": "4", "padding-y": "3"
+  ),
   "base": (
     "padding-x": "6", "padding-y": "4"
   )
@@ -11,3 +14,4 @@ $table-sizes: (
 
 $thead-row-height: var(--size-14);
 $tbody-row-height: var(--size-12);
+$tfoot-row-height: var(--size-14);

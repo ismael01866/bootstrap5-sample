@@ -6,34 +6,76 @@
   flex-direction: column;
 }
 
+// Children
+
+.menu-item,
+.menu-link {
+  align-items: center;
+  display: flex;
+}
+
+.menu-link {
+  flex: 1 1 auto;
+  transition: all $menu-transition-duration;
+
+  &.component-is-selected {
+    pointer-events: none;
+  }
+
+  &:not(.component-is-selected) {
+    &:not(:hover) {
+      color: unset;
+    }
+  }
+}
+
+// -- Borders
+
+.menu.component-border-bordered {
+  border: $menu-border-width solid $menu-border-color;
+  border-radius: $menu-border-radius;
+
+  .menu-item:not(:last-child) {
+    border-bottom: $menu-border-width solid $menu-border-color;
+  }
+}
+
+.menu.component-border-flushed {
+  .menu-item:not(:last-child) {
+    border-bottom: $menu-border-width solid $menu-border-color;
+  }
+}
+
 // -- Size
 
 @each $size, $props in $menu-sizes {
   .menu.component-size-#{$size} {
-    $height: map.get($props, "height");
-    $min-height: map.get($props, "min-height");
-    $spacing: map.get($props, "spacing");
+    $padding-x: map.get($props, "padding-x");
+    $padding-y: map.get($props, "padding-y");
 
     .menu-item {
       @include map-props-mixin(
-        map.get($component-margin-x-sizing, $spacing));
+        map.get($component-padding-x-sizing, $padding-x));
+      @include map-props-mixin(
+        map.get($component-padding-y-sizing, $padding-y));
     }
 
     .menu-link {
-      $margin: map.get(
-        map.get($component-margin-sizing, $spacing),
-        "margin"
+      @include map-props-mixin(
+        map.get($component-padding-x-sizing, $padding-x));
+      @include map-props-mixin(
+        map.get($component-padding-y-sizing, $padding-y));
+
+      $margin-x: map.get(
+        map.get($component-padding-x-sizing, $padding-x),
+        "padding-left"
+      );
+      $margin-y: map.get(
+        map.get($component-padding-y-sizing, $padding-y),
+        "padding-top"
       );
 
-      @include map-props-mixin(
-        map.get($component-height-sizing, $height));
-      @include map-props-mixin(
-        map.get($component-min-height-sizing, $min-height));
-      @include map-props-mixin(
-        map.get($component-padding-x-sizing, $spacing));
-
-      margin-left: -#{$margin};
-      margin-right: -#{$margin};
+      margin: -#{$margin-y} -#{$margin-x};
     }
   }
 }
@@ -49,22 +91,5 @@
       map.get($component-min-width-sizing, $min-width));
     @include map-props-mixin(
       map.get($component-width-sizing, $width));
-  }
-}
-
-// Children
-
-.menu-item,
-.menu-link {
-  align-items: center;
-  display: flex;
-}
-
-.menu-link {
-  flex: 1 1 auto;
-  transition: all $menu-transition-duration;
-
-  &.component-is-selected {
-    pointer-events: none;
   }
 }

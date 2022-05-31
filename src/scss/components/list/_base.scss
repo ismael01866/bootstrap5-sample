@@ -2,21 +2,10 @@
 
 .list {
   box-sizing: border-box;
-  display: flex;
-}
 
-// Size
-
-@each $size, $props in $list-sizes {
-  .list.component-size-#{$size} {
-    $gap: map.get($props, "gap");
-    $padding: map.get($props, "padding");
-
-    .list-item {
-      @include map-props-mixin(
-        map.get($component-gap-sizing, $gap));
-      @include map-props-mixin(
-        map.get($component-padding-sizing, $padding));
+  @at-root {
+    ol#{&} {
+      list-style: decimal;
     }
   }
 }
@@ -25,5 +14,38 @@
 
 .list-item {
   box-sizing: border-box;
-  display: flex;
+  list-style-position: inside;
+}
+
+// -- Borders
+
+.list.component-border-bordered {
+  border: $list-border-width solid $list-border-color;
+  border-radius: $list-border-radius;
+
+  .list-item:not(:last-child) {
+    border-bottom: $list-border-width solid $list-border-color;
+  }
+}
+
+.list.component-border-flushed {
+  .list-item:not(:last-child) {
+    border-bottom: $list-border-width solid $list-border-color;
+  }
+}
+
+// -- Size
+
+@each $size, $props in $list-sizes {
+  .list.component-size-#{$size} {
+    $padding-x: map.get($props, "padding-x");
+    $padding-y: map.get($props, "padding-y");
+
+    .list-item {
+      @include map-props-mixin(
+        map.get($component-padding-x-sizing, $padding-x));
+      @include map-props-mixin(
+        map.get($component-padding-y-sizing, $padding-y));
+    }
+  }
 }

@@ -86,10 +86,10 @@
   }
 }
 
-// Size
+// Width
 
-@each $size, $props in $drawer-sizes {
-  .drawer.component-size-#{$size} {
+@each $width, $props in $drawer-widths {
+  .drawer.component-width-#{$width} {
     $min-width: map.get($props, "min-width");
     $width: map.get($props, "width");
 

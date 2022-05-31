@@ -1,15 +1,12 @@
+$menu-border-color: var(--color-default-lt) !default;
+$menu-border-radius: var(--border-radius-base) !default;
+$menu-border-width: var(--border-width-base) !default;
 $menu-sizes: (
   "sm": (
-    "height": "6",  "spacing": "3", "min-height": "6"
+    "padding-x": "4", "padding-y": "3"
   ),
   "base": (
-    "height": "8",  "spacing": "4", "min-height": "8"
-  ),
-  "md": (
-    "height": "10", "spacing": "4", "min-height": "10"
-  ),
-  "lg": (
-    "height": "12", "spacing": "5", "min-height": "12"
+    "padding-x": "6", "padding-y": "4"
   )
 ) !default;
 $menu-transition-duration: var(--animation-duration-fast) !default;

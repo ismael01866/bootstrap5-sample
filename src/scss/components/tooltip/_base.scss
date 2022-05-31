@@ -14,15 +14,6 @@
   }
 }
 
-// Max-Width
-
-@each $max-width in $tooltip-max-widths {
-  .tooltip.component-width-#{$max-width} {
-    @include map-props-mixin(
-      map.get($component-max-width-sizing, $max-width));
-  }
-}
-
 // Size
 
 @each $size, $props in $tooltip-sizes {

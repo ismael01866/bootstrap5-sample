@@ -49,3 +49,11 @@
       map.get($component-padding-x-sizing, $padding-x));
   }
 }
+
+// Variants
+
+.button-icon {
+  &[class*="component-size"] {
+    padding: 0;
+  }
+}
